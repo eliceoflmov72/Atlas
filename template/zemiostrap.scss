@@ -66,6 +66,34 @@ html, body {
 }
 
 /* Colors */
+.primary {color: $primary-color;}
+
+.red {color: $red;}
+.yellow {color: $yellow;}
+.green {color: $green;}
+.blue {color: $blue;}
+.purple {color: $purple;}
+
+.white {color: $white;}
+.black {color: $black;}
+
+.light {color: $light;}
+.dark {color: $dark;}
+
+.bg-primary {background-color: $primary-color;}
+
+.bg-red {background-color: $red;}
+.bg-yellow {background-color: $yellow;}
+.bg-green {background-color: $green;}
+.bg-blue {background-color: $blue;}
+.bg-purple {background-color: $purple;}
+
+.bg-white {background-color: $white;}
+.bg-black {background-color: $dark;}
+
+.bg-light {background-color: $light;}
+.bg-dark {background-color: $dark;}
+
 
 /* Margin & Padding */
 .m {margin: 0.4em;}
