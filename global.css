@@ -14,6 +14,40 @@ html, body {
     overflow: hidden;
 }
 
+.animated-balls-container {
+    position: absolute;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width: 33vw;
+    height: 100vh;
+    background-color: black;
+}
+.animated-ball-container {
+    width: 100%;
+    /* border: 1px solid ff; */
+}
+.animated-ball-container-1 {
+    animation: rotate-180 1s linear forwards;
+}
+.animated-ball-container-2 {
+    opacity: 0;
+    margin-left: -2em;
+    animation: rotate-180 1s 1s linear forwards;
+}
+.animated-ball-container-3 {
+    opacity: 0;
+    margin-left: -2em;
+    animation: rotate-180 1s 2s linear forwards;
+}
+
+.animated-ball {
+    width: 2em;
+    height: 2em;
+    background-color: red;
+    border-radius: 100%;
+}
+
 .animated-title {
     display: flex;
     justify-content: center;
@@ -71,6 +105,21 @@ html, body {
 
 .animated-title span:nth-child(6) {
     animation-delay: 1.5s;
+}
+
+@keyframes rotate-180 {
+    0% {
+        rotate: 0deg;
+        opacity: 100;
+    }
+    99% {
+        rotate: 178deg;
+        opacity: 100;
+    }
+    100% {
+        rotate: 180deg;
+        opacity: 0;
+    }
 }
 
 @keyframes appear {
