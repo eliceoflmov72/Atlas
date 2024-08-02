@@ -42,7 +42,7 @@ html, body {
 
 .animated-title {
     display: flex;
-    gap: 8em;
+    gap: 4em;
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -187,4 +187,23 @@ html, body {
 
 .animated-z span {
     text-shadow: 0px 0px 0.2em #fff, 0px 0px 0.4em #fff, 0px 0px 0.6em #fff, 0px 0px 0.8em #fff, 0px 0px 1em #fff;
+}
+
+
+@media (width < 1024px) {
+
+}
+
+@media (width < 768px) {
+    .animated-ball {
+        width: 1em;
+        height: 1em;
+    }
+    .animated-title {
+        gap: 3em;
+    }
+}
+
+@media (width < 480px) {
+
 }
