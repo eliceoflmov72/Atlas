@@ -14,31 +14,15 @@ html, body {
     overflow: hidden;
 }
 
-.animated-balls-container {
+.animated-ball-container {
     position: absolute;
     display: flex;
-    justify-content: left;
+    justify-content: center;
     align-items: center;
-    width: 33vw;
+    width: 100vw;
     height: 100vh;
     background-color: black;
-}
-.animated-ball-container {
-    width: 100%;
-    /* border: 1px solid ff; */
-}
-.animated-ball-container-1 {
-    animation: rotate-180 1s linear forwards;
-}
-.animated-ball-container-2 {
-    opacity: 0;
-    margin-left: -2em;
-    animation: rotate-180 1s 1s linear forwards;
-}
-.animated-ball-container-3 {
-    opacity: 0;
-    margin-left: -2em;
-    animation: rotate-180 1s 2s linear forwards;
+    border: 1px solid ff;
 }
 
 .animated-ball {
