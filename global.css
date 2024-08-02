@@ -21,8 +21,6 @@ html, body {
     align-items: center;
     width: 100vw;
     height: 100vh;
-    background-color: black;
-    border: 1px solid #fff;
 }
 
 .animated-ball {
@@ -32,6 +30,14 @@ html, body {
     border-radius: 50%;
     position: absolute;
     animation: bounce 2.5s normal forwards;
+}
+.animated-ball-shadow-1 {
+    background-color: rgba(255, 0, 0, 0.50);
+    animation: bounce 2.5s 0.025s normal forwards;
+}
+.animated-ball-shadow-2 {
+    background-color: rgba(255, 0, 0, 0.25);
+    animation: bounce 2.5s 0.050s normal forwards;
 }
 
 .animated-title {
