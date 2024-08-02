@@ -22,14 +22,16 @@ html, body {
     width: 100vw;
     height: 100vh;
     background-color: black;
-    border: 1px solid ff;
+    border: 1px solid #fff;
 }
 
 .animated-ball {
     width: 2em;
     height: 2em;
     background-color: red;
-    border-radius: 100%;
+    border-radius: 50%;
+    position: absolute;
+    animation: bounce 2.5s normal forwards;
 }
 
 .animated-title {
@@ -59,7 +61,7 @@ html, body {
     height: 0px;
     color: #131313;
     animation: expaned-circle 5s ease-out forwards;
-    animation-delay: 3s;
+    animation-delay: 2.5s;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -91,18 +93,37 @@ html, body {
     animation-delay: 1.5s;
 }
 
-@keyframes rotate-180 {
+@keyframes bounce {
     0% {
-        rotate: 0deg;
-        opacity: 100;
+        transform: translateY(-300px);
+        animation-timing-function: cubic-bezier(0.5, 0, 1, 1);
     }
-    99% {
-        rotate: 178deg;
-        opacity: 100;
+    20% {
+        transform: translateY(0);
+        animation-timing-function: cubic-bezier(0.5, 1, 1, 1);
+    }
+    40% {
+        transform: translateY(-150px);
+        animation-timing-function: cubic-bezier(0.7, 0, 1, 1);
+    }
+    55% {
+        transform: translateY(0);
+        animation-timing-function: cubic-bezier(0.5, 1, 1, 1);
+    }
+    70% {
+        transform: translateY(-75px);
+        animation-timing-function: cubic-bezier(0.7, 0, 1, 1);
+    }
+    80% {
+        transform: translateY(0);
+        animation-timing-function: cubic-bezier(0.5, 1, 1, 1);
+    }
+    90% {
+        transform: translateY(-30px);
+        animation-timing-function: cubic-bezier(0.7, 0, 1, 1);
     }
     100% {
-        rotate: 180deg;
-        opacity: 0;
+        transform: translateY(0);
     }
 }
 
