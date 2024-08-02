@@ -1,0 +1,211 @@
+@import url("https://use.typekit.net/npd8ime.css");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "muli", sans-serif;
+    font-weight: 200;
+    scroll-behavior: smooth;
+}
+
+html, body {
+    height: 100%;
+    overflow: hidden;
+}
+
+.animated-ball-container {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.animated-ball {
+    width: 2em;
+    height: 2em;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    position: absolute;
+    animation: bounce 2.5s normal forwards;
+}
+.animated-ball-shadow-1 {
+    background-color: rgba(255, 255, 255, 0.5);
+    animation: bounce 2.5s 0.025s normal forwards;
+}
+.animated-ball-shadow-2 {
+    background-color: rgba(255, 255, 255, 0.25);
+    animation: bounce 2.5s 0.050s normal forwards;
+}
+
+.animated-title {
+    display: flex;
+    gap: 4em;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #131313;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+.animated-title span {
+    animation: appear 4s forwards;
+    opacity: 0;
+    user-select: none;
+    text-shadow: 0 0 0.2em, 0 0 0.4em, 0 0 0.6em, 0 0 0.8em, 0 0 1em;
+}
+
+.animated-z {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #fff;
+    width: 0px;
+    height: 0px;
+    color: #131313;
+    animation: expaned-circle 5s ease-out forwards;
+    animation-delay: 2.5s;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+.animated-title span:nth-child(1) {
+    animation-delay: 1s;
+}
+
+.animated-title span:nth-child(2) {
+    animation-delay: 2.8s;
+}
+
+.animated-title span:nth-child(3) {
+    animation-delay: 4.2s;
+}
+
+.animated-title span:nth-child(4) {
+    animation-delay: 5.1s;
+}
+
+.animated-title span:nth-child(5) {
+    animation-delay: 3.6s;
+}
+
+.animated-title span:nth-child(6) {
+    animation-delay: 1.5s;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(-300px);
+        animation-timing-function: cubic-bezier(0.5, 0, 1, 1);
+    }
+    20% {
+        transform: translateY(0);
+        animation-timing-function: cubic-bezier(0.5, 1, 1, 1);
+    }
+    40% {
+        transform: translateY(-150px);
+        animation-timing-function: cubic-bezier(0.7, 0, 1, 1);
+    }
+    55% {
+        transform: translateY(0);
+        animation-timing-function: cubic-bezier(0.5, 1, 1, 1);
+    }
+    70% {
+        transform: translateY(-75px);
+        animation-timing-function: cubic-bezier(0.7, 0, 1, 1);
+    }
+    80% {
+        transform: translateY(0);
+        animation-timing-function: cubic-bezier(0.5, 1, 1, 1);
+    }
+    90% {
+        transform: translateY(-30px);
+        animation-timing-function: cubic-bezier(0.7, 0, 1, 1);
+    }
+    100% {
+        transform: translateY(0);
+        display: none;
+    }
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+        filter: blur(0.2em);
+    }
+
+    50% {
+        opacity: 0.5;
+        transform: scale(1);
+        filter: blur(0.1em);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1.2);
+        filter: blur(0);
+        color: #131313;
+        text-shadow: 0px 0px 0.2em #fff, 0px 0px 0.4em #fff, 0px 0px 0.6em #fff, 0px 0px 0.8em #fff, 0px 0px 1em #fff;
+    }
+}
+
+@keyframes expaned-circle {
+    0% {
+        width: 0px;
+        height: 0px;
+    }
+    10% {
+        width: 200px;
+        height: 200px;
+    }
+    20% {
+        width: 100px;
+        height: 100px;
+    }
+    30% {
+        width: 300px;
+        height: 300px;
+    }
+    40% {
+        width: 150px;
+        height: 150px;
+    }
+
+    100% {
+        width: 2000px;
+        height: 2000px;
+    }
+}
+
+
+.animated-z span {
+    text-shadow: 0px 0px 0.2em #fff, 0px 0px 0.4em #fff, 0px 0px 0.6em #fff, 0px 0px 0.8em #fff, 0px 0px 1em #fff;
+}
+
+
+@media (width < 1024px) {
+
+}
+
+@media (width < 768px) {
+    .animated-ball {
+        width: 1em;
+        height: 1em;
+    }
+    .animated-title {
+        gap: 3em;
+    }
+}
+
+@media (width < 480px) {
+
+}
