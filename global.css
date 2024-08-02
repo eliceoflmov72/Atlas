@@ -26,23 +26,23 @@ html, body {
 .animated-ball {
     width: 2em;
     height: 2em;
-    background-color: red;
+    background-color: rgb(255, 255, 255);
     border-radius: 50%;
     position: absolute;
     animation: bounce 2.5s normal forwards;
 }
 .animated-ball-shadow-1 {
-    background-color: rgba(255, 0, 0, 0.50);
+    background-color: rgba(255, 255, 255, 0.5);
     animation: bounce 2.5s 0.025s normal forwards;
 }
 .animated-ball-shadow-2 {
-    background-color: rgba(255, 0, 0, 0.25);
+    background-color: rgba(255, 255, 255, 0.25);
     animation: bounce 2.5s 0.050s normal forwards;
 }
 
 .animated-title {
     display: flex;
-    gap: 4em;
+    gap: 8em;
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -130,6 +130,7 @@ html, body {
     }
     100% {
         transform: translateY(0);
+        display: none;
     }
 }
 
