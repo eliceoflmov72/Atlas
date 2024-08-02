@@ -42,6 +42,7 @@ html, body {
 
 .animated-title {
     display: flex;
+    gap: 4em;
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -50,7 +51,6 @@ html, body {
 }
 
 .animated-title span {
-    margin-left: 4em;
     animation: appear 4s forwards;
     opacity: 0;
     user-select: none;
