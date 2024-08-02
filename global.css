@@ -1,17 +1,15 @@
 @import url("https://use.typekit.net/npd8ime.css");
 
-* {
+html, body {
+    height: 100%;
+    overflow: hidden;
+    background-color: #131313;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "muli", sans-serif;
     font-weight: 200;
     scroll-behavior: smooth;
-}
-
-html, body {
-    height: 100%;
-    overflow: hidden;
 }
 
 .animated-ball-container {
@@ -42,11 +40,10 @@ html, body {
 
 .animated-title {
     display: flex;
-    gap: 4em;
+    gap: 10em;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #131313;
     color: #fff;
     position: relative;
     overflow: hidden;
@@ -55,6 +52,7 @@ html, body {
 .animated-title span {
     animation: appear 4s forwards;
     opacity: 0;
+    font-size: 2em;
     user-select: none;
     text-shadow: 0 0 0.2em, 0 0 0.4em, 0 0 0.6em, 0 0 0.8em, 0 0 1em;
 }
@@ -193,7 +191,16 @@ html, body {
 
 
 @media (width < 1024px) {
-
+    .animated-ball {
+        width: 2em;
+        height: 2em;
+    }
+    .animated-title {
+        gap: 5em;
+    }
+    .animated-title span {
+        font-size: 1.8em;
+    }
 }
 
 @media (width < 768px) {
@@ -203,6 +210,9 @@ html, body {
     }
     .animated-title {
         gap: 3em;
+    }
+    .animated-title span {
+        font-size: 1.3em;
     }
 }
 
