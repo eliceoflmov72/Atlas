@@ -1,9 +1,18 @@
 @import url("https://use.typekit.net/npd8ime.css");
 
+:root {
+    --light: #ffffff;
+    --dark: #131313;
+    --initial-background-color: var(--dark);
+    --final-background-color: var(--light);
+
+    --text-color: var(--dark);
+}
+
 html, body {
     height: 100%;
     overflow: hidden;
-    background-color: #131313;
+    background-color: var(--initial-background-color);
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -24,17 +33,19 @@ html, body {
 .animated-ball {
     width: 2em;
     height: 2em;
-    background-color: rgb(255, 255, 255);
+    background-color: var(--final-background-color);
     border-radius: 50%;
     position: absolute;
     animation: bounce 2.5s normal forwards;
 }
 .animated-ball-shadow-1 {
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: var(--final-background-color);
+    opacity: 50%;
     animation: bounce 2.5s 0.025s normal forwards;
 }
 .animated-ball-shadow-2 {
-    background-color: rgba(255, 255, 255, 0.25);
+    background-color: var(--final-background-color);
+    opacity: 25%;
     animation: bounce 2.5s 0.050s normal forwards;
 }
 
@@ -62,10 +73,10 @@ html, body {
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    background-color: #fff;
+    background-color: var(--final-background-color);
     width: 0px;
     height: 0px;
-    color: #131313;
+    color: var(--initial-background-color);
     animation: expaned-circle 5s ease-out forwards;
     animation-delay: 2.5s;
     position: absolute;
