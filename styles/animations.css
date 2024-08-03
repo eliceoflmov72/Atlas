@@ -75,8 +75,8 @@
     }
 
     100% {
-        width: 115vw;
-        height: 115vw;
+        width: 4000px;
+        height: 4000px;
         display: none;
     }
 }
