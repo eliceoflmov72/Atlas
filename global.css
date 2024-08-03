@@ -75,34 +75,9 @@ html, body {
     pointer-events: none;
 }
 
-.animated-title span:nth-child(1) {
-    animation-delay: 1s;
-}
-
-.animated-title span:nth-child(2) {
-    animation-delay: 2.8s;
-}
-
-.animated-title span:nth-child(3) {
-    animation-delay: 4.2s;
-}
-
-.animated-title span:nth-child(4) {
-    animation-delay: 5.1s;
-}
-
-.animated-title span:nth-child(5) {
-    animation-delay: 3.6s;
-}
-
-.animated-title span:nth-child(6) {
-    animation-delay: 1.5s;
-}
-
 .animated-z span {
     text-shadow: 0px 0px 0.2em #fff, 0px 0px 0.4em #fff, 0px 0px 0.6em #fff, 0px 0px 0.8em #fff, 0px 0px 1em #fff;
 }
-
 
 @media (width < 1024px) {
     .animated-ball {
