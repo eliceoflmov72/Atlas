@@ -1,5 +1,8 @@
 @import '../global.css';
-
+@keyframes body-color { 
+    0% { background-color: var(--initial-background-color); }
+    100% { background-color: var(--final-background-color); }
+}
 @keyframes bounce {
     0% {
         transform: translateY(-300px);
@@ -74,5 +77,6 @@
     100% {
         width: 2000px;
         height: 2000px;
+        display: none;
     }
 }

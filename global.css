@@ -20,6 +20,7 @@ html, body {
     font-family: "muli", sans-serif;
     font-weight: 200;
     scroll-behavior: smooth;
+    animation: body-color 0s linear 7.5s forwards;
 }
 
 .lightmode-button-container {
