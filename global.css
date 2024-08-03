@@ -55,7 +55,7 @@ html, body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    color: #fff;
+    color: var(--final-background-color);
     position: relative;
     overflow: hidden;
 }
@@ -87,7 +87,7 @@ html, body {
 }
 
 .animated-z span {
-    text-shadow: 0px 0px 0.2em #fff, 0px 0px 0.4em #fff, 0px 0px 0.6em #fff, 0px 0px 0.8em #fff, 0px 0px 1em #fff;
+    text-shadow: 0px 0px 0.2em var(--final-background-color), 0px 0px 0.4em var(--final-background-color), 0px 0px 0.6em var(--final-background-color), 0px 0px 0.8em var(--final-background-color), 0px 0px 1em var(--final-background-color);
 }
 
 @media (width < 1024px) {
