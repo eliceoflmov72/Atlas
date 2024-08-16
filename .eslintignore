@@ -1,0 +1,7 @@
+test
+.github
+coverage
+node_modules/
+dist/
+atlas_vanilla/
+
