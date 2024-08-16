@@ -7,7 +7,7 @@ import { MenubarModule } from 'primeng/menubar';
   standalone: true,
   imports: [MenubarModule],
   templateUrl: './header.component.html',
-  styleUrl: './header.component.css'
+  styleUrl: './header.component.css',
 })
 export class HeaderComponent {
   items: MenuItem[] | undefined;
@@ -16,11 +16,11 @@ export class HeaderComponent {
     this.items = [
       {
         label: 'Home',
-        icon: 'pi pi-home'
+        icon: 'pi pi-home',
       },
       {
         label: 'Features',
-        icon: 'pi pi-star'
+        icon: 'pi pi-star',
       },
       {
         label: 'Projects',
@@ -28,15 +28,15 @@ export class HeaderComponent {
         items: [
           {
             label: 'Components',
-            icon: 'pi pi-bolt'
+            icon: 'pi pi-bolt',
           },
           {
             label: 'Blocks',
-            icon: 'pi pi-server'
+            icon: 'pi pi-server',
           },
           {
             label: 'UI Kit',
-            icon: 'pi pi-pencil'
+            icon: 'pi pi-pencil',
           },
           {
             label: 'Templates',
@@ -44,20 +44,20 @@ export class HeaderComponent {
             items: [
               {
                 label: 'Apollo',
-                icon: 'pi pi-palette'
+                icon: 'pi pi-palette',
               },
               {
                 label: 'Ultima',
-                icon: 'pi pi-palette'
-              }
-            ]
-          }
-        ]
+                icon: 'pi pi-palette',
+              },
+            ],
+          },
+        ],
       },
       {
         label: 'Contact',
-        icon: 'pi pi-envelope'
-      }
-    ]
+        icon: 'pi pi-envelope',
+      },
+    ];
   }
 }
