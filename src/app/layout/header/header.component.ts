@@ -26,6 +26,7 @@ export class HeaderComponent {
         items: [
           {
             label: 'La Fábrica Martos',
+            url: 'https://www.lafabricamartos.com',
             icon: 'pi pi-building',
           },
         ],
