@@ -97,6 +97,12 @@
   font-style: italic;
 }
 
-* {
+body, app-root {
+  margin: 0;
+}
+
+body {
   font-family: "Muli";
+  background-image: url("https://4kwallpapers.com/images/wallpapers/macos-monterey-stock-blue-dark-mode-layers-5k-2880x1800-5895.jpg");
+
 }
