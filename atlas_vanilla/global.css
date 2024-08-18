@@ -74,6 +74,7 @@ body {
   align-items: center;
   width: 100vw;
   height: 100vh;
+  z-index: 2;
 }
 
 .animated-ball {
@@ -104,6 +105,7 @@ body {
   color: var(--final-background-color);
   position: relative;
   overflow: hidden;
+  z-index: 1;
 }
 
 .animated-title span {
