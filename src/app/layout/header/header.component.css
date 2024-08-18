@@ -11,3 +11,7 @@
     border: 0;
 }
 
+.p-menubar-root-list {
+    width: max-content;
+}
+
