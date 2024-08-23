@@ -1,0 +1,24 @@
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: black;
+}
+
+.footer footer ul {
+    display: flex;
+    list-style: none;
+    gap: 1em;
+    justify-content: space-around;
+    align-items: end;
+
+}
+
+.footer footer ul li:nth-child(1) {
+    font-size: 10em;
+}
+
+.footer footer ul li:nth-child(2) a {
+    text-decoration: none;
+    color: white;
+}

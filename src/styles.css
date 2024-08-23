@@ -97,12 +97,13 @@
   font-style: italic;
 }
 
-body, app-root {
+body,
+app-root {
   margin: 0;
 }
 
 body {
   font-family: "Muli";
-  background-image: url("https://4kwallpapers.com/images/wallpapers/macos-monterey-stock-blue-dark-mode-layers-5k-2880x1800-5895.jpg");
-
+  width: 100%;
+  background-image: url("assets/media/magicpattern-grid-pattern-1724346944010.jpeg");
 }
