@@ -46,12 +46,12 @@
 .animated-text li:nth-child(4) {transition-delay: 375ms;}
 .animated-text li:nth-child(5) {transition-delay: 500ms;}
 .animated-text li:nth-child(6) {transition-delay: 725ms;}
-.animated-text:hover li:nth-child(1) {transform: translatey(0.5em);}
-.animated-text:hover li:nth-child(2) {transform: translatey(0.5em);}
-.animated-text:hover li:nth-child(3) {transform: translatey(0.5em);}
-.animated-text:hover li:nth-child(4) {transform: translatey(0.5em);}
-.animated-text:hover li:nth-child(5) {transform: translatey(0.5em);}
-.animated-text:hover li:nth-child(6) {transform: translatey(0.5em);}
+.animated-text:hover li:nth-child(1) {transform: translatey(2.5vw);}
+.animated-text:hover li:nth-child(2) {transform: translatey(2.5vw);}
+.animated-text:hover li:nth-child(3) {transform: translatey(2.5vw);}
+.animated-text:hover li:nth-child(4) {transform: translatey(2.5vw);}
+.animated-text:hover li:nth-child(5) {transform: translatey(2.5vw);}
+.animated-text:hover li:nth-child(6) {transform: translatey(2.5vw);}
 
 /* Estilo de fondo 1 */
 /* .footer {
