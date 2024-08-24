@@ -23,13 +23,7 @@ export class HeaderComponent {
       {
         label: 'Proyectos',
         icon: 'pi pi-search',
-        items: [
-          {
-            label: 'La Fábrica Martos',
-            url: 'https://www.lafabricamartos.com',
-            icon: 'pi pi-building',
-          },
-        ],
+        routerLink: ['/Projects'],
       },
       {
         label: 'Contacto',
