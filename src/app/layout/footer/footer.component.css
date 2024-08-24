@@ -1,6 +1,10 @@
 .footer {
   width: 100%;
-  background-color: black;
+  position: fixed;
+  bottom: 0;
+  clip-path: ellipse(100% 83% at 28% 100%);
+
+  padding: 6em 0 2em; /* Añadir un poco de espacio */
 }
 
 .footer footer ul {
@@ -19,4 +23,29 @@
 .footer footer ul li:nth-child(2) a {
   text-decoration: none;
   color: white;
+}
+
+
+/* Estilo de fondo 1 */
+/* .footer {
+  background: linear-gradient(-45deg, #376591, #194e83, #3d3396, #694796);
+  animation: gradient 10s linear infinite;
+  background-size: 400% 400%;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+} */
+
+/* Estilo de fondo 2 */
+.footer {
+  background-color: rgba(255, 255, 255, 0.2);
 }
