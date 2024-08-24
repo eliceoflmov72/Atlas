@@ -8,7 +8,7 @@ import { RouterLink } from '@angular/router';
   standalone: true,
   imports: [MenubarModule, RouterLink],
   templateUrl: './header.component.html',
-  styleUrl: './header.component.css',
+  styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent {
   items: MenuItem[] | undefined;
@@ -18,7 +18,7 @@ export class HeaderComponent {
       {
         label: 'Inicio',
         icon: 'pi pi-home',
-        routerLink: '/',
+        routerLink: ['/'],
       },
       {
         label: 'Proyectos',
@@ -34,6 +34,7 @@ export class HeaderComponent {
       {
         label: 'Contacto',
         icon: 'pi pi-envelope',
+        routerLink: ['/Contact'],
       },
     ];
   }
