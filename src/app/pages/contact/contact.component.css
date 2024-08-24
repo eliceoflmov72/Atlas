@@ -18,7 +18,7 @@
 
 .cards-container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 4vw;
   width: 100%;
   padding-inline: 4vw;
@@ -34,4 +34,18 @@ p-footer {
   .contact-container iframe {
     width: 90%;
   }
+}
+
+@media (min-width: 480px) {
+}
+@media (min-width: 768px) {
+  .cards-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 1024px) {
+}
+@media (min-width: 1200px) {
+}
+@media (min-width: 1920px) {
 }

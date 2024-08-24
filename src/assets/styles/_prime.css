@@ -3,7 +3,7 @@
   border-radius: 5px;
 }
 
-.cards-container .p-card-body{
+.cards-container .p-card-body {
   text-align: center;
 }
 
@@ -21,6 +21,7 @@
 }
 
 /* HEADER */
-a.p-menuitem-link:hover > span, a.p-menuitem-link:active > span {
+a.p-menuitem-link:hover > span,
+a.p-menuitem-link:active > span {
   color: black;
 }
