@@ -1,20 +1,18 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+
 
 .container {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  /* width: fit-content; */
 }
 .parent {
   height: 400px;
-  width: 300px;
   padding: 20px;
   perspective: 1000px;
+  width: fit-content;
+
 }
 
 .card {
