@@ -29,7 +29,8 @@
               "node_modules/primeng/resources/primeng.min.css",
               "primeng/resources/themes/lara-light-blue/theme.css",
               "node_modules/primeicons/primeicons.css",
-              "src/app/layout/header/header.component.css"
+              "src/app/layout/header/header.component.css",
+              "src/assets/styles/_prime.css"
             ],
             "scripts": [],
             "server": "src/main.server.ts",
@@ -93,7 +94,8 @@
               "node_modules/primeng/resources/primeng.min.css",
               "primeng/resources/themes/lara-light-blue/theme.css",
               "node_modules/primeicons/primeicons.css",
-              "src/app/layout/header/header.component.css"
+              "src/app/layout/header/header.component.css",
+              "src/assets/styles/_prime.css"
             ],
             "scripts": []
           }

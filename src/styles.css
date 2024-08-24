@@ -102,12 +102,29 @@ app-root {
   margin: 0;
 }
 
+* {
+  font-family: "Muli", sans-serif;
+  color: rgb(250, 240, 222) !important;
+}
+
 body {
-  font-family: "Muli";
   width: 100%;
-  background-position: center;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-image: url("assets/media/background_2.png");
+  height: 100vh;
+  background: radial-gradient(circle, #376591, #194e83, #3d3396, #694796);
+  background-size: 200% 200%;
+  animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
 }
