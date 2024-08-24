@@ -24,6 +24,11 @@
   padding-inline: 4vw;
 }
 
+p-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 @media screen and (width<=960px) {
   .contact-container iframe {
