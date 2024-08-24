@@ -4,7 +4,7 @@
   bottom: 0;
   clip-path: ellipse(100% 83% at 28% 100%);
 
-  padding: 6em 0 2em; /* Añadir un poco de espacio */
+  padding: 6em 0 2em; 
 }
 
 .footer footer ul {
@@ -36,59 +36,23 @@
 }
 
 .animated-text li {
-  transform: rotate(0deg); /* Estado inicial */
-  transition: transform 250ms ease-in-out; /* Transición suave con duración de 500ms */
+  transform: rotate(0deg);
+  transition: transform 250ms ease-in-out; 
 }
 
-/* Aplicar la rotación y el delay a cada elemento */
-.animated-text li:nth-child(1) {
-  transition-delay: 0ms; /* Sin retraso */
-}
+.animated-text li:nth-child(1) {transition-delay: 0ms;}
+.animated-text li:nth-child(2) {transition-delay: 125ms;}
+.animated-text li:nth-child(3) {transition-delay: 250ms;}
+.animated-text li:nth-child(4) {transition-delay: 375ms;}
+.animated-text li:nth-child(5) {transition-delay: 500ms;}
+.animated-text li:nth-child(6) {transition-delay: 725ms;}
+.animated-text:hover li:nth-child(1) {transform: rotate(180deg);}
+.animated-text:hover li:nth-child(2) {transform: rotate(180deg);}
+.animated-text:hover li:nth-child(3) {transform: rotate(180deg);}
+.animated-text:hover li:nth-child(4) {transform: rotate(180deg);}
+.animated-text:hover li:nth-child(5) {transform: rotate(180deg);}
+.animated-text:hover li:nth-child(6) {transform: rotate(180deg);}
 
-.animated-text li:nth-child(2) {
-  transition-delay: 125ms;
-}
-
-.animated-text li:nth-child(3) {
-  transition-delay: 250ms;
-}
-
-.animated-text li:nth-child(4) {
-  transition-delay: 375ms;
-}
-
-.animated-text li:nth-child(5) {
-  transition-delay: 500ms;
-}
-
-.animated-text li:nth-child(6) {
-  transition-delay: 725ms;
-}
-
-/* Al hacer hover, rota cada elemento */
-.animated-text:hover li:nth-child(1) {
-  transform: rotate(180deg);
-}
-
-.animated-text:hover li:nth-child(2) {
-  transform: rotate(180deg);
-}
-
-.animated-text:hover li:nth-child(3) {
-  transform: rotate(180deg);
-}
-
-.animated-text:hover li:nth-child(4) {
-  transform: rotate(180deg);
-}
-
-.animated-text:hover li:nth-child(5) {
-  transform: rotate(180deg);
-}
-
-.animated-text:hover li:nth-child(6) {
-  transform: rotate(180deg);
-}
 /* Estilo de fondo 1 */
 /* .footer {
   background: linear-gradient(-45deg, #376591, #194e83, #3d3396, #694796);
