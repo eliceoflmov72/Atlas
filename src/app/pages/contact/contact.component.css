@@ -1,0 +1,25 @@
+.contact-container {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  padding-block: 0.5em;
+}
+
+.contact-container iframe {
+  width: 60%;
+  border-radius: 15px;
+  box-shadow:
+    0 2px 4px -1px rgba(0, 0, 0, 0.2),
+    0 4px 5px 0 rgba(0, 0, 0, 0.14),
+    0 1px 10px 0 rgba(0, 0, 0, 0.12);
+  margin-top: 2rem;
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1vw;
+  width: 100%;
+  padding-inline: 2vw;
+}
