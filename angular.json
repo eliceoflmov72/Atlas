@@ -3,9 +3,13 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "atlas": {
+    "Zemios": {
       "projectType": "application",
-      "schematics": {},
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -13,34 +17,28 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/atlas",
+            "outputPath": "dist/zemios",
             "index": "src/index.html",
             "browser": "src/main.ts",
-            "polyfills": ["zone.js"],
+            "polyfills": [
+              "zone.js"
+            ],
             "tsConfig": "tsconfig.app.json",
+            "inlineStyleLanguage": "scss",
             "assets": [
               {
                 "glob": "**/*",
                 "input": "public"
-              },
-              {
-                "glob": "**/*",
-                "input": "src/assets"
               }
             ],
             "styles": [
-              "src/styles.css",
-              "node_modules/primeng/resources/primeng.min.css",
-              "primeng/resources/themes/lara-light-blue/theme.css",
-              "node_modules/primeicons/primeicons.css",
-              "src/app/layout/header/header.component.css",
-              "src/assets/styles/_prime.css"
+              "src/styles.scss"
             ],
             "scripts": [],
             "server": "src/main.server.ts",
             "prerender": true,
             "ssr": {
-              "entry": "server.ts"
+              "entry": "src/server.ts"
             }
           },
           "configurations": {
@@ -53,8 +51,8 @@
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "2kB",
-                  "maximumError": "4kB"
+                  "maximumWarning": "4kB",
+                  "maximumError": "8kB"
                 }
               ],
               "outputHashing": "all"
@@ -71,10 +69,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "atlas:build:production"
+              "buildTarget": "Zemios:build:production"
             },
             "development": {
-              "buildTarget": "atlas:build:development"
+              "buildTarget": "Zemios:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -85,26 +83,20 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "polyfills": ["zone.js", "zone.js/testing"],
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ],
             "tsConfig": "tsconfig.spec.json",
+            "inlineStyleLanguage": "scss",
             "assets": [
               {
                 "glob": "**/*",
                 "input": "public"
-              },
-              {
-                "glob": "**/*",
-                "input": "src/assets/",
-                "output": "assets"
               }
             ],
             "styles": [
-              "src/styles.css",
-              "node_modules/primeng/resources/primeng.min.css",
-              "primeng/resources/themes/lara-light-blue/theme.css",
-              "node_modules/primeicons/primeicons.css",
-              "src/app/layout/header/header.component.css",
-              "src/assets/styles/_prime.css"
+              "src/styles.scss"
             ],
             "scripts": []
           }
