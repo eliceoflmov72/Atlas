@@ -13,6 +13,12 @@ body {
     animation: gradient 10s linear infinite;
 }
 
+app-root {
+    display: grid;
+    min-height: 100vh;
+    grid-template-rows: auto 1fr auto;
+}
+
 @keyframes gradient {
     0% {background-position: 0% 50%;}
     50% {background-position: 100% 50%;}
