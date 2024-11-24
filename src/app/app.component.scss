@@ -1,0 +1,33 @@
+/* app-header,
+router-outlet {
+  display: block;
+  margin: 0;
+  padding: 0;
+} */
+.e-lceo {
+    animation: e13 1s linear 10s forwards;
+    position: absolute;
+    opacity: 0;
+    width: 50vw;
+    height: 80vh;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  @keyframes e13 {
+    0%, 100% {
+      opacity: 0;
+      filter: contrast(0);
+      transform: scale(1);
+    }
+    25%, 75% {
+      opacity: 0.5;
+      filter: contrast(1);
+    }
+    50% {
+      transform: scale(1.2) rotatex(20deg);
+      filter: contrast(10) brightness(10) hue-rotate(360deg);
+    }
+  }
