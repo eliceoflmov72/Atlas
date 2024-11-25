@@ -11,4 +11,37 @@ import { RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
   title = 'Zemios';
+
+  pages = [
+    {
+      title: 'Inicio',
+      icon: 'house-fill'
+    },
+    {
+      title: 'Noticias',
+      icon: 'newspaper',
+      sub: [
+        {
+          title: 'Tecnología',
+          icon: 'gear-fill'
+        },
+        {
+          title: 'Empleo',
+          icon: 'briefcase-fill'
+        }
+      ]
+    },
+    {
+      title: 'Cursos',
+      icon: 'book-half'
+    },
+    {
+      title: 'Proyectos',
+      icon: 'box-fill'
+    },
+    {
+      title: 'Contacto',
+      icon: 'info-circle-fill'
+    },
+  ]
 }
