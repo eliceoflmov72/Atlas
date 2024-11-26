@@ -8,9 +8,5 @@ import { RouterLink } from '@angular/router';
   styleUrl: './menu.component.scss'
 })
 export class MenuComponent {
-  @Input() pages: Array<{ title: string, url: string, icon: string }> = new Array
-  log(msg: any) {
-    console.log(msg);
-  }
-
+  @Input() pages: Array<{ title: string, url: string, icon: string }> = []
 }
