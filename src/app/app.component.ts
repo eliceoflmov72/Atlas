@@ -15,32 +15,39 @@ export class AppComponent {
   pages = [
     {
       title: 'Inicio',
+      url: '/',
       icon: 'house-fill'
     },
     {
       title: 'Noticias',
+      url: 'News',
       icon: 'newspaper',
       sub: [
         {
           title: 'Tecnología',
+          url: 'News/Tech',
           icon: 'gear-fill'
         },
         {
           title: 'Empleo',
+          url: 'News/Jobs',
           icon: 'briefcase-fill'
         }
       ]
     },
     {
       title: 'Cursos',
+      url: 'Learning',
       icon: 'book-half'
     },
     {
       title: 'Proyectos',
+      url: 'Projects',
       icon: 'box-fill'
     },
     {
       title: 'Contacto',
+      url: 'Contact',
       icon: 'info-circle-fill'
     },
   ]

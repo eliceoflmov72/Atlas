@@ -3,9 +3,9 @@
         Logo
     </div>
     <ul class="flex-1 flex justify-center gap-10 bg-orange-500">
-        <li>1</li>
-        <li>2</li>
-        <li>3</li>
+        @for (page of pages; track $index) {
+            <li><a [routerLink]="page.url">{{page.title}}</a></li>
+        }
     </ul>
 </div>
   
