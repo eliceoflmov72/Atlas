@@ -1,10 +1,10 @@
-<div class="flex justify-around px-32">
-    <div class=" bg-yellow-500">
-        Logo
+<div class="flex justify-around px-32 py-5 bg-white">
+    <div>
+        <img src="logo.svg" class="w-12" alt="Logo">
     </div>
-    <ul class="flex-1 flex justify-center gap-10 bg-orange-500">
+    <ul class="flex-1 flex justify-center items-center text-neutral-700 text-2xl font-bold gap-10">
         @for (page of pages; track $index) {
-            <li><a [routerLink]="page.url">{{page.title}}</a></li>
+            <li><a class="px-2 hover:text-blue-400" [routerLink]="page.url">{{page.title}}</a></li>
         }
     </ul>
 </div>
