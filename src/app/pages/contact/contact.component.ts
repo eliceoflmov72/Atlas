@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
-import { CardModule } from 'primeng/card';
 
 @Component({
   selector: 'app-contact',
-  standalone: true,
-  imports: [CardModule],
+  imports: [],
   templateUrl: './contact.component.html',
-  styleUrl: './contact.component.css',
+  styleUrl: './contact.component.scss'
 })
-export class ContactComponent {}
+export class ContactComponent {
+
+}
