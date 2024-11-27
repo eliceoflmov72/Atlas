@@ -10,6 +10,7 @@ import { MaintenanceComponent } from './pages/maintenance/maintenance.component'
 
 export const routes: Routes = [
     // { path: '', component: HomeComponent },
+    { path: '', component: MaintenanceComponent },
     // { path: 'News', component: NewsComponent },
     // { path: 'Tech-news', component: TechComponent },
     // { path: 'Job-news', component: JobsComponent },
@@ -17,14 +18,14 @@ export const routes: Routes = [
     // { path: 'Projects', component: ProjectsComponent },
     // { path: 'Contact', component: ContactComponent },
 
-    // { path: '**', redirectTo: '', pathMatch: "full" }
     { path: 'Maintenance', component: MaintenanceComponent },
-
-
+    
+    
     // { path: 'About-us', component: AboutusComponent },
-
+    
     // { path: 'SignIn', component: SigninComponent },
     // { path: 'SignUp', component: SignupComponent },
-
+    
+    // { path: '**', redirectTo: '', pathMatch: "full" }
     { path: '**', redirectTo: 'Maintenance', pathMatch: "full" },
 ];
