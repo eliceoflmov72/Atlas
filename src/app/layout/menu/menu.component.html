@@ -8,14 +8,16 @@
         }
     </ul>
 </div>
-<div class="flex flex-col md:hidden justify-start px-5 py-5 relative bg-white text-neutral-700">
+<div class="flex md:hidden justify-start items-center gap-5 px-5 py-5 relative bg-white text-neutral-700">
+    
     <i class="bi bi-list text-3xl cursor-pointer font-bold" (click)="toggleMenu()"></i>
     @if (menuVisibility) {
-        <ul class="flex-1 flex flex-col items-start text-neutral-700 absolute start-0 mt-12 px-5 py-2 text-2xl bg-white font-bold gap-2 md:gap-4 lg:gap-10">
+        <ul class="flex-1 flex flex-col items-start text-neutral-700 absolute start-0 top-0 mt-16 px-5 py-2 text-2xl bg-white font-bold gap-2 md:gap-4 lg:gap-10">
             @for (page of pages; track $index) {
-                <li><a class="px-2 hover:text-blue-400" [routerLink]="page.url"><i class="bi bi-{{page.icon}}"></i> {{page.title}}</a></li>
+                <li><a class="px-2 hover:text-blue-400" [routerLink]="page.url"><i class="bi bi-{{page.icon}} text-blue-600"></i> {{page.title}}</a></li>
             }
         </ul>
     }
+    <img src="title.svg" routerLink="/" class="cursor-pointer h-6" alt="Logo">
 </div>
   
