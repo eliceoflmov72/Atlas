@@ -1,11 +1,21 @@
-<div class="flex justify-around px-32 py-5 bg-white">
+<div class=" hidden md:flex justify-around px-16 md:px-10 lg:px-28 py-5 bg-white">
     <div>
         <img src="logo.svg" routerLink="/" class="cursor-pointer w-12" alt="Logo">
     </div>
-    <ul class="flex-1 flex justify-center items-center text-neutral-700 text-2xl font-bold gap-10">
+    <ul class="flex-1 flex justify-center items-center text-neutral-700 text-2xl font-bold gap-2 md:gap-4 lg:gap-10">
         @for (page of pages; track $index) {
             <li><a class="px-2 hover:text-blue-400" [routerLink]="page.url">{{page.title}}</a></li>
         }
     </ul>
+</div>
+<div class="flex flex-col md:hidden justify-start px-5 py-5 relative bg-white text-neutral-700">
+    <i class="bi bi-list text-3xl cursor-pointer font-bold" (click)="toggleMenu()"></i>
+    @if (menuVisibility) {
+        <ul class="flex-1 flex flex-col items-start text-neutral-700 absolute start-0 mt-12 px-5 py-2 text-2xl bg-white font-bold gap-2 md:gap-4 lg:gap-10">
+            @for (page of pages; track $index) {
+                <li><a class="px-2 hover:text-blue-400" [routerLink]="page.url"><i class="bi bi-{{page.icon}}"></i> {{page.title}}</a></li>
+            }
+        </ul>
+    }
 </div>
   
