@@ -5,6 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "deploy": "deploy.sh",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:Zemios": "node dist/zemios/server/server.mjs"
