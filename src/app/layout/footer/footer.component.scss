@@ -9,6 +9,17 @@
         -webkit-text-fill-color: unset;
     }
 }
+.twitter {
+    background: linear-gradient(90deg, #757575, #000000);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    &:hover {
+        background: linear-gradient(90deg, #757575, #000000);
+        color: #ffffff;
+        background-clip: unset;
+        -webkit-text-fill-color: unset;
+    }
+}
 .linkedin {
     transition: 100ms;
     color: #0A66C2;
@@ -18,7 +29,7 @@
     }
 }
 
-.linkedin, .instagram {
+.linkedin, .instagram, .twitter {
     padding: 0.2em 0.5em;
     border-radius: 0.2em;
 }

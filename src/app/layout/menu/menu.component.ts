@@ -9,4 +9,8 @@ import { RouterLink } from '@angular/router';
 })
 export class MenuComponent {
   @Input() pages: Array<{ title: string, url: string, icon: string }> = []
+  menuVisibility: boolean = false;
+  toggleMenu() {
+    this.menuVisibility = !this.menuVisibility;
+  }
 }
