@@ -1,5 +1,5 @@
-<div class=" flex justify-around flex-wrap py-10 text-neutral-700">
-    <div class="flex-1 flex flex-col justify-start items-center">
+<div class=" flex justify-center lg:justify-around items-center flex-wrap lg:flex-row lg:flex-nowrap py-10 px-10 gap-3 text-neutral-700">
+    <div class=" flex flex-col gap-2 justify-start items-center order-2 lg:order-1  w-72">
         <a href="mailto:info@zemios.com" class="flex px-2 hover:text-blue-400 font-bold">info&#64;zemios.com</a>
         <ul class="flex gap-4 font-bold">
             <li><a class="instagram" href="https://www.instagram.com/zemios_company">Instagram</a></li>
@@ -7,11 +7,11 @@
             <li><a class="linkedin" href="https://www.linkedin.com/company/zemios/">LinkedIn</a></li>
         </ul>
     </div>
-    <div class="flex-1 flex flex-col justify-start items-center">
+    <div class="flex w-full lg:w-auto flex-col justify-start items-center order-1 lg:order-2">
         <img src="title.svg" routerLink="/" class="cursor-pointer h-10" alt="Title">
     </div>
-    <div class="flex-1 flex justify-center">
-        <ul class="flex flex-wrap">
+    <div class="flex justify-center order-3 w-72">
+        <ul class="flex flex-wrap justify-center lg:justify-start">
             @for (page of pages; track $index) {
             <li><a class="px-2 hover:text-blue-400" [routerLink]="page.url">{{page.title}}</a></li>
             }
