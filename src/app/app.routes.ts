@@ -8,24 +8,27 @@ import { ProjectsComponent } from './pages/projects/projects.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { MaintenanceComponent } from './pages/maintenance/maintenance.component';
 
-export const routes: Routes = [
-    // { path: '', component: HomeComponent },
-    { path: '', component: MaintenanceComponent },
-    // { path: 'News', component: NewsComponent },
-    // { path: 'Tech-news', component: TechComponent },
-    // { path: 'Job-news', component: JobsComponent },
-    // { path: 'Learning', component: LearningComponent },
-    // { path: 'Projects', component: ProjectsComponent },
-    // { path: 'Contact', component: ContactComponent },
+const Maintenance = false;
 
-    { path: 'Maintenance', component: MaintenanceComponent },
-    
-    
-    // { path: 'About-us', component: AboutusComponent },
-    
-    // { path: 'SignIn', component: SigninComponent },
-    // { path: 'SignUp', component: SignupComponent },
-    
-    // { path: '**', redirectTo: '', pathMatch: "full" }
-    { path: '**', redirectTo: 'Maintenance', pathMatch: "full" },
+export const routes: Routes = [
+    ...(Maintenance ? [] : [
+        { path: '', component: HomeComponent },
+        { path: '', component: MaintenanceComponent },
+        { path: 'News', component: NewsComponent },
+        { path: 'Tech-news', component: TechComponent },
+        { path: 'Job-news', component: JobsComponent },
+        { path: 'Learning', component: LearningComponent },
+        { path: 'Projects', component: ProjectsComponent },
+        { path: 'Contact', component: ContactComponent },
+        // { path: 'About-us', component: AboutusComponent },
+
+        // { path: 'SignIn', component: SigninComponent },
+        // { path: 'SignUp', component: SignupComponent },
+        { path: '**', redirectTo: '', pathMatch: "full" as "full" },
+    ]),
+    ...(Maintenance ? [
+        { path: 'Maintenance', component: MaintenanceComponent },
+        { path: '**', redirectTo: 'Maintenance', pathMatch: "full" as "full" },
+    ] : []),
+
 ];
