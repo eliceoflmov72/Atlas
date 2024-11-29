@@ -33,8 +33,7 @@
 
     <!-- Que hacemos -->
     
-    <!-- ¿ TODO:  Hacer mas pequeño esto vvvvvvvvvvv -->
-    <div class="flex flex-wrap justify-around items-center gap-4">
+    <div class="hidden md:flex flex-wrap justify-around items-center gap-4">
         @for (itemList of joinUsList; track $index) {
         <div
             class="bg-white text-blue-800 flex flex-col justify-start items-center text-center px-4 rounded-xl max-w-64 w-full h-80">
@@ -44,7 +43,18 @@
         </div>
         }
     </div>    
-
+    <div class="flex md:hidden bg-white flex-col gap-6 items-start px-4 py-10">
+        @for (itemList of joinUsList; track $index) {
+        <div class="flex items-start gap-4">
+            <img src="icons/{{itemList.icon}}" class="w-16 h-16 md:w-20 md:h-20 object-cover">
+            <div class="flex flex-col justify-center">
+                <p class="font-semibold text-xl md:text-2xl text-blue-800">{{itemList.title}}</p>
+                <p class="text-gray-600 text-sm md:text-base">{{itemList.description}}</p>
+            </div>
+        </div>
+        }
+    </div>
+    
     <!-- Noticias o posts ¿ -->
     <div>
 
