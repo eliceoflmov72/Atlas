@@ -1,14 +1,7 @@
 <div class="flex flex-col gap-10 py-10">
     <!-- Banner presentacion -->
-    <!-- ¿ TODO: Mejorar el diseño de esto, ponerle un fondo al titulo quizas y centrarlo -->
-     <!-- !! A lo mejor no hace falta poner esto¿ vv -->
-     <!-- <div class="flex justify-center flex-col items-center text-center">
-        <img src="title.svg" class="w-1/2" alt="">
-
-         <h2 class="text-2xl md:text-2xl font-semibold mb-4 animate__animated animate__fadeIn animate__delay-1s">
-             Comunidad de Desarrollo Web
-         </h2>
-     </div> -->
+     <!-- ¿ Mejorar diseño del banner -->
+     <!-- !! El banner idealmente deberia medir el alto completo de la pantalla en ese momento, es decir, el usuario segun entra en la pagina no deberia ver lo que hay debajo del banner hasta que no haga scroll -->
     <div class=" text-white py-12 px-6 md:px-20 flex flex-col md:flex-row justify-between items-center rounded-lg overflow-hidden">
         <div class="z-10 flex flex-col md:w-1/2 items-center md:items-start text-center md:text-left">
 
@@ -28,36 +21,43 @@
             <img src="title.svg" alt="Banner Image" class=" w-full max-w-lg transform hover:scale-105 transition-transform duration-500">
         </div>
     </div>
-    
-    
-
-    <!-- Que hacemos -->
-    
-    <div class="hidden md:flex flex-wrap justify-around items-center gap-4">
+    <hr class="w-11/12 m-auto hidden md:flex">
+    <div class="hidden lg:flex flex-wrap justify-center items-center gap-0 xl:gap-4 bg-white">
         @for (itemList of joinUsList; track $index) {
-        <div
-            class="bg-white text-blue-800 flex flex-col justify-start items-center text-center px-4 rounded-xl max-w-64 w-full h-80">
-            <img src="icons/{{itemList.icon}}" class="p-4 mb-4 w-32">
-            <p class="font-semibold text-2xl mb-2">{{itemList.title}}</p>
-            <p class="text-gray-600">{{itemList.description}}</p>
-        </div>
+            <div class="flex flex-col justify-start items-center text-center px-4 rounded-xl transform transition-transform hover:scale-105 w-48 h-72 xl:w-60 xl:h-80">
+              <img src="icons/{{itemList.icon}}" class="p-4 mb-4 w-20 xl:w-32">
+              <p class="font-semibold text-xl xl:text-2xl mb-2 text-blue-800">{{itemList.title}}</p>
+              <p class="text-gray-600 text-sm xl:text-base">{{itemList.description}}</p>
+            </div>
         }
     </div>    
-    <div class="flex md:hidden bg-white flex-col gap-6 items-start px-4 py-10">
+    <div class="flex lg:hidden bg-white flex-col gap-6 items-start px-4 py-10">
         @for (itemList of joinUsList; track $index) {
         <div class="flex items-start gap-4">
-            <img src="icons/{{itemList.icon}}" class="w-16 h-16 md:w-20 md:h-20 object-cover">
+            <img src="icons/{{itemList.icon}}" class="w-16 h-16 object-cover">
             <div class="flex flex-col justify-center">
-                <p class="font-semibold text-xl md:text-2xl text-blue-800">{{itemList.title}}</p>
-                <p class="text-gray-600 text-sm md:text-base">{{itemList.description}}</p>
+                <p class="font-semibold text-xl text-blue-800">{{itemList.title}}</p>
+                <p class="text-gray-600 text-sm">{{itemList.description}}</p>
             </div>
         </div>
         }
     </div>
-    
+    <hr class="w-11/12 m-auto hidden md:flex">
     <!-- Noticias o posts ¿ -->
-    <div>
-
+    <div class="flex flex-col justify-center py-8">
+        <h2 class="m-auto text-3xl md:text-4xl font-bold text-white mb-8">Noticias Relevantes</h2>
+        <!-- ¿ Un efecto de scroll a esto en horizontal estaria increible -->
+        <div class="flex flex-col md:flex-row justify-center items-center gap-6">
+            @for (news of mainNews; track $index) {
+                <div class="bg-white shadow-lg text-blue-800 flex flex-col justify-start items-center text-center px-6 pb-6 rounded-2xl w-96 transition-transform transform hover:scale-105">
+                    <img src="{{news.imageURL}}" alt="Imagen noticia" class="my-6 rounded-2xl object-contain">
+                    <p class="font-semibold text-2xl mb-2">{{news.title}}</p>
+                    <p class="text-gray-600 mb-4">{{news.description}}</p>
+                    <a href="{{news.URL}}" class="text-blue-500 hover:underline font-medium mt-auto" target="_blank">Leer más</a>
+                </div>
+            }
+            
+        </div>
     </div>
 
     <!-- Principales proyectos y cursos -->

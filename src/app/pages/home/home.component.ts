@@ -33,5 +33,14 @@ export class HomeComponent {
       description: 'Haz networking y consigue referencias que te ayuden en tu carrera.',
       icon: 'key.svg',
     }
+  ];
+
+  mainNews = [
+    {
+      title: 'Angular 19 ya esta aquí',
+      description: 'Descubre sus nuevas caracteristicas ya mismo.',
+      imageURL: 'https://miro.medium.com/v2/resize:fit:1400/1*IKZuN_kzUYPl37lBXQkymQ.png',
+      URL: 'https://blog.angular.dev/meet-angular-v19-7b29dfd05b84',
+    }
   ]
 }
