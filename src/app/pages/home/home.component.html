@@ -22,36 +22,39 @@
             <img src="title.svg" alt="Banner Image" class=" w-full max-w-lg transform hover:scale-105 transition-transform duration-500">
         </div>
     </div>
-    
-    
-
-    <!-- Que hacemos -->
-    
-    <div class="hidden md:flex flex-wrap justify-around items-center gap-4">
+    <hr class="w-11/12 m-auto hidden md:flex">
+    <div class="hidden lg:flex flex-wrap justify-center items-center gap-0 xl:gap-4 bg-white">
         @for (itemList of joinUsList; track $index) {
-        <div
-            class="bg-white text-blue-800 flex flex-col justify-start items-center text-center px-4 rounded-xl max-w-64 w-full h-80">
-            <img src="icons/{{itemList.icon}}" class="p-4 mb-4 w-32">
-            <p class="font-semibold text-2xl mb-2">{{itemList.title}}</p>
-            <p class="text-gray-600">{{itemList.description}}</p>
-        </div>
+            <div class="flex flex-col justify-start items-center text-center px-4 rounded-xl transform transition-transform hover:scale-105 w-48 h-72 xl:w-60 xl:h-80">
+              <img src="icons/{{itemList.icon}}" class="p-4 mb-4 w-20 xl:w-32">
+              <p class="font-semibold text-xl xl:text-2xl mb-2 text-blue-800">{{itemList.title}}</p>
+              <p class="text-gray-600 text-sm xl:text-base">{{itemList.description}}</p>
+            </div>
         }
     </div>    
-    <div class="flex md:hidden bg-white flex-col gap-6 items-start px-4 py-10">
+    <div class="flex lg:hidden bg-white flex-col gap-6 items-start px-4 py-10">
         @for (itemList of joinUsList; track $index) {
         <div class="flex items-start gap-4">
-            <img src="icons/{{itemList.icon}}" class="w-16 h-16 md:w-20 md:h-20 object-cover">
+            <img src="icons/{{itemList.icon}}" class="w-16 h-16 object-cover">
             <div class="flex flex-col justify-center">
-                <p class="font-semibold text-xl md:text-2xl text-blue-800">{{itemList.title}}</p>
-                <p class="text-gray-600 text-sm md:text-base">{{itemList.description}}</p>
+                <p class="font-semibold text-xl text-blue-800">{{itemList.title}}</p>
+                <p class="text-gray-600 text-sm">{{itemList.description}}</p>
             </div>
         </div>
         }
     </div>
-    
+    <hr class="w-11/12 m-auto hidden md:flex">
     <!-- Noticias o posts ¿ -->
-    <div>
-
+    <div class="flex flex-col justify-center ">
+        <h2 class="m-auto text-3xl md:text-4xl font-bold">Noticias Relevantes</h2>
+        <div class="flex flex-col md:flex-row justify-center items-center gap-4">
+                <div class="bg-white text-blue-800 flex flex-col justify-start items-center text-center
+                px-4 rounded-xl max-w-64 w-full h-80">
+                <img src="" class="p-4 mb-4 w-5">
+                <p class="font-semibold text-2xl mb-2">Titulo</p>
+                <p class="text-gray-600">Descripcion</p>
+            </div>
+        </div>
     </div>
 
     <!-- Principales proyectos y cursos -->
