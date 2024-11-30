@@ -1,1 +1,72 @@
-<p>home works!</p>
+<div class="flex flex-col gap-10 py-10">
+    <!-- Banner presentacion -->
+    <!-- ¿ TODO: Mejorar el diseño de esto, ponerle un fondo al titulo quizas y centrarlo -->
+     <!-- !! A lo mejor no hace falta poner esto¿ vv -->
+     <!-- <div class="flex justify-center flex-col items-center text-center">
+        <img src="title.svg" class="w-1/2" alt="">
+
+         <h2 class="text-2xl md:text-2xl font-semibold mb-4 animate__animated animate__fadeIn animate__delay-1s">
+             Comunidad de Desarrollo Web
+         </h2>
+     </div> -->
+    <div class=" text-white py-12 px-6 md:px-20 flex flex-col md:flex-row justify-between items-center rounded-lg overflow-hidden">
+        <div class="z-10 flex flex-col md:w-1/2 items-center md:items-start text-center md:text-left">
+
+            <h1 class="text-4xl md:text-5xl font-extrabold leading-tight mb-6 animate__animated animate__fadeIn animate__delay-1s">
+                Conéctate, Aprende y Crece
+            </h1>
+            <p class="text-lg md:text-xl mb-8 opacity-80">
+                Forma parte de una comunidad que impulsa tu desarrollo profesional, compartiendo conocimientos, oportunidades y más.
+            </p>
+            <!-- ¿ Quitar boton ya que aun no hay registro, pero poner un boton a otra cosa, hacer lo mismo con una de las tarjetas que es la de unete -->
+            <!-- <a href="#register" class="bg-white hover:bg-gray-100 text-blue-900 py-3 px-8 rounded-full text-lg font-semibold transition-all transform hover:scale-105 duration-300">
+                ¡Únete Ahora!
+            </a> -->
+        </div>
+        <!-- ¿ Crear imagen o poner algo llamativo -->
+        <div class="relative z-10 mt-6 md:mt-0 md:w-1/2 flex justify-center">
+            <img src="title.svg" alt="Banner Image" class=" w-full max-w-lg transform hover:scale-105 transition-transform duration-500">
+        </div>
+    </div>
+    
+    
+
+    <!-- Que hacemos -->
+    
+    <div class="hidden md:flex flex-wrap justify-around items-center gap-4">
+        @for (itemList of joinUsList; track $index) {
+        <div
+            class="bg-white text-blue-800 flex flex-col justify-start items-center text-center px-4 rounded-xl max-w-64 w-full h-80">
+            <img src="icons/{{itemList.icon}}" class="p-4 mb-4 w-32">
+            <p class="font-semibold text-2xl mb-2">{{itemList.title}}</p>
+            <p class="text-gray-600">{{itemList.description}}</p>
+        </div>
+        }
+    </div>    
+    <div class="flex md:hidden bg-white flex-col gap-6 items-start px-4 py-10">
+        @for (itemList of joinUsList; track $index) {
+        <div class="flex items-start gap-4">
+            <img src="icons/{{itemList.icon}}" class="w-16 h-16 md:w-20 md:h-20 object-cover">
+            <div class="flex flex-col justify-center">
+                <p class="font-semibold text-xl md:text-2xl text-blue-800">{{itemList.title}}</p>
+                <p class="text-gray-600 text-sm md:text-base">{{itemList.description}}</p>
+            </div>
+        </div>
+        }
+    </div>
+    
+    <!-- Noticias o posts ¿ -->
+    <div>
+
+    </div>
+
+    <!-- Principales proyectos y cursos -->
+    <div>
+
+    </div>
+
+    <!-- Unete a nosotros y contacto -->
+    <div>
+
+    </div>
+</div>
