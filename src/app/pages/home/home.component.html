@@ -59,20 +59,19 @@
         </div>
     </div>
 
-<!-- Principales proyectos y cursos -->
-    <div class="flex flex-col justify-center py-24 px-4 bg-white">
-        <h2 class="m-auto text-3xl md:text-4xl font-bold text-neutral-700 mb-8">Amplia tus conocimientos</h2>
-        <div class="flex flex-wrap justify-center gap-8">
-            <!-- Card 1: Proyecto o Curso -->
-            <div class="bg-gray-100 shadow-lg rounded-xl w-72 lg:w-96 p-6 transition-transform transform hover:scale-105 hover:bg-blue-100">
-                <img alt="Imagen del proyecto" class="w-full h-48 object-cover rounded-t-xl mb-6">
-                <p class="font-semibold text-xl text-blue-800 mb-2">titel</p>
-                <p class="text-gray-600 mb-4">description</p>
-                <a  class="text-blue-500 hover:underline font-medium" target="_blank">Ver más</a>
-            </div>
+    <!-- Principales proyectos y cursos -->
+    <div class="flex flex-col lg:flex-row justify-between items-center py-24 px-4 bg-white">
+        <h2 class="m-auto text-3xl md:text-4xl font-bold text-neutral-700 text-center mb-8 lg:mb-auto">Amplia tus conocimientos</h2>
+        <div class="flex flex-row flex-wrap justify-around gap-2 w-full h-auto">
+            @for (course of lastCourses; track $index) {
+                <div class="flex flex-grow flex-col justify-between items-center text-center p-6 bg-gray-800 text-white rounded-2xl transition-all transform">
+                    <h3 class="text-xl font-bold {{course.color}} mb-4">{{course.title}}</h3>
+                    <p class="text-gray-300 mb-4 w-auto sm:w-56">{{course.description}}</p>
+                    <a href="#" class="text-blue-400 hover:underline font-bold">Ver más</a>
+                </div>
+            }
         </div>
     </div>
-
 
     <!-- Unete a nosotros y contacto -->
     <div class="flex flex-col justify-center py-24 px-6 bg-gradient-to-r from-blue-500 to-purple-600">
@@ -88,16 +87,16 @@
             </a>
         </div>
     
-        <div class="flex flex-col lg:flex-row justify-center gap-12 text-center">
+        <div class="flex flex-col lg:flex-row justify-center items-center gap-12 text-center">
             <div class="flex gap-8 mb-6 lg:mb-0">
                 <a href="https://www.instagram.com/zemios_company" target="_blank" class="text-white text-4xl hover:text-gray-200 transition-all">
-                    <i class="bi bi-instagram"></i> <!-- Icono de Instagram -->
+                    <i class="bi bi-instagram"></i>
                 </a>
                 <a href="https://x.com/zemios_company" target="_blank" class="text-white text-4xl hover:text-gray-200 transition-all">
-                    <i class="bi bi-twitter-x"></i> <!-- Icono de Twitter -->
+                    <i class="bi bi-twitter-x"></i> 
                 </a>
                 <a href="https://www.linkedin.com/company/zemios/" target="_blank" class="text-white text-4xl hover:text-gray-200 transition-all">
-                    <i class="bi bi-linkedin"></i> <!-- Icono de LinkedIn -->
+                    <i class="bi bi-linkedin"></i> 
                 </a>
             </div>
     

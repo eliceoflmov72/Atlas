@@ -56,4 +56,22 @@ export class HomeComponent {
       URL: 'https://blog.angular.dev/meet-angular-v19-7b29dfd05b84',
     },
   ]
+
+  lastCourses = [
+    {
+      title: 'Curso de Angular',
+      description: 'Aprende a crear aplicaciones web con Angular',
+      color: 'text-red-500'
+    },
+    {
+      title: 'Curso de React',
+      description: 'Aprende a crear aplicaciones web con React',
+      color: 'text-blue-500'
+    },
+    {
+      title: 'Curso de Vue.js',
+      description: 'Aprende a crear aplicaciones web con Vue.js',
+      color: 'text-green-500'
+    }
+  ]
 }
