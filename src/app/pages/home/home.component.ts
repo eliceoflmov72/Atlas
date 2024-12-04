@@ -36,44 +36,7 @@ export class HomeComponent {
     }
   ];
 
-  mainNews = [
-    {
-      title: 'Angular 19 ya esta aquí',
-      description: 'Descubre sus nuevas caracteristicas ya mismo.',
-      imageURL: 'https://miro.medium.com/v2/resize:fit:1400/1*IKZuN_kzUYPl37lBXQkymQ.png',
-      URL: 'https://blog.angular.dev/meet-angular-v19-7b29dfd05b84',
-    },
-    {
-      title: 'Angular 19 ya esta aquí',
-      description: 'Descubre sus nuevas caracteristicas ya mismo.',
-      imageURL: 'https://miro.medium.com/v2/resize:fit:1400/1*IKZuN_kzUYPl37lBXQkymQ.png',
-      URL: 'https://blog.angular.dev/meet-angular-v19-7b29dfd05b84',
-    },
-    {
-      title: 'Angular 19 ya esta aquí',
-      description: 'Descubre sus nuevas caracteristicas ya mismo.',
-      imageURL: 'https://miro.medium.com/v2/resize:fit:1400/1*IKZuN_kzUYPl37lBXQkymQ.png',
-      URL: 'https://blog.angular.dev/meet-angular-v19-7b29dfd05b84',
-    },
-  ]
-
-  lastCourses = [
-    {
-      title: 'Curso de Angular',
-      description: 'Aprende a crear aplicaciones web con Angular',
-      color: 'text-red-500'
-    },
-    {
-      title: 'Curso de React',
-      description: 'Aprende a crear aplicaciones web con React',
-      color: 'text-blue-500'
-    },
-    {
-      title: 'Curso de Vue.js',
-      description: 'Aprende a crear aplicaciones web con Vue.js',
-      color: 'text-green-500'
-    }
-  ]
-
+  mainNews: Array<{title: string, description: string, url: string, imageUrl: string}> = [];
+  lastCourses: Array<{ title: string, description: string, url: string, color: string }> = [];
   lastProyects: Array<{ title: string, description: string, image: string, collaborators: Array<{ image: string, name: string }> }> = [];
 }
