@@ -74,4 +74,25 @@ export class HomeComponent {
       color: 'text-green-500'
     }
   ]
+
+  lastProyects = [
+    {
+      title: 'Proyecto 1',
+      description: 'Este es un proyecto de ejemplo',
+      image: 'https://picsum.photos/200/300',
+      URL: 'https://www.google.com',
+      collaborators: [
+        {
+          name: 'Juan',
+          image: 'https://picsum.photos/500/300',
+          url: 'profileURL'
+        },
+        {
+          name: 'Pedro',
+          image: 'https://picsum.photos/800/300',
+          url: 'profileURL'
+        }
+      ]
+    }
+  ]
 }
