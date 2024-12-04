@@ -1,6 +1,6 @@
 <div class="flex flex-col">
-     <div class="banner text-white py-24 px-6 md:px-20 flex flex-col md:flex-row justify-around items-center gap-8 rounded-lg">
-        <div class="z-10 flex flex-col md:w-1/2 items-center md:items-start text-center md:text-left">
+     <div class="banner text-white py-24 px-6 md:px-20 flex flex-wrap flex-col xl:flex-row justify-around items-center gap-8 rounded-lg">
+        <div class="flex flex-col items-center md:items-start text-center md:text-left max-w-lg order-1 md:order-2 xl:order-1">
             <h1 class="text-4xl md:text-5xl font-extrabold leading-tight mb-4 animate__animated animate__fadeIn animate__delay-1s">
                 Conéctate, Aprende y Crece
             </h1>
@@ -10,7 +10,7 @@
             <p class="text-lg md:text-xl mb-6 opacity-80">
                 Compartimos conocimientos, oportunidades y mucho más para ayudarte a avanzar.
             </p>
-            <div class="flex space-x-4">
+            <div class="flex flex-wrap justify-center gap-3 items-center text-center">
                 <a routerLink="/explore" class="bg-white hover:bg-gray-100 text-blue-900 py-3 px-8 rounded-full text-lg font-semibold transition-all transform hover:scale-105 duration-300">
                     Explora la Comunidad
                 </a>
@@ -19,8 +19,8 @@
                 </a>
             </div>
         </div>
-        <div class="relative z-10 mt-6 md:mt-0 md:w-1/2 flex justify-center">
-            <img src="images/title.svg" alt="Banner Image" class="w-full max-w-lg transform hover:scale-105 transition-transform duration-500 bannerImage">
+        <div class="flex justify-center order-2 md:order-1 xl:order-2 px-3 sm:px-0">
+            <img src="images/title.svg" alt="Banner Image" class=" h-20 transform hover:scale-105 transition-transform duration-500 bannerImage">
         </div>
     </div>
     
