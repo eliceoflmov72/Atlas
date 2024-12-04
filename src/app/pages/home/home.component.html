@@ -44,8 +44,9 @@
     <!-- Noticias o posts ¿ -->
     <div class="flex flex-col justify-center py-8 px-4">
         <h2 class="m-auto text-3xl md:text-4xl font-bold text-white mb-8">Noticias Relevantes</h2>
-        <!-- ¿ Un efecto de scroll a esto en horizontal estaria increible -->
-        <div class="flex flex-col md:flex-row justify-center items-center gap-6">
+        <!-- ¿ Un efecto de carrusel estaria increible -->
+         <!-- PrimeNG tiene unos carruseles muy bonitos pero estan en beta para angular 19 -->
+        <div class="flex flex-col md:flex-row flex-wrap justify-center items-center gap-6">
             @for (news of mainNews; track $index) {
                 <div class="bg-white shadow-lg text-blue-800 flex flex-col justify-start items-center text-center px-6 pb-6 rounded-2xl w-96 transition-transform transform hover:scale-105">
                     <img src="{{news.imageURL}}" alt="Imagen noticia" class="my-6 rounded-2xl object-contain">
@@ -59,12 +60,14 @@
     </div>
 
     <!-- Principales proyectos y cursos -->
-    <div>
+    <div class="flex flex-col justify-center py-8 px-4 bg-white">
+        <h2 class="m-auto text-3xl md:text-4xl font-bold text-neutral-700 mb-8">Amplia tus conocimientos</h2>
 
     </div>
 
     <!-- Unete a nosotros y contacto -->
-    <div>
-
+    <div class="flex flex-col justify-center py-8 px-4">
+        <h2 class="m-auto text-3xl md:text-4xl font-bold text-white mb-8">Únete a Nosotros</h2>
+        
     </div>
 </div>
