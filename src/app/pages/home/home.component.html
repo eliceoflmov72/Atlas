@@ -42,54 +42,63 @@
         }
     </div>
     <!-- Noticias o posts ¿ -->
-    <div class="flex flex-col justify-center py-24 px-4">
-        <h2 class="m-auto text-3xl md:text-4xl font-bold text-white mb-8">Noticias relevantes</h2>
-        <!-- ¿ Un efecto de carrusel estaria increible -->
-         <!-- PrimeNG tiene unos carruseles muy bonitos pero estan en beta para angular 19 -->
-        <div class="flex flex-col md:flex-row flex-wrap justify-center items-center gap-6">
-            @for (news of mainNews; track $index) {
-                <div class="bg-white shadow-lg text-blue-800 flex flex-col justify-start items-center text-center px-6 pb-6 rounded-2xl max-w-96 transition-transform transform hover:scale-105">
-                    <img src="{{news.imageURL}}" alt="Imagen noticia" class="my-6 rounded-2xl object-contain">
-                    <p class="font-semibold text-2xl mb-2">{{news.title}}</p>
-                    <p class="text-gray-600 mb-4">{{news.description}}</p>
-                    <a href="{{news.URL}}" class="text-blue-500 hover:underline font-medium mt-auto" target="_blank">Leer más</a>
-                </div>
-            }
-            
+    @if (mainNews.length) {    
+        <div class="flex flex-col justify-center py-24 px-4">
+            <h2 class="m-auto text-3xl md:text-4xl font-bold text-white mb-8">Noticias relevantes</h2>
+            <!-- ¿ Un efecto de carrusel estaria increible -->
+            <!-- PrimeNG tiene unos carruseles muy bonitos pero estan en beta para angular 19 -->
+            <div class="flex flex-col md:flex-row flex-wrap justify-center items-center gap-6">
+                @for (news of mainNews; track $index) {
+                    @if ($index < 3) {
+                        <div class="bg-white shadow-lg text-blue-800 flex flex-col justify-start items-center text-center px-6 pb-6 rounded-2xl max-w-96 transition-transform transform hover:scale-105">
+                            <img src="{{news.imageURL}}" alt="Imagen noticia" class="my-6 rounded-2xl object-contain">
+                            <p class="font-semibold text-2xl mb-2">{{news.title}}</p>
+                            <p class="text-gray-600 mb-4">{{news.description}}</p>
+                            <a href="{{news.URL}}" class="text-blue-500 hover:underline font-medium mt-auto" target="_blank">Leer más</a>
+                        </div>
+                    }
+                }
+                
+            </div>
         </div>
-    </div>
+    }
 
-    <!-- Principales proyectos y cursos -->
     <div class="bg-white">
         <div class="flex flex-col lg:flex-row justify-between items-center py-24 px-4">
             <h2 class="m-auto text-3xl md:text-4xl font-bold text-neutral-700 text-center mb-8 lg:mb-auto">Amplia tus conocimientos</h2>
             <div class="flex flex-row flex-wrap justify-around gap-2 w-full h-auto">
                 @for (course of lastCourses; track $index) {
-                    <div class="flex flex-grow flex-col justify-between items-center text-center p-6 bg-gray-800 text-white rounded-2xl transition-all transform">
-                        <h3 class="text-xl font-bold {{course.color}} mb-4">{{course.title}}</h3>
-                        <p class="text-gray-300 mb-4 w-auto sm:w-56">{{course.description}}</p>
-                        <a href="#" class="text-blue-400 hover:underline font-bold">Ver más</a>
-                    </div>
+                    @if ($index < 3) {
+                        <div class="flex flex-grow flex-col justify-between items-center text-center p-6 bg-gray-800 text-white rounded-2xl transition-all transform">
+                            <h3 class="text-xl font-bold {{course.color}} mb-4">{{course.title}}</h3>
+                            <p class="text-gray-300 mb-4 w-auto sm:w-56">{{course.description}}</p>
+                            <a href="#" class="text-blue-400 hover:underline font-bold">Ver más</a>
+                        </div>
+                    }
                 }
             </div>
         </div>
-        <div class="flex flex-col lg:flex-row justify-between items-center py-24 px-4">
-            <div class="flex flex-row flex-wrap justify-around gap-2 w-full h-auto">
-                @for (proyect of lastProyects; track $index) {
-                    <div class=" relative flex flex-col justify-between items-center text-center p-6 bg-gray-800 text-white rounded-2xl transition-all transform">
-                        <img src="https://fastly.picsum.photos/id/975/500/300.jpg?hmac=FvXkBFq0L6vVyBVl0JTLtBX8GCmaJr3CCteIxCKXNuo" class="top-0 rounded-2xl absolute h-full object-cover w-full opacity-0 hover:opacity-100">
-                        <h3 class="text-xl font-bold text-neutral-700 mb-4">{{proyect.title}}</h3>
-                        <p class="text-gray-300 mb-4 w-auto sm:w-56">{{proyect.description}}</p>
-                        <ul class="flex list-none m-0">
-                            @for (collaborator of proyect.collaborators; track $index) {
-                                <li class="text-gray-300 border-2 rounded-full border-gray-800 -ms-5"><img src="{{collaborator.image}}" alt="{{collaborator.name}} photo" class="w-12 h-12 object-cover rounded-full"></li>
-                            }
-                        </ul>
-                    </div>
-                }
+        @if (lastProyects.length) {
+            <div class="flex flex-col lg:flex-row justify-between items-center py-24 px-4">
+                <div class="flex flex-row flex-wrap justify-around gap-2 w-full h-auto">
+                    @for (proyect of lastProyects; track $index) {
+                        @if ($index < 3) {
+                            <div class=" relative flex flex-col justify-between items-center text-center p-6 bg-gray-800 text-white rounded-2xl transition-all transform">
+                                <img src="{{proyect.image}}" class="top-0 rounded-2xl absolute h-full object-cover w-full opacity-0 hover:opacity-100">
+                                <h3 class="text-xl font-bold text-neutral-700 mb-4">{{proyect.title}}</h3>
+                                <p class="text-gray-300 mb-4 w-auto sm:w-56">{{proyect.description}}</p>
+                                <ul class="flex list-none m-0">
+                                    @for (collaborator of proyect.collaborators; track $index) {
+                                        <li class="text-gray-300 border-2 rounded-full border-gray-800 -ms-5"><img src="{{collaborator.image}}" alt="{{collaborator.name}} photo" class="w-12 h-12 object-cover rounded-full"></li>
+                                    }
+                                </ul>
+                            </div>
+                        }
+                    }
+                </div>
+                <h2 class="m-auto text-3xl md:text-4xl font-bold text-neutral-700 text-center mb-8 lg:mb-auto">Colaboremos juntos</h2>
             </div>
-            <h2 class="m-auto text-3xl md:text-4xl font-bold text-neutral-700 text-center mb-8 lg:mb-auto">Colaboremos juntos</h2>
-        </div>
+        }
     </div>
 
     <!-- Unete a nosotros y contacto -->
