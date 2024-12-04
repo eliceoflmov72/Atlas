@@ -23,6 +23,32 @@
             <img src="images/title.svg" alt="Banner Image" class=" h-20 transform hover:scale-105 transition-transform duration-500 bannerImage">
         </div>
     </div>
+    <div class="bg-white py-16 px-6 shadow-lg rounded-t-xl">
+        <h2 class="text-3xl md:text-4xl font-bold text-blue-800 text-center mb-6">¿Quiénes Somos?</h2>
+        <p class="text-lg md:text-xl text-gray-700 text-center mb-6">
+            En Zemios, somos una comunidad apasionada de profesionales y estudiantes del mundo digital, unidos por el aprendizaje y el crecimiento continuo.
+        </p>
+        <p class="text-lg md:text-xl text-gray-700 text-center mb-8">
+            Nos dedicamos a crear un espacio donde cada miembro pueda aprender, enseñar y conectar con otros. Nuestro objetivo es impulsar el desarrollo personal y profesional, promoviendo la colaboración y las oportunidades para todos.
+        </p>
+        <div class="flex justify-center gap-4 mb-6">
+            <a routerLink="/about-us" class="bg-blue-900 text-white hover:bg-blue-800 py-3 px-8 rounded-full text-lg font-semibold transition-all transform hover:scale-105 duration-300">
+                Conoce más sobre nosotros
+            </a>
+        </div>
+        <div class="flex justify-center gap-8 text-blue-900">
+            <a href="https://www.instagram.com/zemios_company" target="_blank" class="text-4xl hover:text-gray-600 transition-all">
+                <i class="bi bi-instagram"></i>
+            </a>
+            <a href="https://x.com/zemios_company" target="_blank" class="text-4xl hover:text-gray-600 transition-all">
+                <i class="bi bi-twitter-x"></i>
+            </a>
+            <a href="https://www.linkedin.com/company/zemios/" target="_blank" class="text-4xl hover:text-gray-600 transition-all">
+                <i class="bi bi-linkedin"></i>
+            </a>
+        </div>
+    </div>
+    
     
     <div class="hidden lg:flex flex-wrap justify-center items-center gap-0 xl:gap-4 bg-white py-5">
         @for (itemList of joinUsList; track $index) {
