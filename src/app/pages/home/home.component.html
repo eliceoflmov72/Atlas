@@ -1,26 +1,29 @@
 <div class="flex flex-col">
-    <!-- Banner presentacion -->
-     <!-- ¿ Mejorar diseño del banner -->
-     <!-- !! El banner idealmente deberia medir el alto completo de la pantalla en ese momento, es decir, el usuario segun entra en la pagina no deberia ver lo que hay debajo del banner hasta que no haga scroll -->
-    <div class="banner text-white py-24 px-6 md:px-20 flex flex-col md:flex-row justify-between items-center rounded-lg">
+     <div class="banner text-white py-24 px-6 md:px-20 flex flex-col md:flex-row justify-around items-center gap-8 rounded-lg">
         <div class="z-10 flex flex-col md:w-1/2 items-center md:items-start text-center md:text-left">
-
-            <h1 class="text-4xl md:text-5xl font-extrabold leading-tight mb-6 animate__animated animate__fadeIn animate__delay-1s">
+            <h1 class="text-4xl md:text-5xl font-extrabold leading-tight mb-4 animate__animated animate__fadeIn animate__delay-1s">
                 Conéctate, Aprende y Crece
             </h1>
-            <p class="text-lg md:text-xl mb-8 opacity-80">
-                Forma parte de una comunidad que impulsa tu desarrollo profesional, compartiendo conocimientos, oportunidades y más.
+            <h2 class="text-xl md:text-2xl font-semibold opacity-80 mb-6">
+                Forma parte de una comunidad que impulsa tu desarrollo profesional
+            </h2>
+            <p class="text-lg md:text-xl mb-6 opacity-80">
+                Compartimos conocimientos, oportunidades y mucho más para ayudarte a avanzar.
             </p>
-            <!-- ¿ Quitar boton ya que aun no hay registro, pero poner un boton a otra cosa, hacer lo mismo con una de las tarjetas que es la de unete -->
-            <!-- <a href="#register" class="bg-white hover:bg-gray-100 text-blue-900 py-3 px-8 rounded-full text-lg font-semibold transition-all transform hover:scale-105 duration-300">
-                ¡Únete Ahora!
-            </a> -->
+            <div class="flex space-x-4">
+                <a routerLink="/explore" class="bg-white hover:bg-gray-100 text-blue-900 py-3 px-8 rounded-full text-lg font-semibold transition-all transform hover:scale-105 duration-300">
+                    Explora la Comunidad
+                </a>
+                <a routerLink="/sign-in" class="bg-transparent border-2 border-white text-white py-3 px-8 rounded-full text-lg font-semibold transition-all transform hover:scale-105 duration-300">
+                    Únete a Nosotros
+                </a>
+            </div>
         </div>
-        <!-- ¿ Crear imagen o poner algo llamativo -->
         <div class="relative z-10 mt-6 md:mt-0 md:w-1/2 flex justify-center">
-            <img src="images/title.svg" alt="Banner Image" class=" w-full max-w-lg transform hover:scale-105 transition-transform duration-500">
+            <img src="images/title.svg" alt="Banner Image" class="w-full max-w-lg transform hover:scale-105 transition-transform duration-500 bannerImage">
         </div>
     </div>
+    
     <div class="hidden lg:flex flex-wrap justify-center items-center gap-0 xl:gap-4 bg-white py-5">
         @for (itemList of joinUsList; track $index) {
             <div class="flex flex-col justify-start items-center text-center px-4 rounded-xl transform transition-transform hover:scale-105 w-48 h-72 xl:w-60 xl:h-80">
