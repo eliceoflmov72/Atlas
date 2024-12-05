@@ -18,7 +18,7 @@ export const routes: Routes = [
     // { path: 'Job-news', component: JobsComponent },
     // { path: 'Learning', component: LearningComponent },
     // { path: 'Projects', component: ProjectsComponent },
-    // { path: 'Contact', component: ContactComponent },
+    { path: 'Contact', component: ContactComponent },
     // { path: 'About-us', component: AboutusComponent },
 
     // { path: 'SignIn', component: SigninComponent },
