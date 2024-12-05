@@ -9,6 +9,7 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { MaintenanceComponent } from './pages/maintenance/maintenance.component';
 import { SigninComponent } from './pages/auth/signin/signin.component';
 import { SignupComponent } from './pages/auth/signup/signup.component';
+import { ProfileComponent } from './pages/auth/profile/profile.component';
 
 const Maintenance = false;
 
@@ -18,13 +19,14 @@ export const routes: Routes = [
     { path: 'News', component: NewsComponent },
     // { path: 'Tech-news', component: TechComponent },
     // { path: 'Job-news', component: JobsComponent },
-    // { path: 'Learning', component: LearningComponent },
+    { path: 'Learning', component: LearningComponent },
     { path: 'Projects', component: ProjectsComponent },
     { path: 'Contact', component: ContactComponent },
     // { path: 'About-us', component: AboutusComponent },
 
     { path: 'SignIn', component: SigninComponent },
     { path: 'SignUp', component: SignupComponent },
+    { path: 'Profile', component: ProfileComponent },
 
     { path: 'Maintenance', component: MaintenanceComponent },
     // { path: '**', redirectTo: '', pathMatch: "full" as "full" },
