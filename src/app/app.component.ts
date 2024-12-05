@@ -38,7 +38,7 @@ export class AppComponent {
     {
       title: 'Foro',
       url: 'Explore',
-      icon: 'envelope-fill',
+      icon: 'chat-dots-fill',
     },
     {
       title: 'Cursos',
