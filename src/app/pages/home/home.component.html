@@ -1,31 +1,59 @@
-<div class="flex flex-col gap-10 py-10">
-    <!-- Banner presentacion -->
-     <!-- ¿ Mejorar diseño del banner -->
-     <!-- !! El banner idealmente deberia medir el alto completo de la pantalla en ese momento, es decir, el usuario segun entra en la pagina no deberia ver lo que hay debajo del banner hasta que no haga scroll -->
-    <div class=" text-white py-12 px-6 md:px-20 flex flex-col md:flex-row justify-between items-center rounded-lg overflow-hidden">
-        <div class="z-10 flex flex-col md:w-1/2 items-center md:items-start text-center md:text-left">
-
-            <h1 class="text-4xl md:text-5xl font-extrabold leading-tight mb-6 animate__animated animate__fadeIn animate__delay-1s">
+<div class="flex flex-col">
+     <div class="banner text-white py-24 px-6 md:px-20 flex flex-wrap flex-col xl:flex-row justify-around items-center gap-8 rounded-lg">
+        <div class="flex flex-col items-center md:items-start text-center md:text-left max-w-lg order-1 md:order-2 xl:order-1">
+            <h1 class="text-4xl md:text-5xl font-extrabold leading-tight mb-4 animate__animated animate__fadeIn animate__delay-1s">
                 Conéctate, Aprende y Crece
             </h1>
-            <p class="text-lg md:text-xl mb-8 opacity-80">
-                Forma parte de una comunidad que impulsa tu desarrollo profesional, compartiendo conocimientos, oportunidades y más.
+            <h2 class="text-xl md:text-2xl font-semibold opacity-80 mb-6">
+                Forma parte de una comunidad que impulsa tu desarrollo profesional
+            </h2>
+            <p class="text-lg md:text-xl mb-6 opacity-80">
+                Compartimos conocimientos, oportunidades y mucho más para ayudarte a avanzar.
             </p>
-            <!-- ¿ Quitar boton ya que aun no hay registro, pero poner un boton a otra cosa, hacer lo mismo con una de las tarjetas que es la de unete -->
-            <!-- <a href="#register" class="bg-white hover:bg-gray-100 text-blue-900 py-3 px-8 rounded-full text-lg font-semibold transition-all transform hover:scale-105 duration-300">
-                ¡Únete Ahora!
-            </a> -->
+            <div class="flex flex-wrap justify-center gap-3 items-center text-center">
+                <a routerLink="/Explore" class="bg-white hover:bg-gray-100 text-blue-900 py-3 px-8 rounded-full text-lg font-semibold transition-all transform hover:scale-105 duration-300">
+                    Explora la Comunidad
+                </a>
+                <a routerLink="/SignIn" class="bg-transparent border-2 border-white text-white py-3 px-8 rounded-full text-lg font-semibold transition-all transform hover:scale-105 duration-300">
+                    Únete a Nosotros
+                </a>
+            </div>
         </div>
-        <!-- ¿ Crear imagen o poner algo llamativo -->
-        <div class="relative z-10 mt-6 md:mt-0 md:w-1/2 flex justify-center">
-            <img src="title.svg" alt="Banner Image" class=" w-full max-w-lg transform hover:scale-105 transition-transform duration-500">
+        <div class="flex justify-center order-2 md:order-1 xl:order-2 px-3 sm:px-0">
+            <img src="images/title.svg" alt="Banner Image" class=" h-20 transform hover:scale-105 transition-transform duration-500 bannerImage">
         </div>
     </div>
-    <hr class="w-11/12 m-auto hidden md:flex">
-    <div class="hidden lg:flex flex-wrap justify-center items-center gap-0 xl:gap-4 bg-white">
+    <div class="bg-white py-16 px-6 shadow-lg rounded-t-xl">
+        <h2 class="text-3xl md:text-4xl font-bold text-blue-800 text-center mb-6">¿Quiénes Somos?</h2>
+        <p class="text-lg md:text-xl text-gray-700 text-center mb-6">
+            En Zemios, somos una comunidad apasionada de profesionales y estudiantes del mundo digital, unidos por el aprendizaje y el crecimiento continuo.
+        </p>
+        <p class="text-lg md:text-xl text-gray-700 text-center mb-8">
+            Nos dedicamos a crear un espacio donde cada miembro pueda aprender, enseñar y conectar con otros. Nuestro objetivo es impulsar el desarrollo personal y profesional, promoviendo la colaboración y las oportunidades para todos.
+        </p>
+        <div class="flex justify-center gap-4 mb-6">
+            <a routerLink="/Contact" class="bg-blue-900 text-white hover:bg-blue-800 py-3 px-8 rounded-full text-lg font-semibold transition-all transform hover:scale-105 duration-300">
+                Conoce más sobre nosotros
+            </a>
+        </div>
+        <div class="flex justify-center gap-8 text-blue-900">
+            <a href="https://www.instagram.com/zemios_company" target="_blank" class="text-4xl hover:text-gray-600 transition-all">
+                <i class="bi bi-instagram"></i>
+            </a>
+            <a href="https://x.com/zemios_company" target="_blank" class="text-4xl hover:text-gray-600 transition-all">
+                <i class="bi bi-twitter-x"></i>
+            </a>
+            <a href="https://www.linkedin.com/company/zemios/" target="_blank" class="text-4xl hover:text-gray-600 transition-all">
+                <i class="bi bi-linkedin"></i>
+            </a>
+        </div>
+    </div>
+    
+    
+    <div class="hidden lg:flex flex-wrap justify-center items-center gap-0 xl:gap-4 bg-white py-5">
         @for (itemList of joinUsList; track $index) {
-            <div class="flex flex-col justify-start items-center text-center px-4 rounded-xl transform transition-transform hover:scale-105 w-48 h-72 xl:w-60 xl:h-80">
-              <img src="icons/{{itemList.icon}}" class="p-4 mb-4 w-20 xl:w-32">
+            <div class="flex flex-col justify-start items-center text-center px-4 rounded-xl transform transition-transform hover:scale-105 w-48 h-72 xl:w-60 xl:h-80 cursor-pointer" [routerLink]="itemList.url">
+              <img src="icons/{{itemList.icon}}" class="p-4 mb-4 w-20 xl:w-32" alt="icon">
               <p class="font-semibold text-xl xl:text-2xl mb-2 text-blue-800">{{itemList.title}}</p>
               <p class="text-gray-600 text-sm xl:text-base">{{itemList.description}}</p>
             </div>
@@ -33,8 +61,8 @@
     </div>    
     <div class="flex lg:hidden bg-white flex-col gap-6 items-start px-4 py-10">
         @for (itemList of joinUsList; track $index) {
-        <div class="flex items-start gap-4">
-            <img src="icons/{{itemList.icon}}" class="w-16 h-16 object-cover">
+        <div class="flex items-start gap-4" [routerLink]="itemList.url" >
+            <img src="icons/{{itemList.icon}}" class="w-16 h-16 object-cover" alt="icon">
             <div class="flex flex-col justify-center">
                 <p class="font-semibold text-xl text-blue-800">{{itemList.title}}</p>
                 <p class="text-gray-600 text-sm">{{itemList.description}}</p>
@@ -42,31 +70,101 @@
         </div>
         }
     </div>
-    <hr class="w-11/12 m-auto hidden md:flex">
     <!-- Noticias o posts ¿ -->
-    <div class="flex flex-col justify-center py-8">
-        <h2 class="m-auto text-3xl md:text-4xl font-bold text-white mb-8">Noticias Relevantes</h2>
-        <!-- ¿ Un efecto de scroll a esto en horizontal estaria increible -->
-        <div class="flex flex-col md:flex-row justify-center items-center gap-6">
-            @for (news of mainNews; track $index) {
-                <div class="bg-white shadow-lg text-blue-800 flex flex-col justify-start items-center text-center px-6 pb-6 rounded-2xl w-96 transition-transform transform hover:scale-105">
-                    <img src="{{news.imageURL}}" alt="Imagen noticia" class="my-6 rounded-2xl object-contain">
-                    <p class="font-semibold text-2xl mb-2">{{news.title}}</p>
-                    <p class="text-gray-600 mb-4">{{news.description}}</p>
-                    <a href="{{news.URL}}" class="text-blue-500 hover:underline font-medium mt-auto" target="_blank">Leer más</a>
-                </div>
-            }
-            
+    @if (mainNews.length) {    
+        <div class="flex flex-col justify-center py-24 px-4">
+            <h2 class="m-auto text-3xl md:text-4xl font-bold text-white mb-8">Noticias relevantes</h2>
+            <!-- ¿ Un efecto de carrusel estaria increible -->
+            <!-- PrimeNG tiene unos carruseles muy bonitos pero estan en beta para angular 19 -->
+            <div class="flex flex-col md:flex-row flex-wrap justify-center items-center gap-6">
+                @for (news of mainNews; track $index) {
+                    @if ($index < 3) {
+                        <div class="bg-white shadow-lg text-blue-800 flex flex-col justify-start items-center text-center px-6 pb-6 rounded-2xl max-w-96 transition-transform transform hover:scale-105">
+                            <img src="{{news.imageUrl}}" alt="Imagen noticia" class="my-6 rounded-2xl object-contain">
+                            <p class="font-semibold text-2xl mb-2">{{news.title}}</p>
+                            <p class="text-gray-600 mb-4">{{news.description}}</p>
+                            <a href="{{news.url}}" class="text-blue-500 hover:underline font-medium mt-auto" target="_blank">Leer más</a>
+                        </div>
+                    }
+                }
+                
+            </div>
         </div>
-    </div>
+    }
 
-    <!-- Principales proyectos y cursos -->
-    <div>
-
+    
+    <div class="bg-white">
+        @if (lastCourses.length) {
+            <div class="flex flex-col lg:flex-row justify-between items-center py-24 px-4">
+                <h2 class="m-auto text-3xl md:text-4xl font-bold text-neutral-700 text-center mb-8 lg:mb-auto">Amplia tus conocimientos</h2>
+                <div class="flex flex-row flex-wrap justify-around gap-2 w-full h-auto">
+                    @for (course of lastCourses; track $index) {
+                        @if ($index < 3) {
+                            <div class="flex flex-grow flex-col justify-between items-center text-center p-6 bg-gray-800 text-white rounded-2xl transition-all transform">
+                                <h3 class="text-xl font-bold {{course.color}} mb-4">{{course.title}}</h3>
+                                <p class="text-gray-300 mb-4 w-auto sm:w-56">{{course.description}}</p>
+                                <a href="#" class="text-blue-400 hover:underline font-bold">Ver más</a>
+                            </div>
+                        }
+                    }
+                </div>
+            </div>
+        }
+        @if (lastProyects.length) {
+            <div class="flex flex-col lg:flex-row justify-between items-center py-24 px-4">
+                <div class="flex flex-row flex-wrap justify-around gap-2 w-full h-auto">
+                    @for (proyect of lastProyects; track $index) {
+                        @if ($index < 3) {
+                            <div class=" relative flex flex-col justify-between items-center text-center p-6 bg-gray-800 text-white rounded-2xl transition-all transform">
+                                <img src="{{proyect.image}}" class="top-0 rounded-2xl absolute h-full object-cover w-full opacity-0 hover:opacity-100" alt="Proyect Image">
+                                <h3 class="text-xl font-bold text-neutral-700 mb-4">{{proyect.title}}</h3>
+                                <p class="text-gray-300 mb-4 w-auto sm:w-56">{{proyect.description}}</p>
+                                <ul class="flex list-none m-0">
+                                    @for (collaborator of proyect.collaborators; track $index) {
+                                        <li class="text-gray-300 border-2 rounded-full border-gray-800 -ms-5"><img src="{{collaborator.image}}" alt="{{collaborator.name}} photo" class="w-12 h-12 object-cover rounded-full"></li>
+                                    }
+                                </ul>
+                            </div>
+                        }
+                    }
+                </div>
+                <h2 class="m-auto text-3xl md:text-4xl font-bold text-neutral-700 text-center mb-8 lg:mb-auto">Colaboremos juntos</h2>
+            </div>
+        }
     </div>
 
     <!-- Unete a nosotros y contacto -->
-    <div>
-
+    <div class="flex flex-col justify-center py-24 px-6 bg-gradient-to-r from-blue-500 to-purple-600">
+        <h2 class="m-auto text-3xl md:text-4xl font-bold text-white mb-8">Únete a nosotros</h2>
+    
+        <p class="text-white text-lg md:text-xl mb-8 text-center drop-shadow-lg">
+            Forma parte de una comunidad vibrante que comparte conocimientos, oportunidades y proyectos. ¡Juntos podemos crecer y alcanzar nuevas metas!
+        </p>
+    
+        <div class="text-center mb-10">
+            <a routerLink="/SignUp" class="bg-white text-neutral-700 hover:bg-gray-100 font-bold py-2 px-6 rounded-full text-lg inline-flex items-center transition-transform transform hover:scale-105 duration-50 shadow-md">
+                Crear perfil
+            </a>
+        </div>
+    
+        <div class="flex flex-col lg:flex-row justify-center items-center gap-12 text-center">
+            <div class="flex gap-8 mb-6 lg:mb-0">
+                <a href="https://www.instagram.com/zemios_company" target="_blank" class="text-white text-4xl hover:text-gray-200 transition-all">
+                    <i class="bi bi-instagram"></i>
+                </a>
+                <a href="https://x.com/zemios_company" target="_blank" class="text-white text-4xl hover:text-gray-200 transition-all">
+                    <i class="bi bi-twitter-x"></i> 
+                </a>
+                <a href="https://www.linkedin.com/company/zemios/" target="_blank" class="text-white text-4xl hover:text-gray-200 transition-all">
+                    <i class="bi bi-linkedin"></i> 
+                </a>
+            </div>
+    
+            <div class="text-white">
+                <p class="text-lg font-semibold mb-2">¿Tienes alguna pregunta? Contáctanos:</p>
+                <a href="mailto:info@zemios.com" class="text-white text-lg hover:text-gray-200 font-semibold underline transform hover:scale-105 duration-300">info&#64;zemios.com</a>
+            </div>
+        </div>
     </div>
+     
 </div>

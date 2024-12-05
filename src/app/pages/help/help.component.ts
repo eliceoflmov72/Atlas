@@ -2,11 +2,11 @@ import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
 @Component({
-  selector: 'app-news',
+  selector: 'app-help',
   imports: [RouterLink],
-  templateUrl: './news.component.html',
-  styleUrl: './news.component.scss'
+  templateUrl: './help.component.html',
+  styleUrl: './help.component.scss'
 })
-export class NewsComponent {
+export class HelpComponent {
 
 }
