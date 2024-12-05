@@ -10,6 +10,7 @@ import { MaintenanceComponent } from './pages/maintenance/maintenance.component'
 import { SigninComponent } from './pages/auth/signin/signin.component';
 import { SignupComponent } from './pages/auth/signup/signup.component';
 import { ProfileComponent } from './pages/auth/profile/profile.component';
+import { ExploreComponent } from './pages/explore/explore.component';
 
 const Maintenance = false;
 
@@ -22,6 +23,7 @@ export const routes: Routes = [
     { path: 'Learning', component: LearningComponent },
     { path: 'Projects', component: ProjectsComponent },
     { path: 'Contact', component: ContactComponent },
+    { path: 'Explore', component: ExploreComponent },
     // { path: 'About-us', component: AboutusComponent },
 
     { path: 'SignIn', component: SigninComponent },
