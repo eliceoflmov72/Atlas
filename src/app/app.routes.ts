@@ -11,6 +11,9 @@ import { SigninComponent } from './pages/auth/signin/signin.component';
 import { SignupComponent } from './pages/auth/signup/signup.component';
 import { ProfileComponent } from './pages/auth/profile/profile.component';
 import { ExploreComponent } from './pages/explore/explore.component';
+import { PostComponent } from './pages/explore/post/post.component';
+import { ArticleComponent } from './pages/news/article/article.component';
+import { CourseComponent } from './pages/learning/course/course.component';
 
 const Maintenance = false;
 
@@ -18,12 +21,16 @@ export const routes: Routes = [
     { path: '', component: HomeComponent },
     { path: '', component: MaintenanceComponent },
     { path: 'News', component: NewsComponent },
+        { path: 'Article', component: ArticleComponent },
     // { path: 'Tech-news', component: TechComponent },
     // { path: 'Job-news', component: JobsComponent },
     { path: 'Learning', component: LearningComponent },
+        { path: 'Course', component: CourseComponent },
     { path: 'Projects', component: ProjectsComponent },
+        { path: 'Project', component: ProjectsComponent },
     { path: 'Contact', component: ContactComponent },
     { path: 'Explore', component: ExploreComponent },
+        { path: 'Post', component: PostComponent },
     // { path: 'About-us', component: AboutusComponent },
 
     { path: 'SignIn', component: SigninComponent },
