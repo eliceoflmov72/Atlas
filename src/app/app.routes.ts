@@ -17,8 +17,6 @@ import { CourseComponent } from './pages/learning/course/course.component';
 import { ProjectComponent } from './pages/projects/project/project.component';
 import { HelpComponent } from './pages/help/help.component';
 
-const Maintenance = false;
-
 export const routes: Routes = [
     { path: '', component: HomeComponent },
     { path: '', component: MaintenanceComponent },
