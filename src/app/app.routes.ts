@@ -13,7 +13,7 @@ const Maintenance = false;
 export const routes: Routes = [
     { path: '', component: HomeComponent },
     { path: '', component: MaintenanceComponent },
-    // { path: 'News', component: NewsComponent },
+    { path: 'News', component: NewsComponent },
     // { path: 'Tech-news', component: TechComponent },
     // { path: 'Job-news', component: JobsComponent },
     // { path: 'Learning', component: LearningComponent },
