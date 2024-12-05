@@ -14,6 +14,7 @@ import { ExploreComponent } from './pages/explore/explore.component';
 import { PostComponent } from './pages/explore/post/post.component';
 import { ArticleComponent } from './pages/news/article/article.component';
 import { CourseComponent } from './pages/learning/course/course.component';
+import { ProjectComponent } from './pages/projects/project/project.component';
 
 const Maintenance = false;
 
@@ -27,7 +28,7 @@ export const routes: Routes = [
     { path: 'Learning', component: LearningComponent },
         { path: 'Course', component: CourseComponent },
     { path: 'Projects', component: ProjectsComponent },
-        { path: 'Project', component: ProjectsComponent },
+        { path: 'Project', component: ProjectComponent },
     { path: 'Contact', component: ContactComponent },
     { path: 'Explore', component: ExploreComponent },
         { path: 'Post', component: PostComponent },
