@@ -15,6 +15,7 @@ import { PostComponent } from './pages/explore/post/post.component';
 import { ArticleComponent } from './pages/news/article/article.component';
 import { CourseComponent } from './pages/learning/course/course.component';
 import { ProjectComponent } from './pages/projects/project/project.component';
+import { HelpComponent } from './pages/help/help.component';
 
 const Maintenance = false;
 
@@ -33,6 +34,7 @@ export const routes: Routes = [
     { path: 'Explore', component: ExploreComponent },
         { path: 'Post', component: PostComponent },
     // { path: 'About-us', component: AboutusComponent },
+    { path: 'Help', component: HelpComponent },
 
     { path: 'SignIn', component: SigninComponent },
     { path: 'SignUp', component: SignupComponent },
