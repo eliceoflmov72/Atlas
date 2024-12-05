@@ -1,8 +1,6 @@
 import { Routes } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 import { NewsComponent } from './pages/news/news.component';
-import { TechComponent } from './pages/news/tech/tech.component';
-import { JobsComponent } from './pages/news/jobs/jobs.component';
 import { LearningComponent } from './pages/learning/learning.component';
 import { ProjectsComponent } from './pages/projects/projects.component';
 import { ContactComponent } from './pages/contact/contact.component';
@@ -22,8 +20,6 @@ export const routes: Routes = [
     { path: '', component: MaintenanceComponent },
     { path: 'News', component: NewsComponent },
         { path: 'Article', component: ArticleComponent },
-    // { path: 'Tech-news', component: TechComponent },
-    // { path: 'Job-news', component: JobsComponent },
     { path: 'Learning', component: LearningComponent },
         { path: 'Course', component: CourseComponent },
     { path: 'Projects', component: ProjectsComponent },
@@ -31,7 +27,6 @@ export const routes: Routes = [
     { path: 'Contact', component: ContactComponent },
     { path: 'Explore', component: ExploreComponent },
         { path: 'Post', component: PostComponent },
-    // { path: 'About-us', component: AboutusComponent },
     { path: 'Help', component: HelpComponent },
 
     { path: 'SignIn', component: SigninComponent },
@@ -39,6 +34,5 @@ export const routes: Routes = [
     { path: 'Profile', component: ProfileComponent },
 
     { path: 'Maintenance', component: MaintenanceComponent },
-    // { path: '**', redirectTo: '', pathMatch: "full" as "full" },
-    { path: '**', redirectTo: 'Maintenance', pathMatch: "full" as "full" },
+    { path: '**', redirectTo: '', pathMatch: "full" as const },
 ];

@@ -9,7 +9,7 @@ import { PublishComponent } from "./publish/publish.component";
   styleUrl: './explore.component.scss'
 })
 export class ExploreComponent {
-  publishModal: boolean = false;
+  publishModal = false;
   openPublishModal() {
     this.publishModal = !this.publishModal
   }

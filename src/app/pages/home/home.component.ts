@@ -41,7 +41,7 @@ export class HomeComponent {
     }
   ];
 
-  mainNews: Array<{ title: string, description: string, url: string, imageUrl: string }> = [];
-  lastCourses: Array<{ title: string, description: string, url: string, color: string }> = [];
-  lastProyects: Array<{ title: string, description: string, image: string, collaborators: Array<{ image: string, name: string }> }> = [];
+  mainNews: { title: string, description: string, url: string, imageUrl: string }[] = [];
+  lastCourses: { title: string, description: string, url: string, color: string }[] = [];
+  lastProyects: { title: string, description: string, image: string, collaborators: { image: string, name: string }[] }[] = [];
 }

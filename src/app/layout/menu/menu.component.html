@@ -11,8 +11,9 @@
     </ul>
 </div>
 <div class="flex fixed w-full md:hidden justify-start items-center gap-5 px-5 py-5 z-20 bg-white text-neutral-700">
-    
-    <i class="bi bi-list text-3xl cursor-pointer font-bold" (click)="toggleMenu()"></i>
+    <button (click)="toggleMenu()" (keypress)="toggleMenu()">
+        <i class="bi bi-list text-3xl cursor-pointer font-bold"></i>
+    </button>
     @if (menuVisibility) {
         <!-- ! Aqui hay un pequeño error y es que cuando le das click, como el <ul> tiene la clase "shadow-lg", antes de que acabe la animacion de los <li> se ve el corte del "shadow-lg" -->
         <!-- ¿ Meter una animacion de desaparicion¿¿¿ -->
