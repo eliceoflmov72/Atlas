@@ -40,11 +40,11 @@ export class AppComponent {
       url: 'Explore',
       icon: 'chat-dots-fill',
     },
-    {
-      title: 'Cursos',
-      url: 'Learning',
-      icon: 'book-half'
-    },
+    /*     {
+          title: 'Cursos',
+          url: 'Learning',
+          icon: 'book-half'
+        }, */
     {
       title: 'Proyectos',
       url: 'Projects',
