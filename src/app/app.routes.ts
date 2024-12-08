@@ -14,6 +14,7 @@ import { ArticleComponent } from './pages/news/article/article.component';
 import { CourseComponent } from './pages/learning/course/course.component';
 import { ProjectComponent } from './pages/projects/project/project.component';
 import { HelpComponent } from './pages/help/help.component';
+import { Error404Component } from './pages/error404/error404.component';
 
 export const routes: Routes = [
     { path: '', component: HomeComponent },
@@ -33,6 +34,6 @@ export const routes: Routes = [
     { path: 'SignUp', component: SignupComponent },
     { path: 'Profile', component: ProfileComponent },
 
-    { path: 'Maintenance', component: MaintenanceComponent },
-    { path: '**', redirectTo: '', pathMatch: "full" as const },
+    { path: '404', component: Error404Component },
+    { path: '**', redirectTo: '404', pathMatch: "full" },
 ];
