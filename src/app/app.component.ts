@@ -20,39 +20,39 @@ export class AppComponent {
     },
     {
       title: 'Noticias',
-      url: 'News',
+      url: 'news',
       icon: 'newspaper',
       sub: [
         {
           title: 'Tecnología',
-          url: 'News/Tech',
+          url: 'news/tech',
           icon: 'gear-fill'
         },
         {
           title: 'Empleo',
-          url: 'News/Jobs',
+          url: 'news/jobs',
           icon: 'briefcase-fill'
         }
       ]
     },
     {
       title: 'Foro',
-      url: 'Explore',
+      url: 'explore',
       icon: 'chat-dots-fill',
     },
     /*     {
           title: 'Cursos',
-          url: 'Learning',
+          url: 'learning',
           icon: 'book-half'
         }, */
     {
       title: 'Proyectos',
-      url: 'Projects',
+      url: 'projects',
       icon: 'box-fill'
     },
     {
       title: 'Contacto',
-      url: 'Contact',
+      url: 'contact',
       icon: 'info-circle-fill'
     },
   ]
