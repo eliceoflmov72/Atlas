@@ -15,7 +15,7 @@ export class AppComponent {
   pages = [
     {
       title: 'Inicio',
-      url: '/',
+      url: '',
       icon: 'house-fill'
     },
     {
