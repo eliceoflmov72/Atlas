@@ -26,7 +26,7 @@ export const routes: Routes = [
     { path: 'contact', component: ContactComponent },
     { path: 'explore', component: ExploreComponent },
     { path: 'post', component: PostComponent },
-    { path: '', component: HelpComponent },
+    { path: 'help', component: HelpComponent },
 
     { path: 'sign-in', component: SigninComponent },
     { path: 'sign-up', component: SignupComponent },
