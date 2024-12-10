@@ -3,9 +3,9 @@
     <div class="max-w-4xl mx-auto">
       <!-- Botón para crear nueva publicación -->
       <div class="mb-6 text-right">
-        <button (click)="openPublishModal()" class="bg-blue-800 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg transition-all transform hover:scale-105 duration-300">Crear Publicación</button>
+        <button (click)="togglePublishModal()" class="bg-blue-800 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg transition-all transform hover:scale-105 duration-300">Crear Publicación</button>
         @if (publishModal) {
-          <app-publish></app-publish>
+          <app-publish (closeModalEvent)="togglePublishModal()"></app-publish>
         }
       </div>
       <!-- Repetir este bloque por cada publicación -->
