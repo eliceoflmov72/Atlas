@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, HostListener, Input } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
 @Component({
@@ -13,4 +13,27 @@ export class MenuComponent {
   toggleMenu() {
     this.menuVisibility = !this.menuVisibility;
   }
+
+  @HostListener('document:click', ['$event'])
+  onDocumentClick(event: Event) {
+    const target = event.target as HTMLElement;
+    if (this.menuVisibility && !target.closest('app-menu')) {
+      this.menuVisibility = false;
+  }
+  }
+
+  @HostListener('window:scroll', [])
+  onScroll() {
+    if (this.menuVisibility) {
+      this.menuVisibility = false;
+    }
+  }
+
+  @HostListener('window:touchmove', [])
+  onTouchMove() {
+    if (this.menuVisibility) {
+      this.menuVisibility = false;
+    }
+  }
 }
+
