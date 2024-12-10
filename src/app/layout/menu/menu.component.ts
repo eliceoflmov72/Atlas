@@ -1,5 +1,5 @@
 import { Component, HostListener, Input } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-menu',
@@ -8,6 +8,7 @@ import { RouterLink } from '@angular/router';
   styleUrl: './menu.component.scss'
 })
 export class MenuComponent {
+  constructor(public router: Router) {}
   @Input() pages: { title: string, url: string, icon: string }[] = []
   menuVisibility = false;
   toggleMenu() {
@@ -19,7 +20,7 @@ export class MenuComponent {
     const target = event.target as HTMLElement;
     if (this.menuVisibility && !target.closest('app-menu')) {
       this.menuVisibility = false;
-  }
+    }
   }
 
   @HostListener('window:scroll', [])
