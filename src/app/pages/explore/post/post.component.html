@@ -1,36 +1,57 @@
-<div class="min-h-screen bg-gray-100 py-12 px-6">
-    <div class="max-w-3xl mx-auto bg-white shadow-lg rounded-lg overflow-hidden">
-      <div class="p-6">
-        <h2 class="text-3xl font-bold text-blue-800 mb-4">Título de la Publicación</h2>
-        <div class="flex items-center gap-4 mb-6">
-          <img src="https://via.placeholder.com/50" alt="Autor" class="w-12 h-12 rounded-full border-2 border-gray-300">
-          <div>
-            <p class="text-gray-700 text-sm font-semibold">Nombre del Autor</p>
-            <p class="text-gray-500 text-sm">Publicado el: Fecha de publicación</p>
-          </div>
-        </div>
-        <div class="text-gray-700 text-lg leading-relaxed mb-8">
-          <p>Aquí va el contenido detallado de la publicación. Puede incluir varias secciones, párrafos, imágenes y enlaces relacionados con el tema discutido en el foro.</p>
-          <p>También puede haber respuestas o comentarios a lo largo del contenido.</p>
-        </div>
-      </div>
-    </div>
-    <div class="max-w-3xl mx-auto mt-8">
-      <h3 class="text-2xl font-bold text-blue-800 mb-4">Respuestas</h3>
-      <!-- Repetir este bloque por cada respuesta -->
-      <div class="bg-white shadow-lg rounded-lg overflow-hidden mb-6">
-        <div class="p-6">
-          <div class="flex items-center gap-4 mb-4">
-            <img src="https://via.placeholder.com/50" alt="Autor" class="w-12 h-12 rounded-full border-2 border-gray-300">
-            <div>
-              <p class="text-gray-700 text-sm font-semibold">Nombre del Usuario</p>
-              <p class="text-gray-500 text-sm">Fecha de respuesta</p>
-            </div>
-          </div>
-          <p class="text-gray-700">Aquí va la respuesta del usuario o comentario en la publicación.</p>
+<div class="min-h-screen bg-gray-100 px-6 py-12">
+  <div class="mx-auto max-w-3xl overflow-hidden rounded-lg bg-white shadow-lg">
+    <div class="p-6">
+      <h2 class="mb-4 text-3xl font-bold text-blue-800">
+        Título de la Publicación
+      </h2>
+      <div class="mb-6 flex items-center gap-4">
+        <img
+          src="https://via.placeholder.com/50"
+          alt="Autor"
+          class="h-12 w-12 rounded-full border-2 border-gray-300"
+        />
+        <div>
+          <p class="text-sm font-semibold text-gray-700">Nombre del Autor</p>
+          <p class="text-sm text-gray-500">
+            Publicado el: Fecha de publicación
+          </p>
         </div>
       </div>
-      <!-- Fin de bloque de respuesta -->
+      <div class="mb-8 text-lg leading-relaxed text-gray-700">
+        <p>
+          Aquí va el contenido detallado de la publicación. Puede incluir varias
+          secciones, párrafos, imágenes y enlaces relacionados con el tema
+          discutido en el foro.
+        </p>
+        <p>
+          También puede haber respuestas o comentarios a lo largo del contenido.
+        </p>
+      </div>
     </div>
   </div>
-  
+  <div class="mx-auto mt-8 max-w-3xl">
+    <h3 class="mb-4 text-2xl font-bold text-blue-800">Respuestas</h3>
+    <!-- Repetir este bloque por cada respuesta -->
+    <div class="mb-6 overflow-hidden rounded-lg bg-white shadow-lg">
+      <div class="p-6">
+        <div class="mb-4 flex items-center gap-4">
+          <img
+            src="https://via.placeholder.com/50"
+            alt="Autor"
+            class="h-12 w-12 rounded-full border-2 border-gray-300"
+          />
+          <div>
+            <p class="text-sm font-semibold text-gray-700">
+              Nombre del Usuario
+            </p>
+            <p class="text-sm text-gray-500">Fecha de respuesta</p>
+          </div>
+        </div>
+        <p class="text-gray-700">
+          Aquí va la respuesta del usuario o comentario en la publicación.
+        </p>
+      </div>
+    </div>
+    <!-- Fin de bloque de respuesta -->
+  </div>
+</div>

@@ -8,7 +8,7 @@ import { RouterLink } from '@angular/router';
   styleUrl: './menu.component.scss',
 })
 export class MenuComponent {
-  @Input() pages: { title: string, url: string, icon: string }[] = []
+  @Input() pages: { title: string; url: string; icon: string }[] = [];
   menuVisibility = false;
   toggleMenu() {
     this.menuVisibility = !this.menuVisibility;

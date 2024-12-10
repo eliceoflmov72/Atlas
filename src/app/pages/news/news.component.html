@@ -1,61 +1,125 @@
 <div class="flex flex-col">
-    <div class="banner text-white py-24 px-6 md:px-20 flex flex-wrap flex-col xl:flex-row justify-around items-center gap-8 rounded-lg">
-      <div class="flex flex-col items-center md:items-start text-center md:text-left max-w-lg">
-        <h1 class="text-4xl md:text-5xl font-extrabold leading-tight mb-4">Últimas Noticias</h1>
-        <h2 class="text-xl md:text-2xl font-semibold opacity-80 mb-6">
-          Mantente informado con las últimas actualizaciones del mundo tecnológico y ofertas de empleo
-        </h2>
-      </div>
-    </div>
-  
-    <div class="bg-white py-6 px-6 md:px-20 shadow-md">
-      <h2 class="text-2xl md:text-3xl font-bold text-blue-800 text-center mb-6">Filtrar por Categoría</h2>
-      <div class="flex justify-center gap-6 mb-6">
-        <button class="bg-blue-900 text-white py-2 px-6 rounded-full font-semibold hover:bg-blue-800 transition-all transform hover:scale-105">
-          Actualidad Tecnológica
-        </button>
-        <button class="bg-blue-900 text-white py-2 px-6 rounded-full font-semibold hover:bg-blue-800 transition-all transform hover:scale-105">
-          Empleo
-        </button>
-      </div>
-    </div>
-  
-    <div class="bg-gray-100 py-16 px-6 shadow-lg">
-      <h2 class="text-3xl md:text-4xl font-bold text-blue-800 text-center mb-6">Noticias Relevantes</h2>
-      <div class="flex flex-col md:flex-row flex-wrap justify-center items-center gap-6">
-        <!-- Noticia 1 -->
-        <div class="bg-white shadow-lg text-blue-800 flex flex-col justify-start items-center text-center px-6 pb-6 rounded-2xl max-w-96 transition-transform transform hover:scale-105">
-          <img src="https://via.placeholder.com/400x200" alt="Imagen noticia tecnológica" class="my-6 rounded-2xl object-contain">
-          <p class="font-semibold text-2xl mb-2">Nueva Tecnología en la Nube</p>
-          <p class="text-gray-600 mb-4">La última tendencia en servicios cloud que está revolucionando el mercado.</p>
-          <a routerLink="/Article" class="text-blue-500 hover:underline font-medium mt-auto">Leer más</a>
-        </div>
-  
-        <!-- Noticia 2 -->
-        <div class="bg-white shadow-lg text-blue-800 flex flex-col justify-start items-center text-center px-6 pb-6 rounded-2xl max-w-96 transition-transform transform hover:scale-105">
-          <img src="https://via.placeholder.com/400x200" alt="Imagen noticia tecnológica" class="my-6 rounded-2xl object-contain">
-          <p class="font-semibold text-2xl mb-2">Inteligencia Artificial Avanza</p>
-          <p class="text-gray-600 mb-4">Cómo los desarrollos en IA están impactando diferentes industrias.</p>
-          <a routerLink="/Article" class="text-blue-500 hover:underline font-medium mt-auto">Leer más</a>
-        </div>
-  
-        <!-- Noticia 3 -->
-        <div class="bg-white shadow-lg text-blue-800 flex flex-col justify-start items-center text-center px-6 pb-6 rounded-2xl max-w-96 transition-transform transform hover:scale-105">
-          <img src="https://via.placeholder.com/400x200" alt="Imagen noticia empleo" class="my-6 rounded-2xl object-contain">
-          <p class="font-semibold text-2xl mb-2">Ofertas de Empleo para Juniors</p>
-          <p class="text-gray-600 mb-4">Las empresas tecnológicas buscan talento junior para puestos remotos.</p>
-          <a routerLink="/Article" class="text-blue-500 hover:underline font-medium mt-auto">Leer más</a>
-        </div>
-      </div>
-    </div>
-  
-    <!-- Sección de Contacto -->
-    <div class="bg-gradient-to-r from-blue-500 to-purple-600 py-16 px-6 text-center text-white">
-      <h2 class="text-3xl md:text-4xl font-bold mb-6">¿Tienes alguna pregunta?</h2>
-      <p class="text-lg mb-6">Contáctanos y únete a nuestra comunidad.</p>
-      <a routerLink="/Contact" class="bg-white text-blue-900 py-3 px-8 rounded-full text-lg font-semibold transition-all transform hover:scale-105 duration-300">
-        Contáctanos
-      </a>
+  <div
+    class="banner flex flex-col flex-wrap items-center justify-around gap-8 rounded-lg px-6 py-24 text-white md:px-20 xl:flex-row"
+  >
+    <div
+      class="flex max-w-lg flex-col items-center text-center md:items-start md:text-left"
+    >
+      <h1 class="mb-4 text-4xl font-extrabold leading-tight md:text-5xl">
+        Últimas Noticias
+      </h1>
+      <h2 class="mb-6 text-xl font-semibold opacity-80 md:text-2xl">
+        Mantente informado con las últimas actualizaciones del mundo tecnológico
+        y ofertas de empleo
+      </h2>
     </div>
   </div>
-  
+
+  <div class="bg-white px-6 py-6 shadow-md md:px-20">
+    <h2 class="mb-6 text-center text-2xl font-bold text-blue-800 md:text-3xl">
+      Filtrar por Categoría
+    </h2>
+    <div class="mb-6 flex justify-center gap-6">
+      <button
+        class="transform rounded-full bg-blue-900 px-6 py-2 font-semibold text-white transition-all hover:scale-105 hover:bg-blue-800"
+      >
+        Actualidad Tecnológica
+      </button>
+      <button
+        class="transform rounded-full bg-blue-900 px-6 py-2 font-semibold text-white transition-all hover:scale-105 hover:bg-blue-800"
+      >
+        Empleo
+      </button>
+    </div>
+  </div>
+
+  <div class="bg-gray-100 px-6 py-16 shadow-lg">
+    <h2 class="mb-6 text-center text-3xl font-bold text-blue-800 md:text-4xl">
+      Noticias Relevantes
+    </h2>
+    <div
+      class="flex flex-col flex-wrap items-center justify-center gap-6 md:flex-row"
+    >
+      <!-- Noticia 1 -->
+      <div
+        class="flex max-w-96 transform flex-col items-center justify-start rounded-2xl bg-white px-6 pb-6 text-center text-blue-800 shadow-lg transition-transform hover:scale-105"
+      >
+        <img
+          src="https://via.placeholder.com/400x200"
+          alt="Imagen noticia tecnológica"
+          class="my-6 rounded-2xl object-contain"
+        />
+        <p class="mb-2 text-2xl font-semibold">Nueva Tecnología en la Nube</p>
+        <p class="mb-4 text-gray-600">
+          La última tendencia en servicios cloud que está revolucionando el
+          mercado.
+        </p>
+        <a
+          routerLink="/Article"
+          class="mt-auto font-medium text-blue-500 hover:underline"
+          >Leer más</a
+        >
+      </div>
+
+      <!-- Noticia 2 -->
+      <div
+        class="flex max-w-96 transform flex-col items-center justify-start rounded-2xl bg-white px-6 pb-6 text-center text-blue-800 shadow-lg transition-transform hover:scale-105"
+      >
+        <img
+          src="https://via.placeholder.com/400x200"
+          alt="Imagen noticia tecnológica"
+          class="my-6 rounded-2xl object-contain"
+        />
+        <p class="mb-2 text-2xl font-semibold">
+          Inteligencia Artificial Avanza
+        </p>
+        <p class="mb-4 text-gray-600">
+          Cómo los desarrollos en IA están impactando diferentes industrias.
+        </p>
+        <a
+          routerLink="/Article"
+          class="mt-auto font-medium text-blue-500 hover:underline"
+          >Leer más</a
+        >
+      </div>
+
+      <!-- Noticia 3 -->
+      <div
+        class="flex max-w-96 transform flex-col items-center justify-start rounded-2xl bg-white px-6 pb-6 text-center text-blue-800 shadow-lg transition-transform hover:scale-105"
+      >
+        <img
+          src="https://via.placeholder.com/400x200"
+          alt="Imagen noticia empleo"
+          class="my-6 rounded-2xl object-contain"
+        />
+        <p class="mb-2 text-2xl font-semibold">
+          Ofertas de Empleo para Juniors
+        </p>
+        <p class="mb-4 text-gray-600">
+          Las empresas tecnológicas buscan talento junior para puestos remotos.
+        </p>
+        <a
+          routerLink="/Article"
+          class="mt-auto font-medium text-blue-500 hover:underline"
+          >Leer más</a
+        >
+      </div>
+    </div>
+  </div>
+
+  <!-- Sección de Contacto -->
+  <div
+    class="bg-gradient-to-r from-blue-500 to-purple-600 px-6 py-16 text-center text-white"
+  >
+    <h2 class="mb-6 text-3xl font-bold md:text-4xl">
+      ¿Tienes alguna pregunta?
+    </h2>
+    <p class="mb-6 text-lg">Contáctanos y únete a nuestra comunidad.</p>
+    <a
+      routerLink="/Contact"
+      class="transform rounded-full bg-white px-8 py-3 text-lg font-semibold text-blue-900 transition-all duration-300 hover:scale-105"
+    >
+      Contáctanos
+    </a>
+  </div>
+</div>

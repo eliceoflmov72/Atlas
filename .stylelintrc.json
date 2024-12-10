@@ -39,7 +39,6 @@
       }
     ],
     "color-no-invalid-hex": true,
-    "color-named": "never",
     "declaration-no-important": true,
     "shorthand-property-no-redundant-values": true,
     "unit-disallowed-list": ["cm", "mm"],

@@ -21,5 +21,5 @@ export class ContactComponent {
       photo: 'images/pfp/eliceoPhoto.webp',
       url: 'https://www.linkedin.com/in/eliceo-león-237877280/',
     },
-  ]
+  ];
 }
