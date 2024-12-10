@@ -1,11 +1,4 @@
-.banner {
-    min-height: calc(100vh - 76px);
-    @media (min-width: 1024px) {
-        min-height: calc(100vh - 88px);
-      }
-}
-/* Esto con los pixeles ajustados es horribles */
-/* Si hay otra forma de hacerlo mejor, hay que arreglarlo */
+
 
 
 .bannerImage {

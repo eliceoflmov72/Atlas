@@ -19,6 +19,15 @@ app-root {
     grid-template-rows: auto 0 1fr auto;
 }
 
+.banner {
+    min-height: calc(100vh - 76px);
+    @media (min-width: 1024px) {
+        min-height: calc(100vh - 88px);
+      }
+}
+/* Esto con los pixeles ajustados es horribles */
+/* Si hay otra forma de hacerlo mejor, hay que arreglarlo */
+
 @keyframes gradient {
     0% {background-position: 0% 50%;}
     50% {background-position: 100% 50%;}
