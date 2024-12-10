@@ -36,6 +36,11 @@ export class AppComponent {
       ],
     },
     {
+      title: 'Foro',
+      url: 'Explore',
+      icon: 'chat-dots-fill',
+    },
+    {
       title: 'Cursos',
       url: 'Learning',
       icon: 'book-half',

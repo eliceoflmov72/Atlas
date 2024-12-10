@@ -1,0 +1,31 @@
+<div class="min-h-screen bg-gray-100 py-12 px-6">
+    <h2 class="text-4xl font-bold text-blue-800 text-center mb-8">Foro de la Comunidad</h2>
+    <div class="max-w-4xl mx-auto">
+      <!-- Botón para crear nueva publicación -->
+      <div class="mb-6 text-right">
+        <button (click)="openPublishModal()" class="bg-blue-800 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg transition-all transform hover:scale-105 duration-300">Crear Publicación</button>
+        @if (publishModal) {
+          <app-publish></app-publish>
+        }
+      </div>
+      <!-- Repetir este bloque por cada publicación -->
+      <div class="bg-white shadow-lg rounded-lg overflow-hidden mb-6">
+        <div class="p-6">
+          <h3 class="text-2xl font-bold text-blue-800 mb-4">Título de la Publicación</h3>
+          <p class="text-gray-700 mb-4">Aquí va una descripción breve de la publicación o una introducción del tema.</p>
+          <div class="flex items-center gap-4">
+            <div class="flex-shrink-0">
+              <img src="https://via.placeholder.com/50" alt="Autor" class="w-12 h-12 rounded-full border-2 border-gray-300">
+            </div>
+            <div>
+              <p class="text-gray-700 text-sm font-semibold">Nombre del Autor</p>
+              <p class="text-gray-500 text-sm">Fecha de publicación</p>
+            </div>
+          </div>
+          <a routerLink="/Post" class="text-blue-500 hover:underline mt-4 block">Ver más detalles</a>
+        </div>
+      </div>
+      <!-- Fin de bloque de publicación -->
+    </div>
+  </div>
+  

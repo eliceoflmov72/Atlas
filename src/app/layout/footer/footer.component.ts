@@ -8,5 +8,5 @@ import { RouterLink } from '@angular/router';
   styleUrl: './footer.component.scss',
 })
 export class FooterComponent {
-  @Input() pages: Array<{ title: string; url: string; icon: string }> = [];
+  @Input() pages: { title: string, url: string, icon: string }[] = []
 }

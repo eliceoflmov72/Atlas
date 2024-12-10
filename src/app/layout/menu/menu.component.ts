@@ -1,4 +1,4 @@
-import { Component, Injectable, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
 @Component({
@@ -8,8 +8,8 @@ import { RouterLink } from '@angular/router';
   styleUrl: './menu.component.scss',
 })
 export class MenuComponent {
-  @Input() pages: Array<{ title: string; url: string; icon: string }> = [];
-  menuVisibility: boolean = false;
+  @Input() pages: { title: string, url: string, icon: string }[] = []
+  menuVisibility = false;
   toggleMenu() {
     this.menuVisibility = !this.menuVisibility;
   }
