@@ -1,0 +1,50 @@
+{
+  "extends": [
+    "stylelint-config-standard-scss",
+    "stylelint-config-tailwindcss"
+  ],
+  "plugins": [
+    "stylelint-scss"
+  ],
+  "rules": {
+    "at-rule-no-unknown": null,
+    "scss/at-rule-no-unknown": [
+      true,
+      {
+        "ignoreAtRules": [
+          "tailwind",
+          "apply",
+          "layer",
+          "variants",
+          "responsive",
+          "screen"
+        ]
+      }
+    ],
+    "scss/dollar-variable-pattern": "^([a-z][a-z0-9]*)(-[a-z0-9]+)*$",
+    "scss/selector-no-redundant-nesting-selector": true,
+    "scss/double-slash-comment-whitespace-inside": "always",
+    "selector-pseudo-element-no-unknown": [
+      true,
+      {
+        "ignorePseudoElements": [
+          "ng-deep"
+        ]
+      }
+    ],
+    "selector-class-pattern": [
+      "^([a-z][a-z0-9]*)(-[a-z0-9]+)*(__[a-z0-9]+(-[a-z0-9]+)*)?(--[a-z0-9]+(-[a-z0-9]+)*)?$",
+      {
+        "message": "El selector de clase debe estar en kebab-case o seguir el patrón BEM (con __)"
+      }
+    ],
+    "color-no-invalid-hex": true,
+    "color-named": "never",
+    "declaration-no-important": true,
+    "shorthand-property-no-redundant-values": true,
+    "unit-disallowed-list": ["cm", "mm"],
+    "block-no-empty": true,
+    "no-empty-source": null,
+    "no-descending-specificity": null
+  }
+}

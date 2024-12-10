@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
-import { MenuComponent } from "./layout/menu/menu.component";
-import { FooterComponent } from "./layout/footer/footer.component";
+import { MenuComponent } from './layout/menu/menu.component';
+import { FooterComponent } from './layout/footer/footer.component';
 import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   imports: [MenuComponent, FooterComponent, RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrl: './app.component.scss',
 })
 export class AppComponent {
   title = 'Zemios';
@@ -16,7 +16,7 @@ export class AppComponent {
     {
       title: 'Inicio',
       url: '/',
-      icon: 'house-fill'
+      icon: 'house-fill',
     },
     {
       title: 'Noticias',
@@ -26,29 +26,29 @@ export class AppComponent {
         {
           title: 'Tecnología',
           url: 'News/Tech',
-          icon: 'gear-fill'
+          icon: 'gear-fill',
         },
         {
           title: 'Empleo',
           url: 'News/Jobs',
-          icon: 'briefcase-fill'
-        }
-      ]
+          icon: 'briefcase-fill',
+        },
+      ],
     },
     {
       title: 'Cursos',
       url: 'Learning',
-      icon: 'book-half'
+      icon: 'book-half',
     },
     {
       title: 'Proyectos',
       url: 'Projects',
-      icon: 'box-fill'
+      icon: 'box-fill',
     },
     {
       title: 'Contacto',
       url: 'Contact',
-      icon: 'info-circle-fill'
+      icon: 'info-circle-fill',
     },
-  ]
+  ];
 }

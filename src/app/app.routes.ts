@@ -11,20 +11,20 @@ import { MaintenanceComponent } from './pages/maintenance/maintenance.component'
 const Maintenance = false;
 
 export const routes: Routes = [
-    { path: '', component: HomeComponent },
-    { path: '', component: MaintenanceComponent },
-    // { path: 'News', component: NewsComponent },
-    // { path: 'Tech-news', component: TechComponent },
-    // { path: 'Job-news', component: JobsComponent },
-    // { path: 'Learning', component: LearningComponent },
-    // { path: 'Projects', component: ProjectsComponent },
-    // { path: 'Contact', component: ContactComponent },
-    // { path: 'About-us', component: AboutusComponent },
+  { path: '', component: HomeComponent },
+  { path: '', component: MaintenanceComponent },
+  // { path: 'News', component: NewsComponent },
+  // { path: 'Tech-news', component: TechComponent },
+  // { path: 'Job-news', component: JobsComponent },
+  // { path: 'Learning', component: LearningComponent },
+  // { path: 'Projects', component: ProjectsComponent },
+  // { path: 'Contact', component: ContactComponent },
+  // { path: 'About-us', component: AboutusComponent },
 
-    // { path: 'SignIn', component: SigninComponent },
-    // { path: 'SignUp', component: SignupComponent },
+  // { path: 'SignIn', component: SigninComponent },
+  // { path: 'SignUp', component: SignupComponent },
 
-    { path: 'Maintenance', component: MaintenanceComponent },
-    // { path: '**', redirectTo: '', pathMatch: "full" as "full" },
-    { path: '**', redirectTo: 'Maintenance', pathMatch: "full" as "full" },
+  { path: 'Maintenance', component: MaintenanceComponent },
+  // { path: '**', redirectTo: '', pathMatch: "full" as "full" },
+  { path: '**', redirectTo: 'Maintenance', pathMatch: 'full' as 'full' },
 ];
