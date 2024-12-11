@@ -13,14 +13,16 @@ import { ArticleComponent } from './pages/news/article/article.component';
 import { ProjectComponent } from './pages/projects/project/project.component';
 import { HelpComponent } from './pages/help/help.component';
 import { Error404Component } from './pages/error404/error404.component';
+import { LearningComponent } from './pages/learning/learning.component';
+import { CourseComponent } from './pages/learning/course/course.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: '', component: MaintenanceComponent },
   { path: 'news', component: NewsComponent },
   { path: 'article', component: ArticleComponent },
-  /*     { path: 'learning', component: LearningComponent },
-            { path: 'course', component: CourseComponent }, */
+  { path: 'learning', component: LearningComponent },
+  { path: 'course', component: CourseComponent },
   { path: 'projects', component: ProjectsComponent },
   { path: 'project', component: ProjectComponent },
   { path: 'contact', component: ContactComponent },

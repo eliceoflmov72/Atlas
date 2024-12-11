@@ -6,4 +6,10 @@ import { Component } from '@angular/core';
   templateUrl: './post.component.html',
   styleUrl: './post.component.scss',
 })
-export class PostComponent {}
+export class PostComponent {
+  post = {
+    title: 'Titulo',
+    created_at : 'ayer'
+  }
+
+}
