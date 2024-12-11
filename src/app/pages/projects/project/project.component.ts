@@ -9,7 +9,6 @@ import { ActivatedRoute } from '@angular/router';
   styleUrl: './project.component.scss',
 })
 export class ProjectComponent {
-  route = inject(ActivatedRoute)
   project: ProjectInterface = {
     id: 1,
     name: 'Animalisima',
@@ -19,6 +18,7 @@ export class ProjectComponent {
     technologies: ['HTML', 'CSS', 'JavaScript', 'Angular'],
     startDate: new Date()
   }
+  route = inject(ActivatedRoute)
   id: string | null = null
   ngOnInit() {
     this.id = this.route.snapshot.paramMap.get('id')
