@@ -12,8 +12,11 @@ export class ProjectComponent {
   route = inject(ActivatedRoute)
   Project: ProjectInterface = {
     id: 1,
-    name: 'AW',
-    description: 'fd',
+    name: 'Animalisima',
+    subtitle: 'Una página web sobre animales',
+    description: 'Este es el proyecto 14 de ZEMIOS!!!',
+    image: 'https://i.natgeofe.com/n/4f5aaece-3300-41a4-b2a8-ed2708a0a27c/domestic-dog_thumb_square.jpg',
+    technologies: ['HTML', 'CSS', 'JavaScript', 'Angular'],
     startDate: new Date()
   }
   id: string | null = null
