@@ -1,11 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
-interface NewsItem {
-  title: string;
-  description: string;
-  image: string;
-  category: string;
-}
+import { NewsInterface } from '../../interfaces/news-interface';
 
 @Component({
   selector: 'app-news',
@@ -15,27 +10,33 @@ interface NewsItem {
 })
 export class NewsComponent {
   selectedCategory = '';
-  news: NewsItem[] = [
+  news: Array<NewsInterface> = [
     {
+      id: 1,
       title: 'Nueva Tecnología en la Nube',
-      description:
+      content:
         'La última tendencia en servicios cloud que está revolucionando el mercado.',
       image: 'https://via.placeholder.com/400x200',
       category: 'actualidad',
+      publicationDate: new Date()
     },
     {
-      title: 'Inteligencia Artificial Avanza',
-      description:
-        'Cómo los desarrollos en IA están impactando diferentes industrias.',
+      id: 2,
+      title: 'Nueva Tecnología en la Nube',
+      content:
+        'La última tendencia en servicios cloud que está revolucionando el mercado.',
       image: 'https://via.placeholder.com/400x200',
       category: 'actualidad',
+      publicationDate: new Date()
     },
     {
-      title: 'Ofertas de Empleo para Juniors',
-      description:
-        'Las empresas tecnológicas buscan talento junior para puestos remotos.',
+      id: 3,
+      title: 'Nueva Tecnología en la Nube',
+      content:
+        'La última tendencia en servicios cloud que está revolucionando el mercado.',
       image: 'https://via.placeholder.com/400x200',
       category: 'empleo',
+      publicationDate: new Date()
     },
   ];
 
