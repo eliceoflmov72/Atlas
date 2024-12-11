@@ -5,8 +5,6 @@ import { RouterLink } from '@angular/router';
   selector: 'app-signin',
   imports: [RouterLink],
   templateUrl: './signin.component.html',
-  styleUrl: './signin.component.scss'
+  styleUrl: './signin.component.scss',
 })
-export class SigninComponent {
-
-}
+export class SigninComponent {}

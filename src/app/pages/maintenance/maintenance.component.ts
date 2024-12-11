@@ -5,8 +5,6 @@ import { RouterLink } from '@angular/router';
   selector: 'app-maintenance',
   imports: [RouterLink],
   templateUrl: './maintenance.component.html',
-  styleUrl: './maintenance.component.scss'
+  styleUrl: './maintenance.component.scss',
 })
-export class MaintenanceComponent {
-
-}
+export class MaintenanceComponent {}

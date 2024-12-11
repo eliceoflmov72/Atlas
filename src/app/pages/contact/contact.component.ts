@@ -5,7 +5,7 @@ import { RouterLink } from '@angular/router';
   selector: 'app-contact',
   imports: [RouterLink],
   templateUrl: './contact.component.html',
-  styleUrl: './contact.component.scss'
+  styleUrl: './contact.component.scss',
 })
 export class ContactComponent {
   teamList = [
@@ -21,5 +21,5 @@ export class ContactComponent {
       photo: 'images/pfp/eliceoPhoto.webp',
       url: 'https://www.linkedin.com/in/eliceo-león-237877280/',
     },
-  ]
+  ];
 }

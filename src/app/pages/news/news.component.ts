@@ -11,7 +11,7 @@ interface NewsItem {
   selector: 'app-news',
   imports: [RouterLink],
   templateUrl: './news.component.html',
-  styleUrl: './news.component.scss'
+  styleUrl: './news.component.scss',
 })
 export class NewsComponent {
   selectedCategory = '';
