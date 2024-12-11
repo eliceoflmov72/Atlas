@@ -21,13 +21,28 @@ export const routes: Routes = [
   { path: '', component: MaintenanceComponent },
   { path: 'news', component: NewsComponent },
   { path: 'article', component: ArticleComponent },
-  { path: 'learning', component: LearningComponent },
-  { path: 'course', component: CourseComponent },
-  { path: 'projects', component: ProjectsComponent },
-  { path: 'project', component: ProjectComponent },
+  {
+    path: 'learning',
+    children: [
+      { path: '', component: LearningComponent },
+      { path: 'course/:id', component: CourseComponent },
+    ]
+  },
+  {
+    path: 'projects',
+    children: [
+      { path: '', component: ProjectsComponent },
+      { path: 'project/:id', component: ProjectComponent }
+    ]
+  },
   { path: 'contact', component: ContactComponent },
-  { path: 'explore', component: ExploreComponent },
-  { path: 'post', component: PostComponent },
+  {
+    path: 'explore',
+    children: [
+      { path: '', component: ExploreComponent },
+      { path: 'post/:id', component: PostComponent }
+    ]
+  },
   { path: 'help', component: HelpComponent },
 
   { path: 'sign-in', component: SigninComponent },
