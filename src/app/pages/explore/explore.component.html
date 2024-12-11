@@ -15,15 +15,14 @@
         <app-publish (closeModalEvent)="togglePublishModal()"></app-publish>
       }
     </div>
-    <!-- Repetir este bloque por cada publicación -->
+    @for (post of posts; track $index) {
     <div class="mb-6 overflow-hidden rounded-lg bg-white shadow-lg">
       <div class="p-6">
         <h3 class="mb-4 text-2xl font-bold text-blue-800">
-          Título de la Publicación
+          {{post.title}}
         </h3>
         <p class="mb-4 text-gray-700">
-          Aquí va una descripción breve de la publicación o una introducción del
-          tema.
+          {{post.content}}
         </p>
         <div class="flex items-center gap-4">
           <div class="flex-shrink-0">
@@ -35,14 +34,14 @@
           </div>
           <div>
             <p class="text-sm font-semibold text-gray-700">Nombre del Autor</p>
-            <p class="text-sm text-gray-500">Fecha de publicación</p>
+            <p class="text-sm text-gray-500">{{post.creationDate}}</p>
           </div>
         </div>
-        <a routerLink="/post" class="mt-4 block text-blue-500 hover:underline"
+        <a routerLink="/explore/post/{{post.id}}" class="mt-4 block text-blue-500 hover:underline"
           >Ver más detalles</a
         >
       </div>
     </div>
-    <!-- Fin de bloque de publicación -->
+    }
   </div>
 </div>
