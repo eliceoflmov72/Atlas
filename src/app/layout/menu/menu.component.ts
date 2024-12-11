@@ -9,7 +9,7 @@ import { Router, RouterLink } from '@angular/router';
 })
 export class MenuComponent {
   constructor(public router: Router) {}
-  @Input() pages: { title: string, url: string, icon: string }[] = []
+  @Input() pages: { title: string; url: string; icon: string }[] = [];
   menuVisibility = false;
   toggleMenu() {
     this.menuVisibility = !this.menuVisibility;
@@ -37,4 +37,3 @@ export class MenuComponent {
     }
   }
 }
-

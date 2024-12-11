@@ -15,23 +15,23 @@ import { HelpComponent } from './pages/help/help.component';
 import { Error404Component } from './pages/error404/error404.component';
 
 export const routes: Routes = [
-    { path: '', component: HomeComponent },
-    { path: '', component: MaintenanceComponent },
-    { path: 'news', component: NewsComponent },
-    { path: 'article', component: ArticleComponent },
-    /*     { path: 'learning', component: LearningComponent },
+  { path: '', component: HomeComponent },
+  { path: '', component: MaintenanceComponent },
+  { path: 'news', component: NewsComponent },
+  { path: 'article', component: ArticleComponent },
+  /*     { path: 'learning', component: LearningComponent },
             { path: 'course', component: CourseComponent }, */
-    { path: 'projects', component: ProjectsComponent },
-    { path: 'project', component: ProjectComponent },
-    { path: 'contact', component: ContactComponent },
-    { path: 'explore', component: ExploreComponent },
-    { path: 'post', component: PostComponent },
-    { path: 'help', component: HelpComponent },
+  { path: 'projects', component: ProjectsComponent },
+  { path: 'project', component: ProjectComponent },
+  { path: 'contact', component: ContactComponent },
+  { path: 'explore', component: ExploreComponent },
+  { path: 'post', component: PostComponent },
+  { path: 'help', component: HelpComponent },
 
-    { path: 'sign-in', component: SigninComponent },
-    { path: 'sign-up', component: SignupComponent },
-    { path: 'profile', component: ProfileComponent },
+  { path: 'sign-in', component: SigninComponent },
+  { path: 'sign-up', component: SignupComponent },
+  { path: 'profile', component: ProfileComponent },
 
-    { path: '404', component: Error404Component },
-    { path: '**', redirectTo: '404', pathMatch: "full" },
+  { path: '404', component: Error404Component },
+  { path: '**', redirectTo: '404', pathMatch: 'full' },
 ];

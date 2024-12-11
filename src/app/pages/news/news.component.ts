@@ -18,27 +18,30 @@ export class NewsComponent {
   news: NewsItem[] = [
     {
       title: 'Nueva Tecnología en la Nube',
-      description: 'La última tendencia en servicios cloud que está revolucionando el mercado.',
+      description:
+        'La última tendencia en servicios cloud que está revolucionando el mercado.',
       image: 'https://via.placeholder.com/400x200',
-      category: 'actualidad'
+      category: 'actualidad',
     },
     {
       title: 'Inteligencia Artificial Avanza',
-      description: 'Cómo los desarrollos en IA están impactando diferentes industrias.',
+      description:
+        'Cómo los desarrollos en IA están impactando diferentes industrias.',
       image: 'https://via.placeholder.com/400x200',
-      category: 'actualidad'
+      category: 'actualidad',
     },
     {
       title: 'Ofertas de Empleo para Juniors',
-      description: 'Las empresas tecnológicas buscan talento junior para puestos remotos.',
+      description:
+        'Las empresas tecnológicas buscan talento junior para puestos remotos.',
       image: 'https://via.placeholder.com/400x200',
-      category: 'empleo'
-    }
+      category: 'empleo',
+    },
   ];
 
   get filteredNews() {
-    return this.selectedCategory 
-      ? this.news.filter(item => item.category === this.selectedCategory)
+    return this.selectedCategory
+      ? this.news.filter((item) => item.category === this.selectedCategory)
       : this.news;
   }
 

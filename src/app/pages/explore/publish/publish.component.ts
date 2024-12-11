@@ -9,10 +9,10 @@ import { Component, EventEmitter, HostListener, Output } from '@angular/core';
 export class PublishComponent {
   @Output() closeModalEvent = new EventEmitter();
   closeModal() {
-    this.closeModalEvent.emit()
+    this.closeModalEvent.emit();
   }
   sendPost() {
-    this.closeModal()
+    this.closeModal();
     /* ! ENVIAR A SERVICE */
   }
   @HostListener('document:click', ['$event'])

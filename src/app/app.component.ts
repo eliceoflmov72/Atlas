@@ -16,7 +16,7 @@ export class AppComponent {
     {
       title: 'Inicio',
       url: '',
-      icon: 'house-fill'
+      icon: 'house-fill',
     },
     {
       title: 'Noticias',
@@ -26,14 +26,14 @@ export class AppComponent {
         {
           title: 'Tecnología',
           url: 'news/tech',
-          icon: 'gear-fill'
+          icon: 'gear-fill',
         },
         {
           title: 'Empleo',
           url: 'news/jobs',
-          icon: 'briefcase-fill'
-        }
-      ]
+          icon: 'briefcase-fill',
+        },
+      ],
     },
     {
       title: 'Foro',
@@ -48,12 +48,12 @@ export class AppComponent {
     {
       title: 'Proyectos',
       url: 'projects',
-      icon: 'box-fill'
+      icon: 'box-fill',
     },
     {
       title: 'Contacto',
       url: 'contact',
-      icon: 'info-circle-fill'
+      icon: 'info-circle-fill',
     },
   ];
 }

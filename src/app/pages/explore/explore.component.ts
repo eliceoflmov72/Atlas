@@ -11,6 +11,6 @@ import { PublishComponent } from './publish/publish.component';
 export class ExploreComponent {
   publishModal = false;
   togglePublishModal() {
-    this.publishModal = !this.publishModal
+    this.publishModal = !this.publishModal;
   }
 }

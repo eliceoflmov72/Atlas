@@ -1,10 +1,7 @@
+.banner-image {
+  animation: moving-shadow 5s infinite linear;
 
-
-
-.bannerImage {
-  animation: movingShadow 5s infinite linear;
-
-  @keyframes movingShadow {
+  @keyframes moving-shadow {
     0%,
     100% {
       filter: drop-shadow(0 0 20px rgb(255 255 255 / 20%));
