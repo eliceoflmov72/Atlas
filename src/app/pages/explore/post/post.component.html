@@ -13,18 +13,13 @@
         <div>
           <p class="text-sm font-semibold text-gray-700">Nombre del Autor</p>
           <p class="text-sm text-gray-500">
-            Publicado el: Fecha de publicación
+            Publicado el: {{post.creationDate}}
           </p>
         </div>
       </div>
-      <div class="mb-8 text-lg leading-relaxed text-gray-700">
+      <div class="mb-8 text-lg text-gray-700">
         <p>
-          Aquí va el contenido detallado de la publicación. Puede incluir varias
-          secciones, párrafos, imágenes y enlaces relacionados con el tema
-          discutido en el foro.
-        </p>
-        <p>
-          También puede haber respuestas o comentarios a lo largo del contenido.
+          {{post.content}}
         </p>
       </div>
     </div>

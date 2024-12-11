@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { PostInterface } from '../../../interfaces/post-interface';
 
 @Component({
   selector: 'app-post',
@@ -7,9 +8,12 @@ import { Component } from '@angular/core';
   styleUrl: './post.component.scss',
 })
 export class PostComponent {
-  post = {
-    title: 'Titulo',
-    created_at : 'ayer'
+  post: PostInterface = {
+    id: 1,
+    title: 'Bien',
+    content: 'HOLAAA',
+    userId: 1,
+    creationDate: new Date(),
   }
 
 }
