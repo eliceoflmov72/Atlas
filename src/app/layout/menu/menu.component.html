@@ -36,13 +36,13 @@
     <!-- ! Aqui hay un pequeño error y es que cuando le das click, como el <ul> tiene la clase "shadow-lg", antes de que acabe la animacion de los <li> se ve el corte del "shadow-lg" -->
     <!-- ¿ Meter una animacion de desaparicion¿¿¿ -->
     <ul
-      class="absolute start-0 top-0 z-10 mt-16 flex flex-1 select-none flex-col items-start rounded-b-3xl bg-white pt-2 text-2xl font-bold text-neutral-700 shadow-lg"
+      class="absolute start-0 top-1 z-10 mt-16 flex flex-1 select-none flex-col items-start rounded-b-3xl bg-white pt-2 text-2xl font-bold text-neutral-700 shadow-lg"
     >
       <!-- ^ Developer del futuro, si la cosa fea de class.bg... se puede acortar estaria genial, esta linea de abajo ocupa mas que el gta 6 -->
       @for (page of pages; track $index) {
         <li
           [routerLink]="page.url"
-          class="w-full animate-fade-in-down cursor-pointer px-5 py-2 opacity-0 last:rounded-b-3xl last:pb-4 hover:bg-blue-400 hover:text-white"
+          class="w-full animate-fade-in-down cursor-pointer px-5 py-2 opacity-0 last:rounded-b-3xl last:pb- hover:bg-blue-400 hover:text-white"
           [class.bg-blue-700]="this.router.url === '/' + page.url"
           [class.text-white]="this.router.url === '/' + page.url"
           [style]="'animation-delay: ' + $index * 0.05 + 's;'"
