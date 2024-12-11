@@ -10,7 +10,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class ProjectComponent {
   route = inject(ActivatedRoute)
-  Project: ProjectInterface = {
+  project: ProjectInterface = {
     id: 1,
     name: 'Animalisima',
     subtitle: 'Una página web sobre animales',

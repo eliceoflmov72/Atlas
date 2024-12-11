@@ -1,9 +1,9 @@
 <div class="container mx-auto my-5 rounded-lg bg-white p-8 shadow-lg">
   <!-- Imagen del proyecto en grande -->
   <div class="mb-8">
-    @if (Project.image) {
+    @if (project.image) {
       <img
-        src="{{Project.image}}"
+        src="{{project.image}}"
         alt="Imagen del proyecto"
         class="h-64 w-full rounded-lg object-cover"
       />
@@ -13,23 +13,23 @@
   <!-- Título y enlaces -->
   <div class="mb-8 flex items-start justify-between gap-3">
     <div>
-      <h1 class="mb-2 text-4xl font-bold text-blue-600">{{Project.name}}</h1>
+      <h1 class="mb-2 text-4xl font-bold text-blue-600">{{project.name}}</h1>
       <p class="text-xl text-gray-700">
-        {{Project.subtitle}}
+        {{project.subtitle}}
       </p>
     </div>
     <div class="flex space-x-4">
-      @if (Project.githubLink) {
+      @if (project.githubLink) {
         <a
-          href="{{Project.githubLink}}"
+          href="{{project.githubLink}}"
           class="flex gap-2 rounded-lg bg-blue-500 px-4 py-2 text-white hover:bg-blue-700"
           ><p class="hidden xl:flex">Github</p>
           <i class="bi bi-github"></i
         ></a>
       }
-      @if (Project.websiteLink) {
+      @if (project.websiteLink) {
         <a
-          href="{{Project.websiteLink}}"
+          href="{{project.websiteLink}}"
           class="flex gap-2 rounded-lg bg-green-500 px-4 py-2 text-white hover:bg-green-700"
           ><p class="hidden xl:flex">Sitio Web</p>
           <i class="bi bi-box-arrow-up-right"></i
@@ -40,7 +40,7 @@
   <!-- Tecnologías utilizadas -->
   <div class="mb-8">
     <div class="flex flex-wrap gap-3">
-      @for (technologie of Project.technologies; track $index) {
+      @for (technologie of project.technologies; track $index) {
         <span
           class="rounded-full bg-blue-200 px-4 py-2 font-semibold text-blue-800"
           >{{technologie}}</span
@@ -52,7 +52,7 @@
   <!-- Descripción del proyecto -->
   <div class="mb-6">
     <p class="text-lg text-gray-700">
-      {{Project.description}}
+      {{project.description}}
     </p>
   </div>
 
