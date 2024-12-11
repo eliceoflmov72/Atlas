@@ -1,6 +1,5 @@
 <div class="flex flex-col min-h-screen">
-    <!-- Banner sin imagen, pero con un diseño fuerte -->
-    <div class="banner text-white py-24 px-6 md:px-20 flex flex-col justify-center items-center rounded-lg">
+    <div class="text-white py-24 px-6 md:px-20 flex flex-col justify-center items-center rounded-lg">
       <h1 class="text-4xl md:text-5xl font-extrabold leading-tight mb-6 text-center">
         Conoce más sobre nosotros
       </h1>
@@ -22,7 +21,7 @@
       <!-- Sección del equipo -->
       <div class="text-center">
         <h3 class="text-2xl font-bold text-blue-800 mb-6">Conoce a nuestro equipo</h3>
-        <div class="flex justify-center gap-12">
+        <div class="flex justify-center flex-wrap gap-12">
           @for (member of teamList; track $index) {
           <a [href]="member.url" target="_blank" class=" w-44 ">
             <div class="flex flex-col items-center">
@@ -73,9 +72,9 @@
     <div class="bg-white py-12">
       <div class="text-center">
         <h2 class="text-3xl font-bold text-blue-800 mb-6">¿Necesitas ayuda?</h2>
-        <a routerLink="/Help" class="bg-blue-900 text-white py-3 px-8 rounded-full text-lg font-semibold hover:bg-blue-800 transition-all transform hover:scale-105 duration-300">
+        <button routerLink="/help" class="bg-blue-900 text-white mx-3 py-3 px-8 rounded-full text-lg font-semibold hover:bg-blue-800 transition-all hover:scale-105 duration-300">
           Visita nuestra página de ayuda
-        </a>
+        </button>
       </div>
     </div>
 

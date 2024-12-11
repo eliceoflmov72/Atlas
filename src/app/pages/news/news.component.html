@@ -1,5 +1,5 @@
 <div class="flex flex-col">
-    <div class="banner text-white py-24 px-6 md:px-20 flex flex-wrap flex-col xl:flex-row justify-around items-center gap-8 rounded-lg">
+    <div class="text-white py-24 px-6 md:px-20 flex flex-wrap flex-col xl:flex-row justify-around items-center gap-8 rounded-lg">
       <div class="flex flex-col items-center md:items-start text-center md:text-left max-w-lg">
         <h1 class="text-4xl md:text-5xl font-extrabold leading-tight mb-4">Últimas Noticias</h1>
         <h2 class="text-xl md:text-2xl font-semibold opacity-80 mb-6">
@@ -8,52 +8,42 @@
       </div>
     </div>
   
-    <div class="bg-white py-6 px-6 md:px-20 shadow-md">
-      <h2 class="text-2xl md:text-3xl font-bold text-blue-800 text-center mb-6">Filtrar por Categoría</h2>
-      <div class="flex justify-center gap-6 mb-6">
-        <button class="bg-blue-900 text-white py-2 px-6 rounded-full font-semibold hover:bg-blue-800 transition-all transform hover:scale-105">
-          Actualidad Tecnológica
-        </button>
-        <button class="bg-blue-900 text-white py-2 px-6 rounded-full font-semibold hover:bg-blue-800 transition-all transform hover:scale-105">
-          Empleo
-        </button>
+  <div class="bg-white py-6 px-6 md:px-20 shadow-md">
+    <h2 class="text-2xl md:text-3xl font-bold text-blue-800 text-center mb-6">Filtrar por Categoría</h2>
+    <div class="flex justify-center gap-6 mb-6">
+      <button (click)="filterNews('')" [class.bg-blue-700]="selectedCategory === ''"
+              class="bg-blue-900 text-white py-2 px-6 rounded-full font-semibold hover:bg-blue-800 transition-all transform hover:scale-105">
+        Todas
+    </button>
+      <button (click)="filterNews('actualidad')" [class.bg-blue-700]="selectedCategory === 'actualidad'"
+              class="bg-blue-900 text-white py-2 px-6 rounded-full font-semibold hover:bg-blue-800 transition-all transform hover:scale-105">
+        Actualidad
+      </button>
+      <button (click)="filterNews('empleo')" [class.bg-blue-700]="selectedCategory === 'empleo'"
+              class="bg-blue-900 text-white py-2 px-6 rounded-full font-semibold hover:bg-blue-800 transition-all transform hover:scale-105">
+        Empleo
+      </button>
+    </div>
+  </div>
+
+  <div class="bg-gray-100 py-16 px-6 shadow-lg">
+    <h2 class="text-3xl md:text-4xl font-bold text-blue-800 text-center mb-6">Noticias Relevantes</h2>
+    <div class="flex flex-col md:flex-row flex-wrap justify-center items-center gap-6">
+      @for (newsItem of filteredNews; track $index) {
+        <div class="bg-white shadow-lg text-blue-800 flex flex-col justify-start items-center text-center px-6 pb-6 rounded-2xl max-w-96 transition-transform transform hover:scale-105">
+          <img [src]="newsItem.image" [alt]="newsItem.title" class="my-6 rounded-2xl object-contain">
+          <p class="font-semibold text-2xl mb-2">{{newsItem.title}}</p>
+          <p class="text-gray-600 mb-4">{{newsItem.description}}</p>
+          <a routerLink="/article" class="text-blue-500 hover:underline font-medium mt-auto">Leer más</a>
+        </div>
+      }
       </div>
     </div>
   
-    <div class="bg-gray-100 py-16 px-6 shadow-lg">
-      <h2 class="text-3xl md:text-4xl font-bold text-blue-800 text-center mb-6">Noticias Relevantes</h2>
-      <div class="flex flex-col md:flex-row flex-wrap justify-center items-center gap-6">
-        <!-- Noticia 1 -->
-        <div class="bg-white shadow-lg text-blue-800 flex flex-col justify-start items-center text-center px-6 pb-6 rounded-2xl max-w-96 transition-transform transform hover:scale-105">
-          <img src="https://via.placeholder.com/400x200" alt="Imagen noticia tecnológica" class="my-6 rounded-2xl object-contain">
-          <p class="font-semibold text-2xl mb-2">Nueva Tecnología en la Nube</p>
-          <p class="text-gray-600 mb-4">La última tendencia en servicios cloud que está revolucionando el mercado.</p>
-          <a routerLink="/Article" class="text-blue-500 hover:underline font-medium mt-auto">Leer más</a>
-        </div>
-  
-        <!-- Noticia 2 -->
-        <div class="bg-white shadow-lg text-blue-800 flex flex-col justify-start items-center text-center px-6 pb-6 rounded-2xl max-w-96 transition-transform transform hover:scale-105">
-          <img src="https://via.placeholder.com/400x200" alt="Imagen noticia tecnológica" class="my-6 rounded-2xl object-contain">
-          <p class="font-semibold text-2xl mb-2">Inteligencia Artificial Avanza</p>
-          <p class="text-gray-600 mb-4">Cómo los desarrollos en IA están impactando diferentes industrias.</p>
-          <a routerLink="/Article" class="text-blue-500 hover:underline font-medium mt-auto">Leer más</a>
-        </div>
-  
-        <!-- Noticia 3 -->
-        <div class="bg-white shadow-lg text-blue-800 flex flex-col justify-start items-center text-center px-6 pb-6 rounded-2xl max-w-96 transition-transform transform hover:scale-105">
-          <img src="https://via.placeholder.com/400x200" alt="Imagen noticia empleo" class="my-6 rounded-2xl object-contain">
-          <p class="font-semibold text-2xl mb-2">Ofertas de Empleo para Juniors</p>
-          <p class="text-gray-600 mb-4">Las empresas tecnológicas buscan talento junior para puestos remotos.</p>
-          <a routerLink="/Article" class="text-blue-500 hover:underline font-medium mt-auto">Leer más</a>
-        </div>
-      </div>
-    </div>
-  
-    <!-- Sección de Contacto -->
     <div class="bg-gradient-to-r from-blue-500 to-purple-600 py-16 px-6 text-center text-white">
       <h2 class="text-3xl md:text-4xl font-bold mb-6">¿Tienes alguna pregunta?</h2>
       <p class="text-lg mb-6">Contáctanos y únete a nuestra comunidad.</p>
-      <a routerLink="/Contact" class="bg-white text-blue-900 py-3 px-8 rounded-full text-lg font-semibold transition-all transform hover:scale-105 duration-300">
+      <a routerLink="/contact" class="bg-white text-blue-900 py-3 px-8 rounded-full text-lg font-semibold transition-all transform hover:scale-105 duration-300">
         Contáctanos
       </a>
     </div>

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, HostListener, Output } from '@angular/core';
 
 @Component({
   selector: 'app-publish',
@@ -7,5 +7,19 @@ import { Component } from '@angular/core';
   styleUrl: './publish.component.scss'
 })
 export class PublishComponent {
-
+  @Output() closeModalEvent = new EventEmitter();
+  closeModal() {
+    this.closeModalEvent.emit()
+  }
+  sendPost() {
+    this.closeModal()
+    /* ! ENVIAR A SERVICE */
+  }
+  @HostListener('document:click', ['$event'])
+  onDocumentClick(event: Event) {
+    const target = event.target as HTMLElement;
+    if (!target.closest('[modal-content]')) {
+      this.closeModal();
+    }
+  }
 }

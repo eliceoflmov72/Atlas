@@ -10,7 +10,7 @@ import { PublishComponent } from "./publish/publish.component";
 })
 export class ExploreComponent {
   publishModal = false;
-  openPublishModal() {
+  togglePublishModal() {
     this.publishModal = !this.publishModal
   }
 }
