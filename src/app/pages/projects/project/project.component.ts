@@ -1,3 +1,4 @@
+import { ProjectInterface } from './../../../interfaces/project-interface';
 import { Component, inject } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
@@ -9,6 +10,12 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class ProjectComponent {
   route = inject(ActivatedRoute)
+  Project: ProjectInterface = {
+    id: 1,
+    name: 'AW',
+    description: 'fd',
+    startDate: new Date()
+  }
   id: string | null = null
   ngOnInit() {
     this.id = this.route.snapshot.paramMap.get('id')
