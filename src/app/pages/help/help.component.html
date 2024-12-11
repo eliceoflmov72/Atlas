@@ -1,55 +1,95 @@
-<div class="flex flex-col min-h-screen">
-    <div class="bg-blue-900 text-white py-24 px-6 md:px-20 flex flex-col justify-center items-center rounded-lg">
-        <h1 class="text-4xl md:text-5xl font-extrabold leading-tight mb-6 text-center">
-            ¿Necesitas ayuda?
-        </h1>
-        <p class="text-xl md:text-2xl font-semibold opacity-90 mb-6 text-center">
-            Estamos aquí para ayudarte. Aquí tienes algunas preguntas frecuentes y formas de ponerte en contacto con nosotros.
-        </p>
-    </div>
-    
-    <!-- Preguntas Frecuentes -->
-    <div class="bg-white py-16 px-6">
-        <h2 class="text-3xl md:text-4xl font-bold text-blue-800 text-center mb-8">Preguntas Frecuentes</h2>
-        <div class="space-y-6">
-            <div class="border-b-2 border-gray-200 pb-4">
-                <h3 class="text-2xl font-semibold text-blue-900">¿Qué es Zemios?</h3>
-                <p class="text-lg text-gray-700">
-                    Zemios es una comunidad de profesionales y estudiantes del sector digital, donde fomentamos el aprendizaje, la colaboración y el crecimiento continuo.
-                </p>
-            </div>
-            <div class="border-b-2 border-gray-200 pb-4">
-                <h3 class="text-2xl font-semibold text-blue-900">¿Cómo puedo unirme a Zemios?</h3>
-                <p class="text-lg text-gray-700">
-                    Puedes unirte a nosotros registrándote en nuestra página de <a routerLink="/sign-up" class="text-blue-900 font-bold hover:underline">registro</a>, y empezar a participar en nuestras actividades.
-                </p>
-            </div>
-            <div class="border-b-2 border-gray-200 pb-4">
-                <h3 class="text-2xl font-semibold text-blue-900">¿Qué tipo de contenido compartimos?</h3>
-                <p class="text-lg text-gray-700">
-                    Compartimos recursos sobre desarrollo web, programación, diseño digital y otros temas relacionados. Además, organizamos cursos y talleres para nuestros miembros.
-                </p>
-            </div>
-            <div class="border-b-2 border-gray-200 pb-4">
-                <h3 class="text-2xl font-semibold text-blue-900">¿Cómo puedo contribuir al desarrollo de Zemios?</h3>
-                <p class="text-lg text-gray-700">
-                    Si deseas contribuir, puedes hacerlo de diversas maneras: participando en nuestros proyectos, compartiendo tus conocimientos, o colaborando con nosotros en el desarrollo de esta página. Si estás interesado en colaborar, ponte en contacto con nosotros a través de <a href="https://www.linkedin.com/company/zemios/" target="_blank" class="text-blue-900 font-bold hover:underline">LinkedIn</a>.
-                </p>                
-            </div>
-        </div>
-    </div>
+<div class="flex min-h-screen flex-col">
+  <div
+    class="flex flex-col items-center justify-center rounded-lg bg-blue-900 px-6 py-24 text-white md:px-20"
+  >
+    <h1
+      class="mb-6 text-center text-4xl font-extrabold leading-tight md:text-5xl"
+    >
+      ¿Necesitas ayuda?
+    </h1>
+    <p class="mb-6 text-center text-xl font-semibold opacity-90 md:text-2xl">
+      Estamos aquí para ayudarte. Aquí tienes algunas preguntas frecuentes y
+      formas de ponerte en contacto con nosotros.
+    </p>
+  </div>
 
-    <!-- Sección de contacto -->
-    <div class="bg-gray-100 py-16 px-6">
-        <h2 class="text-3xl md:text-4xl font-bold text-blue-800 text-center mb-8">Contáctanos</h2>
-        <p class="text-lg text-center mb-8 text-gray-700">
-            Si no encuentras la respuesta a tu pregunta, no dudes en ponerte en contacto con nosotros.
+  <!-- Preguntas Frecuentes -->
+  <div class="bg-white px-6 py-16">
+    <h2 class="mb-8 text-center text-3xl font-bold text-blue-800 md:text-4xl">
+      Preguntas Frecuentes
+    </h2>
+    <div class="space-y-6">
+      <div class="border-b-2 border-gray-200 pb-4">
+        <h3 class="text-2xl font-semibold text-blue-900">¿Qué es Zemios?</h3>
+        <p class="text-lg text-gray-700">
+          Zemios es una comunidad de profesionales y estudiantes del sector
+          digital, donde fomentamos el aprendizaje, la colaboración y el
+          crecimiento continuo.
         </p>
-        <div class="text-center">
-            <p class="text-lg font-semibold text-gray-700 mb-4">Correo de contacto:</p>
-            <a href="mailto:info@zemios.com" class="text-blue-900 text-xl font-semibold hover:underline">info&#64;zemios.com</a>
-        </div>
+      </div>
+      <div class="border-b-2 border-gray-200 pb-4">
+        <h3 class="text-2xl font-semibold text-blue-900">
+          ¿Cómo puedo unirme a Zemios?
+        </h3>
+        <p class="text-lg text-gray-700">
+          Puedes unirte a nosotros registrándote en nuestra página de
+          <a
+            routerLink="/sign-up"
+            class="font-bold text-blue-900 hover:underline"
+            >registro</a
+          >, y empezar a participar en nuestras actividades.
+        </p>
+      </div>
+      <div class="border-b-2 border-gray-200 pb-4">
+        <h3 class="text-2xl font-semibold text-blue-900">
+          ¿Qué tipo de contenido compartimos?
+        </h3>
+        <p class="text-lg text-gray-700">
+          Compartimos recursos sobre desarrollo web, programación, diseño
+          digital y otros temas relacionados. Además, organizamos cursos y
+          talleres para nuestros miembros.
+        </p>
+      </div>
+      <div class="border-b-2 border-gray-200 pb-4">
+        <h3 class="text-2xl font-semibold text-blue-900">
+          ¿Cómo puedo contribuir al desarrollo de Zemios?
+        </h3>
+        <p class="text-lg text-gray-700">
+          Si deseas contribuir, puedes hacerlo de diversas maneras: participando
+          en nuestros proyectos, compartiendo tus conocimientos, o colaborando
+          con nosotros en el desarrollo de esta página. Si estás interesado en
+          colaborar, ponte en contacto con nosotros a través de
+          <a
+            href="https://www.linkedin.com/company/zemios/"
+            target="_blank"
+            class="font-bold text-blue-900 hover:underline"
+            >LinkedIn</a
+          >.
+        </p>
+      </div>
     </div>
+  </div>
+
+  <!-- Sección de contacto -->
+  <div class="bg-gray-100 px-6 py-16">
+    <h2 class="mb-8 text-center text-3xl font-bold text-blue-800 md:text-4xl">
+      Contáctanos
+    </h2>
+    <p class="mb-8 text-center text-lg text-gray-700">
+      Si no encuentras la respuesta a tu pregunta, no dudes en ponerte en
+      contacto con nosotros.
+    </p>
+    <div class="text-center">
+      <p class="mb-4 text-lg font-semibold text-gray-700">
+        Correo de contacto:
+      </p>
+      <a
+        href="mailto:info@zemios.com"
+        class="text-xl font-semibold text-blue-900 hover:underline"
+        >info&#64;zemios.com</a
+      >
+    </div>
+  </div>
 
   <!-- Redes sociales -->
   <div class="bg-white py-12">
