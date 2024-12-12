@@ -7,7 +7,8 @@ import { PostInterface } from '../interfaces/post-interface';
 export class PostsService {
 
   constructor() { }
-  posts: PostInterface[] = [{id: 1, userId: 1, title: "Exploring Angular", content: "A deep dive into Angular's new features.", creationDate: new Date("2024-10-16")}, {id: 2, userId: 2, title: "React 18 Overview", content: "A look at React 18 and what it offers.", creationDate: new Date("2024-11-21")}, {id: 3, userId: 3, title: "Why Next.js?", content: "Why developers should switch to Next.js for SSR.", creationDate: new Date("2024-12-02")}];
+  posts: PostInterface[] = [{id: 1, user_id: 1, title: "Introducción a TypeScript", content: "TypeScript es un superconjunto de JS...", creation_date: new Date()}, {id: 2, user_id: 2, title: "Guía de Hooks en React", content: "Los hooks son una nueva adición...", creation_date: new Date()}, {id: 3, user_id: 3, title: "Cómo usar MongoDB con Node.js", content: "En esta guía veremos cómo conectar...", creation_date: new Date()}];
+
   /* * SOLO COMO EJEMPLO; AQUI DEBERIA COGER DEL BACK */
   show(): Array<PostInterface> {
     return this.posts

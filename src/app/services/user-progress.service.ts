@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { UserProgressInterface } from '../interfaces/user-progress-interface';
 
 @Injectable({
   providedIn: 'root'
@@ -6,4 +7,6 @@ import { Injectable } from '@angular/core';
 export class UserProgressService {
 
   constructor() { }
+  userProgress: UserProgressInterface[] = [{id: 1, user_id: 1, course_id: 1, module_id: 1, lesson_id: 1, completed: true, completed_at: new Date()}, {id: 2, user_id: 2, course_id: 2, module_id: 2, lesson_id: 2, completed: false, completed_at: new Date()}, {id: 3, user_id: 3, course_id: 3, module_id: 3, lesson_id: 3, completed: true, completed_at: new Date()}];
+
 }

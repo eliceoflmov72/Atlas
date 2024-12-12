@@ -6,7 +6,8 @@ import { CommentInterface } from '../interfaces/comment-interface';
 })
 export class CommentsService {
   constructor() { }
-  comments: CommentInterface[] = [{id: 1, postId: 1, userId: 2, content: "Great insights on Angular!", creationDate: new Date("2024-10-17")}, {id: 2, postId: 2, userId: 1, content: "Thanks for the React 18 breakdown!", creationDate: new Date("2024-11-22")}, {id: 3, postId: 3, userId: 3, content: "Next.js is amazing!", creationDate: new Date("2024-12-03")}];
+  comments: CommentInterface[] = [{ id: 1, post_id: 1, user_id: 1, content: "Muy buen artículo sobre TypeScript!", creation_date: new Date() }, { id: 2, post_id: 2, user_id: 2, content: "Este post me ayudó a entender React Hooks.", creation_date: new Date() }, { id: 3, post_id: 1, user_id: 3, content: "¿Podrías profundizar en los tipos genéricos?", creation_date: new Date() }];
+
   show(): Array<CommentInterface> {
     return this.comments
   }
@@ -18,7 +19,7 @@ export class CommentsService {
   delete(id: number) {
     return id /* TODO: */
   }
-  
+
   update(id: number) {
     return id /* TODO: Hay que hacerlo?!??¿ */
   }
