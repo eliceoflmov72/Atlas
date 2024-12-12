@@ -19,8 +19,13 @@ import { CourseComponent } from './pages/learning/course/course.component';
 export const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: '', component: MaintenanceComponent },
-  { path: 'news', component: NewsComponent },
-  { path: 'article', component: ArticleComponent },
+  {
+    path: 'news',
+    children: [
+      { path: '', component: NewsComponent },
+      { path: 'article/:id', component: ArticleComponent }
+    ]
+  },
   {
     path: 'learning',
     children: [
