@@ -1,7 +1,7 @@
 export interface PostInterface {
-    id: number;
-    userId: number;
+    id: bigint;
+    user_id: bigint;
     title: string;
     content: string;
-    creationDate: Date;
+    creation_date: Date;
 }

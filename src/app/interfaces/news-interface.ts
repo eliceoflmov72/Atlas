@@ -1,9 +1,9 @@
 export interface NewsInterface {
-    id: number;
+    id: bigint;
     title: string;
     content: string;
-    publicationDate: Date;
-    category?: string;
-    image?: string;
-    authorId?: number;
+    publication_date: Date;
+    category: string;
+    image: string;
+    author_id: bigint;
 }
