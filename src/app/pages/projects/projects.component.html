@@ -10,6 +10,7 @@
        >
          <img
            src="{{project.image}}"
+           (error)="project.image='error.svg'"
            alt="Project Image"
            class="h-48 w-full object-cover"
          />

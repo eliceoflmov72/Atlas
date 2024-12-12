@@ -5,6 +5,7 @@
     @if (project.image) {
       <img
         src="{{project.image}}"
+        (error)="project.image='error.svg'"
         alt="Imagen del proyecto"
         class="h-64 w-full rounded-lg object-cover"
       />
