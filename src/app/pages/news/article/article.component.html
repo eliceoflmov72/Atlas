@@ -1,13 +1,15 @@
 <div class="min-h-screen bg-gray-100 px-6 py-12">
   <div class="mx-auto max-w-5xl overflow-hidden rounded-lg bg-white shadow-lg">
-    <img
-      src="https://via.placeholder.com/800x400"
+    @if (article?.image) {
+      <img
+      src="{{article?.image}}"
       alt="Imagen de la Noticia"
       class="h-96 w-full object-cover"
-    />
+      />
+    }
     <div class="p-8">
       <h1 class="mb-6 text-4xl font-bold text-blue-800">
-        Título de la Noticia
+        {{article?.title}}
       </h1>
       <div class="mb-6 flex items-center gap-4">
         <img
@@ -22,19 +24,7 @@
       </div>
       <div class="text-lg leading-relaxed text-gray-700">
         <p>
-          Aquí va el cuerpo principal de la noticia. Puede incluir múltiples
-          párrafos, imágenes y citas, proporcionando todos los detalles
-          relevantes para la comunidad sobre el evento o noticia que se está
-          cubriendo.
-        </p>
-        <p>
-          Este espacio también puede incluir enlaces externos relacionados con
-          la noticia.
-        </p>
-        <p>
-          Otra sección de contenido más detallada de la noticia. Información
-          adicional sobre lo que ocurrió o los aspectos más importantes del
-          evento que se está reportando.
+          {{article?.content}}
         </p>
       </div>
     </div>
