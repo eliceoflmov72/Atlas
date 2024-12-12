@@ -1,4 +1,4 @@
-export interface ModulesInterface {
+export interface ModuleInterface {
     id: number;
     course_id: number;
     title: string;

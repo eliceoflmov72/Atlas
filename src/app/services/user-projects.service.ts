@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { UserProjectsInterface } from '../interfaces/user-projects-interface';
+import { UserProjectInterface } from '../interfaces/user-project-interface';
 
 @Injectable({
   providedIn: 'root'
@@ -7,6 +7,6 @@ import { UserProjectsInterface } from '../interfaces/user-projects-interface';
 export class UserProjectsService {
 
   constructor() { }
-  userProjects: UserProjectsInterface[] = [{id: 1, user_id: 1, project_id: 1, contribution: "Frontend con React"}, {id: 2, user_id: 2, project_id: 2, contribution: "Backend con Node.js"}, {id: 3, user_id: 3, project_id: 3, contribution: "Fullstack con Express"}];
+  userProjects: UserProjectInterface[] = [{id: 1, user_id: 1, project_id: 1, contribution: "Frontend con React"}, {id: 2, user_id: 2, project_id: 2, contribution: "Backend con Node.js"}, {id: 3, user_id: 3, project_id: 3, contribution: "Fullstack con Express"}];
 
 }
