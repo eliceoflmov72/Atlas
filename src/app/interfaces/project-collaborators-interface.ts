@@ -1,5 +1,5 @@
 export interface ProjectCollaboratorsInterface {
-    id: bigint;
-    project_id: bigint;
-    user_id: bigint;
+    id: number;
+    project_id: number;
+    user_id: number;
 }

@@ -1,6 +1,6 @@
 export interface LikesInterface {
-    id: bigint;
-    user_id: bigint;
-    post_id: bigint;
-    news_id: bigint;
+    id: number;
+    user_id: number;
+    post_id: number;
+    news_id: number;
 }

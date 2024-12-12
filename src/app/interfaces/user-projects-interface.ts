@@ -1,6 +1,6 @@
 export interface UserProjectsInterface {
-    id: bigint;
-    user_id: bigint;
-    project_id: bigint;
+    id: number;
+    user_id: number;
+    project_id: number;
     contribution: string;
 }

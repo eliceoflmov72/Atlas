@@ -1,9 +1,9 @@
 export interface UserProgressInterface {
-    id: bigint;
-    user_id: bigint;
-    course_id: bigint;
-    module_id: bigint;
-    lesson_id: bigint;
+    id: number;
+    user_id: number;
+    course_id: number;
+    module_id: number;
+    lesson_id: number;
     completed: boolean;
     completed_at: Date;
 }

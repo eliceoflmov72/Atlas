@@ -1,6 +1,6 @@
 export interface ModulesInterface {
-    id: bigint;
-    course_id: bigint;
+    id: number;
+    course_id: number;
     title: string;
     description: string;
     module_order: number;

@@ -1,5 +1,5 @@
 export interface UsersInterface {
-    id: bigint;
+    id: number;
     name: string;
     email: string;
     registration_date: Date;

@@ -1,6 +1,6 @@
 export interface LessonsInterface {
-    id: bigint;
-    module_id: bigint;
+    id: number;
+    module_id: number;
     title: string;
     content: string;
     exercise: string;
