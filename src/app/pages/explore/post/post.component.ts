@@ -12,5 +12,5 @@ import { ActivatedRoute } from '@angular/router';
 export class PostComponent {
   route = inject(ActivatedRoute)
   id: string | null = this.route.snapshot.paramMap.get('id')
-  post: PostInterface | undefined = inject(PostsService).getPost(Number(this.id))
+  post: PostInterface | undefined = inject(PostsService).get(Number(this.id))
 }

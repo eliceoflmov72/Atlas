@@ -18,5 +18,5 @@ export class ExploreComponent {
   }
 
   private readonly postsSvc = inject(PostsService)
-  posts: Array<PostInterface> = this.postsSvc.getAllPosts();
+  posts: Array<PostInterface> = this.postsSvc.show();
 }
