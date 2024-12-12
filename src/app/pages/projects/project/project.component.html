@@ -20,17 +20,17 @@
       </p>
     </div>
     <div class="flex space-x-4">
-      @if (project.githubLink) {
+      @if (project.github_link) {
         <a
-          href="{{project.githubLink}}" target="_blank"
+          href="{{project.github_link}}" target="_blank"
           class="flex gap-2 rounded-lg bg-blue-500 px-4 py-2 text-white hover:bg-blue-700"
           ><p class="hidden xl:flex">Github</p>
           <i class="bi bi-github"></i
         ></a>
       }
-      @if (project.websiteLink) {
+      @if (project.website_link) {
         <a
-          href="{{project.websiteLink}}" target="_blank"
+          href="{{project.website_link}}" target="_blank"
           class="flex gap-2 rounded-lg bg-green-500 px-4 py-2 text-white hover:bg-green-700"
           ><p class="hidden xl:flex">Sitio Web</p>
           <i class="bi bi-box-arrow-up-right"></i
