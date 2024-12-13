@@ -23,30 +23,30 @@ export const routes: Routes = [
     path: 'news',
     children: [
       { path: '', component: NewsComponent },
-      { path: 'article/:id', component: ArticleComponent }
-    ]
+      { path: 'article/:id', component: ArticleComponent },
+    ],
   },
   {
     path: 'learning',
     children: [
       { path: '', component: LearningComponent },
       { path: 'course/:id', component: CourseComponent },
-    ]
+    ],
   },
   {
     path: 'projects',
     children: [
       { path: '', component: ProjectsComponent },
-      { path: 'project/:id', component: ProjectComponent }
-    ]
+      { path: 'project/:id', component: ProjectComponent },
+    ],
   },
   { path: 'contact', component: ContactComponent },
   {
     path: 'explore',
     children: [
       { path: '', component: ExploreComponent },
-      { path: 'post/:id', component: PostComponent }
-    ]
+      { path: 'post/:id', component: PostComponent },
+    ],
   },
   { path: 'help', component: HelpComponent },
 

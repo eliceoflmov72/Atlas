@@ -10,7 +10,7 @@ import { ActivatedRoute } from '@angular/router';
   styleUrl: './post.component.scss',
 })
 export class PostComponent {
-  route = inject(ActivatedRoute)
-  id: string | null = this.route.snapshot.paramMap.get('id')
-  post: PostInterface | undefined = inject(PostsService).get(Number(this.id))
+  route = inject(ActivatedRoute);
+  id: string | null = this.route.snapshot.paramMap.get('id');
+  post: PostInterface | undefined = inject(PostsService).get(Number(this.id));
 }

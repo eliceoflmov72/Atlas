@@ -10,6 +10,6 @@ import { ProjectsService } from '../../services/projects.service';
   styleUrl: './projects.component.scss',
 })
 export class ProjectsComponent {
-  private readonly postsSvc = inject(ProjectsService)
+  private readonly postsSvc = inject(ProjectsService);
   projects: Array<ProjectInterface> = this.postsSvc.show();
 }

@@ -10,7 +10,9 @@ import { ProjectsService } from '../../../services/projects.service';
   styleUrl: './project.component.scss',
 })
 export class ProjectComponent {
-  route = inject(ActivatedRoute)
-  id: string | null = this.route.snapshot.paramMap.get('id')
-  project: ProjectInterface | undefined = inject(ProjectsService).get(Number(this.id))
+  route = inject(ActivatedRoute);
+  id: string | null = this.route.snapshot.paramMap.get('id');
+  project: ProjectInterface | undefined = inject(ProjectsService).get(
+    Number(this.id)
+  );
 }

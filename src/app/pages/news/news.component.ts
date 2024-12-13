@@ -11,9 +11,8 @@ import { NewsService } from '../../services/news.service';
 })
 export class NewsComponent {
   selectedCategory = '';
-  private readonly newsSvc = inject(NewsService)
+  private readonly newsSvc = inject(NewsService);
   news: Array<NewsInterface> = this.newsSvc.show();
-
 
   /* TODO: Esto de aqui deberia importar las categorias que hay entre los elementos de news? */
   get filteredNews() {

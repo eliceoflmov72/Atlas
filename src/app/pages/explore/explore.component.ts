@@ -17,6 +17,6 @@ export class ExploreComponent {
     this.publishModal = !this.publishModal;
   }
 
-  private readonly postsSvc = inject(PostsService)
+  private readonly postsSvc = inject(PostsService);
   posts: Array<PostInterface> = this.postsSvc.show();
 }
