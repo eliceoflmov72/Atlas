@@ -8,7 +8,7 @@ import { Router, RouterLink } from '@angular/router';
   styleUrl: './menu.component.scss',
 })
 export class MenuComponent {
-  constructor(public router: Router) {}
+  constructor(public router: Router) { }
   @Input() pages: { title: string; url: string; icon: string }[] = [];
   menuVisibility = false;
   toggleMenu() {
@@ -18,20 +18,16 @@ export class MenuComponent {
   @HostListener('document:click', ['$event'])
   onDocumentClick(event: Event) {
     const target = event.target as HTMLElement;
-    if (this.menuVisibility && !target.closest('app-menu')) {
+    const isMenu = target.closest('app-menu');
+    const isMenuItem = target.closest('li');
+    if (this.menuVisibility && (!isMenu || isMenuItem)) {
       this.menuVisibility = false;
     }
   }
 
   @HostListener('window:scroll', [])
-  onScroll() {
-    if (this.menuVisibility) {
-      this.menuVisibility = false;
-    }
-  }
-
   @HostListener('window:touchmove', [])
-  onTouchMove() {
+  closeMenu() {
     if (this.menuVisibility) {
       this.menuVisibility = false;
     }
