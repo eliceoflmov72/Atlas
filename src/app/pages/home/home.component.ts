@@ -1,5 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { NewsService } from '../../services/news.service';
+import { NewsInterface } from '../../interfaces/news-interface';
+import { CoursesService } from '../../services/courses.service';
+import { CoursesInterface } from '../../interfaces/courses-interface';
+import { ProjectsService } from '../../services/projects.service';
+import { ProjectInterface } from '../../interfaces/project-interface';
 
 @Component({
   selector: 'app-home',
@@ -45,22 +51,10 @@ export class HomeComponent {
     },
   ];
 
-  mainNews: {
-    title: string;
-    description: string;
-    url: string;
-    imageUrl: string;
-  }[] = [];
-  lastCourses: {
-    title: string;
-    description: string;
-    url: string;
-    color: string;
-  }[] = [];
-  lastProyects: {
-    title: string;
-    description: string;
-    image: string;
-    collaborators: { image: string; name: string }[];
-  }[] = [];
+  private readonly newsSvc = inject(NewsService);
+  private readonly coursesSvc = inject(CoursesService);
+  private readonly projectsSvc = inject(ProjectsService);
+  mainNews: Array<NewsInterface> = this.newsSvc.show();
+  lastCourses: Array<CoursesInterface> = this.coursesSvc.show();
+  lastProjects: Array<ProjectInterface> = this.projectsSvc.show();
 }
