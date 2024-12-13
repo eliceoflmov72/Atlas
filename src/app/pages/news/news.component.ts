@@ -16,9 +16,7 @@ export class NewsComponent {
 
   /* TODO: Esto de aqui deberia importar las categorias que hay entre los elementos de news? */
   get filteredNews() {
-    return this.selectedCategory
-      ? this.news.filter((item) => item.category === this.selectedCategory)
-      : this.news;
+    return this.selectedCategory ? this.news.filter((item) => item.category === this.selectedCategory) : this.news;
   }
 
   filterNews(category: string) {

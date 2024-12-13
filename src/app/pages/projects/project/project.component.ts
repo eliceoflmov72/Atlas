@@ -12,7 +12,5 @@ import { ProjectsService } from '../../../services/projects.service';
 export class ProjectComponent {
   route = inject(ActivatedRoute);
   id: string | null = this.route.snapshot.paramMap.get('id');
-  project: ProjectInterface | undefined = inject(ProjectsService).get(
-    Number(this.id)
-  );
+  project: ProjectInterface | undefined = inject(ProjectsService).get(Number(this.id));
 }

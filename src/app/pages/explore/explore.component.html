@@ -1,13 +1,8 @@
 <div class="min-h-screen bg-gray-100 px-6 py-12">
-  <h2 class="mb-8 text-center text-4xl font-bold text-blue-800">
-    Foro de la Comunidad
-  </h2>
+  <h2 class="mb-8 text-center text-4xl font-bold text-blue-800">Foro de la Comunidad</h2>
   <div class="mx-auto max-w-4xl">
     <div class="mb-6 text-right">
-      <button
-        (click)="togglePublishModal()"
-        class="transform rounded-lg bg-blue-800 px-4 py-2 font-bold text-white transition-all duration-300 hover:scale-105 hover:bg-blue-700"
-      >
+      <button (click)="togglePublishModal()" class="transform rounded-lg bg-blue-800 px-4 py-2 font-bold text-white transition-all duration-300 hover:scale-105 hover:bg-blue-700">
         Crear Publicación
       </button>
       @if (publishModal) {
@@ -25,24 +20,14 @@
           </p>
           <div class="flex items-center gap-4">
             <div class="flex-shrink-0">
-              <img
-                src="https://via.placeholder.com/50"
-                alt="Autor"
-                class="h-12 w-12 rounded-full border-2 border-gray-300"
-              />
+              <img src="https://via.placeholder.com/50" alt="Autor" class="h-12 w-12 rounded-full border-2 border-gray-300" />
             </div>
             <div>
-              <p class="text-sm font-semibold text-gray-700">
-                Nombre del Autor
-              </p>
+              <p class="text-sm font-semibold text-gray-700">Nombre del Autor</p>
               <p class="text-sm text-gray-500">{{ post.creation_date }}</p>
             </div>
           </div>
-          <a
-            routerLink="/explore/post/{{ post.id }}"
-            class="mt-4 block text-blue-500 hover:underline"
-            >Ver más detalles</a
-          >
+          <a routerLink="/explore/post/{{ post.id }}" class="mt-4 block text-blue-500 hover:underline">Ver más detalles</a>
         </div>
       </div>
     }

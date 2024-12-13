@@ -3,12 +3,7 @@
     <!-- Imagen del proyecto en grande -->
     <div class="mb-8">
       @if (project.image) {
-        <img
-          src="{{ project.image }}"
-          (error)="project.image = 'error.svg'"
-          alt="Imagen del proyecto"
-          class="h-64 w-full rounded-lg object-cover"
-        />
+        <img src="{{ project.image }}" (error)="project.image = 'error.svg'" alt="Imagen del proyecto" class="h-64 w-full rounded-lg object-cover" />
       }
     </div>
 
@@ -24,19 +19,13 @@
       </div>
       <div class="flex space-x-4">
         @if (project.github_link) {
-          <a
-            href="{{ project.github_link }}"
-            target="_blank"
-            class="flex gap-2 rounded-lg bg-blue-500 px-4 py-2 text-white hover:bg-blue-700"
+          <a href="{{ project.github_link }}" target="_blank" class="flex gap-2 rounded-lg bg-blue-500 px-4 py-2 text-white hover:bg-blue-700"
             ><p class="hidden xl:flex">Github</p>
             <i class="bi bi-github"></i
           ></a>
         }
         @if (project.website_link) {
-          <a
-            href="{{ project.website_link }}"
-            target="_blank"
-            class="flex gap-2 rounded-lg bg-green-500 px-4 py-2 text-white hover:bg-green-700"
+          <a href="{{ project.website_link }}" target="_blank" class="flex gap-2 rounded-lg bg-green-500 px-4 py-2 text-white hover:bg-green-700"
             ><p class="hidden xl:flex">Sitio Web</p>
             <i class="bi bi-box-arrow-up-right"></i
           ></a>
@@ -47,10 +36,7 @@
     <div class="mb-8">
       <div class="flex flex-wrap gap-3">
         @for (technologie of project.technologies; track $index) {
-          <span
-            class="rounded-full bg-blue-200 px-4 py-2 font-semibold text-blue-800"
-            >{{ technologie }}</span
-          >
+          <span class="rounded-full bg-blue-200 px-4 py-2 font-semibold text-blue-800">{{ technologie }}</span>
         }
       </div>
     </div>
@@ -66,18 +52,10 @@
     <div>
       <ul class="flex gap-4">
         <li class="h-16 w-16 overflow-hidden rounded-full">
-          <img
-            src="https://placehold.co/400x400"
-            alt="Colaborador 1"
-            class="h-full w-full object-cover"
-          />
+          <img src="https://placehold.co/400x400" alt="Colaborador 1" class="h-full w-full object-cover" />
         </li>
         <li class="h-16 w-16 overflow-hidden rounded-full">
-          <img
-            src="https://placehold.co/400x400"
-            alt="Colaborador 2"
-            class="h-full w-full object-cover"
-          />
+          <img src="https://placehold.co/400x400" alt="Colaborador 2" class="h-full w-full object-cover" />
         </li>
       </ul>
     </div>
