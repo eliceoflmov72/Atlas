@@ -124,7 +124,8 @@
         <div class="order-2 flex h-auto w-full flex-row flex-wrap justify-around gap-2 lg:order-1">
           @for (project of lastProjects; track $index) {
             @if ($index < 3) {
-              <div class="relative flex transform flex-col items-center justify-between rounded-2xl bg-gray-800 p-6 text-center text-white transition-all">
+              <div routerLink="/projects/project/{{project.id}}" 
+                class="relative flex transform flex-grow cursor-pointer flex-col items-center justify-between rounded-2xl bg-gray-800 p-6 text-center text-white transition-all">
                 <img src="{{ project.image }}" onerror="this.src='error.svg'" class="absolute top-0 h-full w-full rounded-2xl object-cover opacity-0 hover:opacity-100" alt="Proyect Image" />
                 <h3 class="mb-4 text-xl font-bold text-blue-700">{{ project.name }}</h3>
                 <p class="mb-4 w-auto text-gray-300 sm:w-56">{{ project.description }}</p>
