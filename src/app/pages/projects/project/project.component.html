@@ -3,7 +3,7 @@
     <!-- Imagen del proyecto en grande -->
     <div class="mb-8">
       @if (project.image) {
-        <img src="{{ project.image }}" (error)="project.image = 'error.svg'" alt="Imagen del proyecto" class="h-64 w-full rounded-lg object-cover" />
+        <img src="{{ project.image }}" onerror="this.src='error.svg'" alt="Imagen del proyecto" class="h-64 w-full rounded-lg object-cover" />
       }
     </div>
 
@@ -52,10 +52,10 @@
     <div>
       <ul class="flex gap-4">
         <li class="h-16 w-16 overflow-hidden rounded-full">
-          <img src="https://placehold.co/400x400" alt="Colaborador 1" class="h-full w-full object-cover" />
+          <img src="foto" onerror="this.src='error.svg'" alt="Colaborador 1" class="h-full w-full object-cover" />
         </li>
         <li class="h-16 w-16 overflow-hidden rounded-full">
-          <img src="https://placehold.co/400x400" alt="Colaborador 2" class="h-full w-full object-cover" />
+          <img src="foto" onerror="this.src='error.svg'" alt="Colaborador 2" class="h-full w-full object-cover" />
         </li>
       </ul>
     </div>
