@@ -1,3 +1,50 @@
 {
-    "hello": "sdafdsafdsafdasfdsafdsa y estudiantes del mundo digital, unidos por el aprendizaje y el crecimiento continuo."
+    "language-selector": {
+        "en": "Inglés",
+        "es": "Español",
+        "fr": "Francés",
+        "de": "Alemán",
+        "zh": "Chino",
+        "ko": "Coreano",
+        "ja": "Japonés",
+        "pt": "Portugués",
+        "ru": "Ruso",
+        "ar": "Árabe"
+    },
+    "home": {
+        "header": {
+            "title": "Conéctate, Aprende y Crece",
+            "subtitle": "Forma parte de una comunidad que impulsa tu desarrollo profesional",
+            "description": "Compartimos conocimientos, oportunidades y mucho más para ayudarte a avanzar."
+        },
+        "main": {
+            "title": "¿Quiénes somos?",
+            "description": "En Zemios, somos una comunidad apasionada de profesionales y estudiantes del mundo digital, unidos por el aprendizaje y el crecimiento continuo. Hemos creado un espacio donde cada miembro pueda aprender, enseñar y conectar con otros.Nuestro objetivo es impulsar el desarrollo personal y profesional, promoviendo la colaboración y las oportunidades para todos.",
+            "join": "Únete a la comunidad",
+            "join-description": "Regístrate en nuestra plataforma y crea tu perfil.",
+            "connect": "Conecta con otros juniors",
+            "connect-description": "Comparte tus experiencias y aprende de otros programadores como tú.",
+            "collaborate": "Colabora en proyectos",
+            "collaborate-description": "Elige proyectos en los que puedas aportar y que se adapten a tu nivel.",
+            "learn": "Sigue aprendiendo",
+            "learn-description": "Accede a recursos y cursos para seguir desarrollando tus habilidades.",
+            "opportunities": "Abre nuevas oportunidades",
+            "opportunities-description": "Haz networking y consigue referencias que te ayuden en tu carrera."
+        },
+        "secondary": {
+            "title": "Únete a nosotros",
+            "description": "Forma parte de una comunidad vibrante que comparte conocimientos, oportunidades y proyectos. ¡Juntos podemos crecer y alcanzar nuevas metas!",
+            "questions": "¿Tienes alguna pregunta? Contáctanos:"
+        },
+        "footer": {
+            "title": "¿Te gustaría apoyarnos? Haz una pequeña donación y ayuda a que Zemios crezca.",
+            "donate": "Haz una donación"
+        },
+        "buttons": {
+            "explore": "Explora la comunidad",
+            "join": "Únete a nosotros",
+            "learn-more": "Conoce más sobre nosotros",
+            "create-profile": "Crear perfil"
+        }
+    }
 }

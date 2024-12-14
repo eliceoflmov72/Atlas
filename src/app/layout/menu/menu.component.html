@@ -29,8 +29,12 @@
   <div class="language-dropdown">
     <button class="dropdown-button" (click)="toggleDropdown()">🌎</button>
     <div class="dropdown-content" [class.show]="isDropdownOpen">
-      <button (click)="translateText('en'); closeDropdown()">English</button>
-      <button (click)="translateText('es'); closeDropdown()">Español</button>
+      <button (click)="translateText('en'); closeDropdown()">
+        {{ 'language-selector.en' | translate }}
+      </button>
+      <button (click)="translateText('es'); closeDropdown()">
+        {{ 'language-selector.es' | translate }}
+      </button>
     </div>
   </div>
 </div>

@@ -6,27 +6,26 @@
       class="order-1 flex max-w-lg flex-col items-center text-center md:order-2 md:items-start md:text-left xl:order-1"
     >
       <h1 class="mb-4 text-4xl font-extrabold leading-tight md:text-5xl">
-        Conéctate, Aprende y Crece
+        {{ 'home.header.title' | translate }}
       </h1>
       <h2 class="mb-6 text-xl font-semibold opacity-80 md:text-2xl">
-        Forma parte de una comunidad que impulsa tu desarrollo profesional
+        {{ 'home.header.subtitle' | translate }}
       </h2>
       <p class="mb-6 text-lg opacity-80 md:text-xl">
-        Compartimos conocimientos, oportunidades y mucho más para ayudarte a
-        avanzar.
+        {{ 'home.header.description' | translate }}
       </p>
       <div class="flex flex-wrap items-center justify-center gap-3 text-center">
         <a
           routerLink="/explore"
           class="transform rounded-full bg-white px-8 py-3 text-lg font-semibold text-blue-900 transition-all duration-300 hover:scale-105 hover:bg-gray-100"
         >
-          Explora la Comunidad
+          {{ 'home.buttons.explore' | translate }}
         </a>
         <a
           routerLink="/sign-in"
           class="transform rounded-full border-2 border-white bg-transparent px-8 py-3 text-lg font-semibold text-white transition-all duration-300 hover:scale-105"
         >
-          Únete a Nosotros
+          {{ 'home.buttons.join' | translate }}
         </a>
       </div>
     </div>
@@ -40,24 +39,17 @@
   </div>
   <div class="rounded-t-xl bg-white px-6 py-16 shadow-lg">
     <h2 class="mb-6 text-center text-3xl font-bold text-blue-800 md:text-4xl">
-      ¿Quiénes Somos?
+      {{ 'home.main.title' | translate }}
     </h2>
     <p class="mb-6 text-center text-lg text-gray-700 md:text-xl">
-      En Zemios, somos una comunidad apasionada de profesionales y estudiantes
-      del mundo digital, unidos por el aprendizaje y el crecimiento continuo.
-    </p>
-    <p class="mb-8 text-center text-lg text-gray-700 md:text-xl">
-      Nos dedicamos a crear un espacio donde cada miembro pueda aprender,
-      enseñar y conectar con otros. Nuestro objetivo es impulsar el desarrollo
-      personal y profesional, promoviendo la colaboración y las oportunidades
-      para todos.
+      {{ 'home.main.description' | translate }}
     </p>
     <div class="mb-6 flex justify-center gap-4">
       <a
         routerLink="/contact"
         class="transform rounded-full bg-blue-900 px-8 py-3 text-lg font-semibold text-white transition-all duration-300 hover:scale-105 hover:bg-blue-800"
       >
-        Conoce más sobre nosotros
+        {{ 'home.buttons.learn-more' | translate }}
       </a>
     </div>
     <div class="flex justify-center gap-8 text-blue-900">

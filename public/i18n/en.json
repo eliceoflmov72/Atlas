@@ -1,4 +1,50 @@
 {
-    "hello": "En Zemios, somos una comunidad apasionada de profesionales y estudiantes del mundo digital, unidos por el aprendizaje y el crecimiento continuo."
+  "language-selector": {
+      "en": "English",
+      "es": "Spanish",
+      "fr": "French",
+      "de": "German",
+      "zh": "Chinese",
+      "ko": "Korean",
+      "ja": "Japanese",
+      "pt": "Portuguese",
+      "ru": "Russian",
+      "ar": "Arabic"
+  },
+  "home": {
+      "header": {
+          "title": "Connect, Learn, and Grow",
+          "subtitle": "Be part of a community that drives your professional development",
+          "description": "We share knowledge, opportunities, and much more to help you move forward."
+      },
+      "main": {
+          "title": "Who are we?",
+          "description": "At Zemios, we are a passionate community of professionals and students in the digital world, united by continuous learning and growth. We have created a space where each member can learn, teach, and connect with others. Our goal is to drive personal and professional development, fostering collaboration and opportunities for everyone.",
+          "join": "Join the community",
+          "join-description": "Sign up on our platform and create your profile.",
+          "connect": "Connect with other juniors",
+          "connect-description": "Share your experiences and learn from other programmers like you.",
+          "collaborate": "Collaborate on projects",
+          "collaborate-description": "Choose projects where you can contribute and that match your level.",
+          "learn": "Keep learning",
+          "learn-description": "Access resources and courses to keep developing your skills.",
+          "opportunities": "Open new opportunities",
+          "opportunities-description": "Network and get references that will help your career."
+      },
+      "secondary": {
+          "title": "Join us",
+          "description": "Be part of a vibrant community that shares knowledge, opportunities, and projects. Together, we can grow and achieve new goals!",
+          "questions": "Do you have any questions? Contact us:"
+      },
+      "footer": {
+          "title": "Would you like to support us? Make a small donation and help Zemios grow.",
+          "donate": "Make a donation"
+      },
+      "buttons": {
+          "explore": "Explore the community",
+          "join": "Join us",
+          "learn-more": "Learn more about us",
+          "create-profile": "Create profile"
+      }
   }
-  
+}

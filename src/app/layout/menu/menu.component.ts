@@ -1,10 +1,10 @@
 import { Component, HostListener, Input } from '@angular/core';
 import { Router, RouterLink } from '@angular/router';
-import { TranslateService } from '@ngx-translate/core';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-menu',
-  imports: [RouterLink],
+  imports: [RouterLink, TranslateModule],
   templateUrl: './menu.component.html',
   styleUrls: ['./menu.component.scss'],
 })
