@@ -1,18 +1,41 @@
 import { Component, HostListener, Input } from '@angular/core';
 import { Router, RouterLink } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-menu',
   imports: [RouterLink],
   templateUrl: './menu.component.html',
-  styleUrl: './menu.component.scss',
+  styleUrls: ['./menu.component.scss'],
 })
 export class MenuComponent {
-  constructor(public router: Router) {}
   @Input() pages: { title: string; url: string; icon: string }[] = [];
   menuVisibility = false;
+  isDropdownOpen = false;
+
+  constructor(
+    public router: Router,
+    private translate: TranslateService
+  ) {}
+
+  ngOnInit(): void {
+    this.translate.setDefaultLang('es');
+  }
+
+  translateText(lang: string) {
+    this.translate.use(lang);
+  }
+
   toggleMenu() {
     this.menuVisibility = !this.menuVisibility;
+  }
+
+  toggleDropdown(): void {
+    this.isDropdownOpen = !this.isDropdownOpen;
+  }
+
+  closeDropdown(): void {
+    this.isDropdownOpen = false;
   }
 
   @HostListener('document:click', ['$event'])
