@@ -39,17 +39,10 @@
   <img src="images/title.svg" routerLink="/" class="h-6 cursor-pointer" alt="Logo" />
 </div>
 <!-- * Meter numero de usuarios simultaneos -->
-<div class=" fixed end-24 z-20 top-10 border-1 border border-t-0 border-neutral-700 md:top-20 md:mt-2 bg-white md:p-2 sm:px-3 sm:py-2 md:rounded-b-full">
-  <button class="text-neutral-700 mt-1" (click)="toggleDropdown()"><i class="bi bi-globe2 text-xl" ></i></button>
+<div class=" absolute flex flex-col gap-1 end-24 top-20 border-1 border border-t-0 z-10 md:z-0 border-neutral-700 md:mt-1 bg-white -mt-1 md:p-2 px-3 py-2 rounded-b-full">
+  <button class="text-neutral-700 px-1 flex pt-1 " (click)="toggleDropdown()"><i class="bi bi-globe text-xl" ></i></button>
   @if (isDropdownOpen) {
-
-    <div class="dropdown">
-      <button (click)="translateText('en'); closeDropdown()">
-      {{ 'language-selector.en' | translate }}
-    </button>
-    <button (click)="translateText('es'); closeDropdown()">
-      {{ 'language-selector.es' | translate }}
-    </button>
-  </div>
+      <button class="px-1" (click)="translateText('en'); closeDropdown()">🇬🇧</button>
+    <button class="px-1" (click)="translateText('es'); closeDropdown()">🇪🇸</button>
 }
 </div>

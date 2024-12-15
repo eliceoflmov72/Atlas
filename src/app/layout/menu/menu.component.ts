@@ -54,5 +54,8 @@ export class MenuComponent {
     if (this.menuVisibility) {
       this.menuVisibility = false;
     }
+    if (this.isDropdownOpen) {
+      this.isDropdownOpen = false
+    }
   }
 }
