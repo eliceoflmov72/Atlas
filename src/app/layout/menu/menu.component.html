@@ -12,17 +12,6 @@
     }
   </ul>
 
-  <div class="language-dropdown">
-    <button class="dropdown-button" (click)="toggleDropdown()">🌎</button>
-    <div class="dropdown-content" [class.show]="isDropdownOpen">
-      <button (click)="translateText('en'); closeDropdown()">
-        {{ 'language-selector.en' | translate }}
-      </button>
-      <button (click)="translateText('es'); closeDropdown()">
-        {{ 'language-selector.es' | translate }}
-      </button>
-    </div>
-  </div>
 </div>
 <div class="fixed z-20 flex w-full items-center justify-start gap-5 bg-white px-5 py-5 text-neutral-700 md:hidden">
   <button (click)="toggleMenu()" (keypress)="toggleMenu()">
@@ -50,3 +39,17 @@
   <img src="images/title.svg" routerLink="/" class="h-6 cursor-pointer" alt="Logo" />
 </div>
 <!-- * Meter numero de usuarios simultaneos -->
+<div class=" fixed end-24 z-20 top-10 border-1 border border-t-0 border-neutral-700 md:top-20 md:mt-2 bg-white md:p-2 sm:px-3 sm:py-2 md:rounded-b-full">
+  <button class="text-neutral-700 mt-1" (click)="toggleDropdown()"><i class="bi bi-globe2 text-xl" ></i></button>
+  @if (isDropdownOpen) {
+
+    <div class="dropdown">
+      <button (click)="translateText('en'); closeDropdown()">
+      {{ 'language-selector.en' | translate }}
+    </button>
+    <button (click)="translateText('es'); closeDropdown()">
+      {{ 'language-selector.es' | translate }}
+    </button>
+  </div>
+}
+</div>
