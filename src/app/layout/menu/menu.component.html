@@ -1,4 +1,4 @@
-<!-- ¿ Deberiamos quitar todas las opciones que no esten disponibles por falta de backend -->
+<!-- ¿ TODO: Deberiamos quitar todas las opciones que no esten disponibles por falta de backend -->
 <!-- ¿ tambien habria que añadir la parte de perfil pero no de momento -->
 <div class="fixed z-20 hidden w-full justify-around bg-white px-16 py-5 md:flex md:px-5 lg:px-28">
   <div>
@@ -18,11 +18,10 @@
     <i class="bi bi-list cursor-pointer text-3xl font-bold"></i>
   </button>
   @if (menuVisibility) {
-    <!-- TODO -->
+    <!-- TODO: -->
     <!-- ! Aqui hay un pequeño error y es que cuando le das click, como el <ul> tiene la clase "shadow-lg", antes de que acabe la animacion de los <li> se ve el corte del "shadow-lg" -->
     <!-- ¿ Meter una animacion de desaparicion¿¿¿ -->
     <ul class="absolute start-0 top-1 z-10 mt-16 flex flex-1 select-none flex-col items-start rounded-b-3xl bg-white pt-2 text-2xl font-bold text-neutral-700 shadow-lg">
-      <!-- ^ Developer del futuro, si la cosa fea de class.bg... se puede acortar estaria genial, esta linea de abajo ocupa mas que el gta 6 -->
       @for (page of pages; track $index) {
         <li
           [routerLink]="page.url"
@@ -38,7 +37,7 @@
   }
   <img src="images/title.svg" routerLink="/" class="h-6 cursor-pointer" alt="Logo" />
 </div>
-<!-- * Meter numero de usuarios simultaneos -->
+<!-- * TODO: Meter numero de usuarios simultaneos -->
 <div class=" absolute flex flex-col gap-1 end-24 top-20 border-1 border border-t-0 z-10 md:z-0 border-neutral-700 md:mt-1 bg-white -mt-1 md:p-2 px-3 py-2 rounded-b-full">
   <button class="text-neutral-700 px-1 flex pt-1 " (click)="toggleDropdown()"><i class="bi bi-globe text-xl" ></i></button>
   @if (isDropdownOpen) {
