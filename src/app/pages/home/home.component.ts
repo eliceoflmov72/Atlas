@@ -1,5 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { NewsService } from '../../services/news.service';
+import { NewsInterface } from '../../interfaces/news-interface';
+import { CoursesService } from '../../services/courses.service';
+import { CoursesInterface } from '../../interfaces/courses-interface';
+import { ProjectsService } from '../../services/projects.service';
+import { ProjectInterface } from '../../interfaces/project-interface';
 
 @Component({
   selector: 'app-home',
@@ -17,50 +23,34 @@ export class HomeComponent {
     },
     {
       title: 'Conecta con Otros Juniors',
-      description:
-        'Comparte tus experiencias y aprende de otros programadores como tú.',
+      description: 'Comparte tus experiencias y aprende de otros programadores como tú.',
       icon: 'chat-bubble-dots.svg',
       url: '/explore',
     },
     {
       title: 'Colabora en Proyectos',
-      description:
-        'Elige proyectos en los que puedas aportar y que se adapten a tu nivel.',
+      description: 'Elige proyectos en los que puedas aportar y que se adapten a tu nivel.',
       icon: 'git-merge.svg',
       url: '/projects',
     },
     {
       title: 'Sigue Aprendiendo',
-      description:
-        'Accede a recursos y cursos para seguir desarrollando tus habilidades.',
+      description: 'Accede a recursos y cursos para seguir desarrollando tus habilidades.',
       icon: 'chess-pawn.svg',
       url: '/learning',
     },
     {
       title: 'Abre Nuevas Oportunidades',
-      description:
-        'Haz networking y consigue referencias que te ayuden en tu carrera.',
+      description: 'Haz networking y consigue referencias que te ayuden en tu carrera.',
       icon: 'key.svg',
       url: '/explore',
     },
   ];
 
-  mainNews: {
-    title: string;
-    description: string;
-    url: string;
-    imageUrl: string;
-  }[] = [];
-  lastCourses: {
-    title: string;
-    description: string;
-    url: string;
-    color: string;
-  }[] = [];
-  lastProyects: {
-    title: string;
-    description: string;
-    image: string;
-    collaborators: { image: string; name: string }[];
-  }[] = [];
+  private readonly newsSvc = inject(NewsService);
+  private readonly coursesSvc = inject(CoursesService);
+  private readonly projectsSvc = inject(ProjectsService);
+  mainNews: Array<NewsInterface> = this.newsSvc.show();
+  lastCourses: Array<CoursesInterface> = this.coursesSvc.show();
+  lastProjects: Array<ProjectInterface> = this.projectsSvc.show();
 }

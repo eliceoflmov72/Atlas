@@ -1,57 +1,42 @@
-<div class="min-h-screen bg-gray-100 px-6 py-12">
-  <div class="mx-auto max-w-3xl overflow-hidden rounded-lg bg-white shadow-lg">
-    <div class="p-6">
-      <h2 class="mb-4 text-3xl font-bold text-blue-800">
-        Título de la Publicación
-      </h2>
-      <div class="mb-6 flex items-center gap-4">
-        <img
-          src="https://via.placeholder.com/50"
-          alt="Autor"
-          class="h-12 w-12 rounded-full border-2 border-gray-300"
-        />
-        <div>
-          <p class="text-sm font-semibold text-gray-700">Nombre del Autor</p>
-          <p class="text-sm text-gray-500">
-            Publicado el: Fecha de publicación
+@if (post) {
+  <div class="min-h-screen bg-gray-100 px-6 py-12">
+    <div class="mx-auto max-w-3xl overflow-hidden rounded-lg bg-white shadow-lg">
+      <div class="p-6">
+        <h2 class="mb-4 text-3xl font-bold text-blue-800">
+          {{ post.title }}
+        </h2>
+        <div class="mb-6 flex items-center gap-4">
+          <img src="foto" onerror="this.src='error.svg'" alt="Autor" class="h-12 w-12 rounded-full border-2 border-gray-300" />
+          <div>
+            <p class="text-sm font-semibold text-gray-700">Nombre del Autor</p>
+            <p class="text-sm text-gray-500">
+              {{ post.creation_date }}
+            </p>
+          </div>
+        </div>
+        <div class="mb-8 text-lg text-gray-700">
+          <p>
+            {{ post.content }}
           </p>
         </div>
       </div>
-      <div class="mb-8 text-lg leading-relaxed text-gray-700">
-        <p>
-          Aquí va el contenido detallado de la publicación. Puede incluir varias
-          secciones, párrafos, imágenes y enlaces relacionados con el tema
-          discutido en el foro.
-        </p>
-        <p>
-          También puede haber respuestas o comentarios a lo largo del contenido.
-        </p>
-      </div>
     </div>
-  </div>
-  <div class="mx-auto mt-8 max-w-3xl">
-    <h3 class="mb-4 text-2xl font-bold text-blue-800">Respuestas</h3>
-    <!-- Repetir este bloque por cada respuesta -->
-    <div class="mb-6 overflow-hidden rounded-lg bg-white shadow-lg">
-      <div class="p-6">
-        <div class="mb-4 flex items-center gap-4">
-          <img
-            src="https://via.placeholder.com/50"
-            alt="Autor"
-            class="h-12 w-12 rounded-full border-2 border-gray-300"
-          />
-          <div>
-            <p class="text-sm font-semibold text-gray-700">
-              Nombre del Usuario
-            </p>
-            <p class="text-sm text-gray-500">Fecha de respuesta</p>
+    <div class="mx-auto mt-8 max-w-3xl">
+      <h3 class="mb-4 text-2xl font-bold text-blue-800">Respuestas</h3>
+      <!-- Repetir este bloque por cada respuesta -->
+      <div class="mb-6 overflow-hidden rounded-lg bg-white shadow-lg">
+        <div class="p-6">
+          <div class="mb-4 flex items-center gap-4">
+            <img src="foto" onerror="this.src='error.svg'" alt="Autor" class="h-12 w-12 rounded-full border-2 border-gray-300" />
+            <div>
+              <p class="text-sm font-semibold text-gray-700">Nombre del Usuario</p>
+              <p class="text-sm text-gray-500">Fecha de respuesta</p>
+            </div>
           </div>
+          <p class="text-gray-700">Aquí va la respuesta del usuario o comentario en la publicación.</p>
         </div>
-        <p class="text-gray-700">
-          Aquí va la respuesta del usuario o comentario en la publicación.
-        </p>
       </div>
+      <!-- Fin de bloque de respuesta -->
     </div>
-    <!-- Fin de bloque de respuesta -->
   </div>
-</div>
+}

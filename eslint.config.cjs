@@ -23,6 +23,7 @@ module.exports = [
       "@angular-eslint/no-empty-lifecycle-method": "warn",
       "@angular-eslint/directive-class-suffix": ["error", { suffixes: ["Directive"] }],
       "@typescript-eslint/no-unused-vars": ["warn", { argsIgnorePattern: "^_" }],
+      "max-len": ["warn", { "code": 200 }],
     },
   },
   {
@@ -35,6 +36,7 @@ module.exports = [
     },
     rules: {
       "@angular-eslint/template/no-negated-async": "error",
+      "max-len": ["warn", { "code": 200 }],
     },
   },
 ];

@@ -1,11 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
-interface NewsItem {
-  title: string;
-  description: string;
-  image: string;
-  category: string;
-}
+import { NewsInterface } from '../../interfaces/news-interface';
+import { NewsService } from '../../services/news.service';
 
 @Component({
   selector: 'app-news',
@@ -15,34 +11,12 @@ interface NewsItem {
 })
 export class NewsComponent {
   selectedCategory = '';
-  news: NewsItem[] = [
-    {
-      title: 'Nueva Tecnología en la Nube',
-      description:
-        'La última tendencia en servicios cloud que está revolucionando el mercado.',
-      image: 'https://via.placeholder.com/400x200',
-      category: 'actualidad',
-    },
-    {
-      title: 'Inteligencia Artificial Avanza',
-      description:
-        'Cómo los desarrollos en IA están impactando diferentes industrias.',
-      image: 'https://via.placeholder.com/400x200',
-      category: 'actualidad',
-    },
-    {
-      title: 'Ofertas de Empleo para Juniors',
-      description:
-        'Las empresas tecnológicas buscan talento junior para puestos remotos.',
-      image: 'https://via.placeholder.com/400x200',
-      category: 'empleo',
-    },
-  ];
+  private readonly newsSvc = inject(NewsService);
+  news: Array<NewsInterface> = this.newsSvc.show();
 
+  /* TODO: Esto de aqui deberia importar las categorias que hay entre los elementos de news? */
   get filteredNews() {
-    return this.selectedCategory
-      ? this.news.filter((item) => item.category === this.selectedCategory)
-      : this.news;
+    return this.selectedCategory ? this.news.filter((item) => item.category === this.selectedCategory) : this.news;
   }
 
   filterNews(category: string) {

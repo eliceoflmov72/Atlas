@@ -2,19 +2,16 @@
     <div class="mb-4 md:mb-0 md:mr-6">
         <p class="text-lg font-medium">¿Quieres apoyarnos? Únete a nuestro Patreon y ayuda a que más programadores juniors crezcan con Zemios.</p>
     </div>
-    <a href="https://patreon.com/Zemios?utm_medium=unknown&utm_source=join_link&utm_campaign=creatorshare_creator&utm_content=copyLink" target="_blank" class="bg-white text-purple-600 hover:bg-gray-100 font-bold py-2 px-6 rounded-full inline-flex items-center transition-transform transform hover:scale-105 duration-50 shadow-md">
+    <a href="https://patreon.com/Zemios?utm_medium=unknown&utm_source=join_link&utm_campaign=creatorshare_creator&utm_content=copyLink" 
+    target="_blank" class="bg-white text-purple-600 hover:bg-gray-100 font-bold py-2 px-6 rounded-full inline-flex items-center 
+    transition-transform transform hover:scale-105 duration-50 shadow-md">
         <i class="bi bi-heart-fill text-red-500 mr-2"></i> 
         Patreon
     </a>
 </div> -->
-<div
-  class="mx-10 my-10 flex flex-col items-center justify-between rounded-lg bg-yellow-500 px-8 py-6 text-center text-white shadow-lg md:flex-row md:text-left"
->
+<div class="mx-10 my-10 flex flex-col items-center justify-between rounded-lg bg-yellow-500 px-8 py-6 text-center text-white shadow-lg md:flex-row md:text-left">
   <div class="mb-4 md:mb-0 md:mr-6">
-    <p class="text-lg font-medium">
-      ¿Te gustaría apoyarnos? Haz una pequeña donación y ayuda a que Zemios
-      crezca.
-    </p>
+    <p class="text-lg font-medium">¿Te gustaría apoyarnos? Haz una pequeña donación y ayuda a que Zemios crezca.</p>
   </div>
   <a
     href="https://www.buymeacoffee.com/zemios"
@@ -25,63 +22,32 @@
     Haz una Donación
   </a>
 </div>
-<div
-  class="flex flex-wrap items-center justify-center gap-3 p-4 text-neutral-700 sm:p-10 lg:flex-row lg:flex-nowrap lg:justify-around"
->
-  <div
-    class="order-2 flex max-w-96 flex-col items-center justify-start gap-2 lg:order-1"
-  >
-    <a
-      href="mailto:info@zemios.com"
-      class="flex px-2 font-bold hover:text-blue-400"
-      >info&#64;zemios.com</a
-    >
+<div class="flex flex-wrap items-center justify-center gap-3 p-4 text-neutral-700 sm:p-10 lg:flex-row lg:flex-nowrap lg:justify-around">
+  <div class="order-2 flex max-w-96 flex-col items-center justify-start gap-2 lg:order-1">
+    <a href="mailto:info@zemios.com" class="flex px-2 font-bold hover:text-blue-400">info&#64;zemios.com</a>
     <ul class="flex flex-wrap justify-center gap-4 font-bold">
       <li>
-        <a
-          class="instagram"
-          target="_blank"
-          href="https://www.instagram.com/zemios_company"
-          >Instagram</a
-        >
+        <a class="instagram" target="_blank" href="https://www.instagram.com/zemios_company">Instagram</a>
       </li>
       <li>
-        <a class="twitter" target="_blank" href="https://x.com/zemios_company"
-          >Twitter</a
-        >
+        <a class="twitter" target="_blank" href="https://x.com/zemios_company">Twitter</a>
       </li>
       <li>
-        <a
-          class="linkedin"
-          target="_blank"
-          href="https://www.linkedin.com/company/zemios/"
-          >LinkedIn</a
-        >
+        <a class="linkedin" target="_blank" href="https://www.linkedin.com/company/zemios/">LinkedIn</a>
       </li>
     </ul>
   </div>
-  <div
-    class="order-1 flex w-full flex-col items-center justify-start lg:order-2 lg:w-auto"
-  >
-    <img
-      src="images/title.svg"
-      routerLink="/"
-      class="max-h-10 cursor-pointer"
-      alt="Title"
-    />
+  <div class="order-1 flex w-full flex-col items-center justify-start lg:order-2 lg:w-auto">
+    <img src="images/title.svg" routerLink="/" class="max-h-10 cursor-pointer" alt="Title" />
   </div>
   <div class="order-3 flex max-w-72 justify-center">
     <ul class="flex flex-wrap justify-center lg:justify-start">
       @for (page of pages; track $index) {
         <li>
-          <a class="px-2 hover:text-blue-400" [routerLink]="page.url">{{
-            page.title
-          }}</a>
+          <a class="px-2 hover:text-blue-400" [routerLink]="page.url">{{ page.title }}</a>
         </li>
       }
     </ul>
   </div>
 </div>
-<p class="flex justify-center pb-2 text-center">
-  &#169; 2024 Zemios. Todos los derechos reservados.
-</p>
+<p class="flex justify-center pb-2 text-center">&#169; 2024 Zemios. Todos los derechos reservados.</p>

@@ -1,7 +1,5 @@
-<div
-  class="fixed inset-0 flex items-center justify-center bg-gray-700 bg-opacity-75"
->
-  <div class="relative w-96 rounded-2xl bg-white p-8 shadow-2xl" modal-content>
+<div class="fixed inset-0 flex items-center justify-center bg-gray-700 bg-opacity-75">
+  <div class="relative mx-3 w-96 rounded-2xl bg-white p-8 shadow-2xl" modal-content>
     <button
       type="button"
       (click)="closeModal()"
@@ -9,19 +7,13 @@
     >
       <i class="bi bi-x-circle-fill text-3xl"></i>
     </button>
-    <h2 class="mb-6 text-center text-3xl font-bold text-blue-600">
-      Crear Publicación
-    </h2>
+    <h2 class="mb-6 text-center text-3xl font-bold text-blue-600">Crear Publicación</h2>
 
     <!-- Formulario para crear publicación -->
     <form>
       <!-- Título -->
       <div class="mb-6">
-        <label
-          for="titulo"
-          class="rounded-md p-1 text-lg font-semibold text-neutral-900"
-          >Título</label
-        >
+        <label for="titulo" class="rounded-md p-1 text-lg font-semibold text-neutral-900">Título</label>
         <input
           type="text"
           id="titulo"
@@ -34,11 +26,7 @@
 
       <!-- Contenido -->
       <div class="mb-6">
-        <label
-          for="contenido"
-          class="block rounded-md p-1 text-lg font-semibold text-neutral-900"
-          >Contenido</label
-        >
+        <label for="contenido" class="block rounded-md p-1 text-lg font-semibold text-neutral-900">Contenido</label>
         <textarea
           id="contenido"
           name="contenido"
@@ -51,13 +39,7 @@
 
       <!-- Botones -->
       <div class="mt-6 flex flex-wrap items-center justify-around gap-4">
-        <button
-          type="submit"
-          (click)="sendPost()"
-          class="transform rounded-lg bg-blue-500 px-5 py-3 font-semibold text-white shadow-lg transition hover:scale-110 hover:bg-blue-600"
-        >
-          Publicar
-        </button>
+        <button type="submit" (click)="sendPost()" class="transform rounded-lg bg-blue-500 px-5 py-3 font-semibold text-white shadow-lg transition hover:scale-110 hover:bg-blue-600">Publicar</button>
       </div>
     </form>
   </div>
