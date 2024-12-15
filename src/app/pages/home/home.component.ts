@@ -6,10 +6,11 @@ import { CoursesService } from '../../services/courses.service';
 import { CoursesInterface } from '../../interfaces/courses-interface';
 import { ProjectsService } from '../../services/projects.service';
 import { ProjectInterface } from '../../interfaces/project-interface';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-home',
-  imports: [RouterLink],
+  imports: [RouterLink, TranslateModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })

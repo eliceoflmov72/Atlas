@@ -2,10 +2,11 @@ import { Component } from '@angular/core';
 import { MenuComponent } from './layout/menu/menu.component';
 import { FooterComponent } from './layout/footer/footer.component';
 import { RouterOutlet } from '@angular/router';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-root',
-  imports: [MenuComponent, FooterComponent, RouterOutlet],
+  imports: [MenuComponent, FooterComponent, RouterOutlet, TranslateModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })

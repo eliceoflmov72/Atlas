@@ -11,12 +11,25 @@
       </li>
     }
   </ul>
+
+  <div class="language-dropdown">
+    <button class="dropdown-button" (click)="toggleDropdown()">🌎</button>
+    <div class="dropdown-content" [class.show]="isDropdownOpen">
+      <button (click)="translateText('en'); closeDropdown()">
+        {{ 'language-selector.en' | translate }}
+      </button>
+      <button (click)="translateText('es'); closeDropdown()">
+        {{ 'language-selector.es' | translate }}
+      </button>
+    </div>
+  </div>
 </div>
 <div class="fixed z-20 flex w-full items-center justify-start gap-5 bg-white px-5 py-5 text-neutral-700 md:hidden">
   <button (click)="toggleMenu()" (keypress)="toggleMenu()">
     <i class="bi bi-list cursor-pointer text-3xl font-bold"></i>
   </button>
   @if (menuVisibility) {
+    <!-- TODO -->
     <!-- ! Aqui hay un pequeño error y es que cuando le das click, como el <ul> tiene la clase "shadow-lg", antes de que acabe la animacion de los <li> se ve el corte del "shadow-lg" -->
     <!-- ¿ Meter una animacion de desaparicion¿¿¿ -->
     <ul class="absolute start-0 top-1 z-10 mt-16 flex flex-1 select-none flex-col items-start rounded-b-3xl bg-white pt-2 text-2xl font-bold text-neutral-700 shadow-lg">
