@@ -38,7 +38,7 @@
   <img src="images/title.svg" routerLink="/" class="h-6 cursor-pointer" alt="Logo" />
 </div>
 <!-- * TODO: Meter numero de usuarios simultaneos -->
-<div class=" absolute flex flex-col gap-1 end-24 top-20 border-1 border border-t-0 z-10 md:z-0 border-neutral-700 md:mt-1 bg-white -mt-1 md:p-2 px-3 py-2 rounded-b-full">
+<div class=" absolute flex flex-col gap-1 end-24 top-20 shadow-md z-10 md:z-0 md:mt-1 bg-white -mt-1 md:p-2 px-3 py-2 rounded-b-full">
   <button class="text-neutral-700 px-1 flex pt-1 " (click)="toggleDropdown()"><i class="bi bi-globe text-xl" ></i></button>
   @if (isDropdownOpen) {
       <button class="px-1" (click)="translateText('en'); closeDropdown()">🇬🇧</button>
