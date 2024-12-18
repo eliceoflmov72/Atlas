@@ -1,59 +1,76 @@
-# Zemios
+# Zemios - Frontend
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.1.
+Bienvenido al repositorio del frontend de Zemios, la comunidad creada para conectar, apoyar y empoderar a programadores juniors en su camino hacia el crecimiento profesional. Esta aplicación está desarrollada utilizando **Angular 19** y tiene como objetivo proporcionar una plataforma dinámica donde los usuarios puedan compartir experiencias, colaborar en proyectos y mejorar sus habilidades en el mundo del desarrollo web.
 
-## Development server
+## ¿Qué es Zemios?
 
-To start a local development server, run:
+Zemios es una comunidad creada por y para programadores juniors, donde buscamos ofrecer:
 
-```bash
-ng serve
-```
+- **Colaboración**: Un espacio para que los usuarios trabajen juntos en proyectos reales, mejorando sus habilidades técnicas y de trabajo en equipo.
+- **Aprendizaje**: Cursos, talleres y recursos para ayudar a los juniors a aumentar sus conocimientos y mantenerse al día con las últimas tecnologías.
+- **Networking**: Oportunidades para conectar con otros profesionales en etapas similares de su carrera y construir una red de contactos útil para el futuro.
+- **Noticias del sector**: Actualizaciones y noticias relevantes del mundo del desarrollo web, para estar siempre informado sobre las tendencias y cambios.
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## Tecnologías utilizadas
 
-## Code scaffolding
+Este proyecto utiliza las siguientes tecnologías:
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+- **Angular 19**: Framework frontend principal para construir la aplicación.
+- **TypeScript**: Lenguaje de programación para el desarrollo de código seguro y escalable.
+- **Tailwind CSS**: Para el diseño y estilización de la interfaz de usuario.
 
-```bash
-ng generate component component-name
-```
+## Requisitos previos
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+Antes de comenzar, asegúrate de tener instalado lo siguiente:
 
-```bash
-ng generate --help
-```
+- [Node.js](https://nodejs.org/) v18+
+- [Angular CLI](https://angular.io/cli) v19+
 
-## Building
+## Instalación
 
-To build the project run:
+Sigue estos pasos para configurar y ejecutar el proyecto en tu entorno local:
 
-```bash
-ng build
-```
+1. Clona el repositorio:
+    ```bash
+    git clone https://github.com/Zemios/Atlas.git
+    ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+2. Navega al directorio del proyecto:
+    ```bash
+    cd Atlas
+    ```
 
-## Running unit tests
+3. Instala las dependencias del proyecto:
+    ```bash
+    npm install
+    ```
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+4. Ejecuta la aplicación localmente:
+    ```bash
+    ng serve
+    ```
 
-```bash
-ng test
-```
+5. Abre tu navegador y visita `http://localhost:4200/`.
 
-## Running end-to-end tests
+## Contribuciones
 
-For end-to-end (e2e) testing, run:
+Las contribuciones a Zemios son bienvenidas. Si deseas colaborar, por favor sigue estos pasos:
 
-```bash
-ng e2e
-```
+1. Realiza un fork del repositorio.
+2. Crea una rama para tu nueva funcionalidad:
+    ```bash
+    git checkout -b feature/nueva-funcionalidad
+    ```
+3. Haz commit de tus cambios:
+    ```bash
+    git commit -m "Añadir nueva funcionalidad"
+    ```
+4. Sube tu rama:
+    ```bash
+    git push origin feature/nueva-funcionalidad
+    ```
+5. Abre un Pull Request en el repositorio original.
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+## Licencia
 
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Este proyecto está licenciado bajo la [MIT License](LICENSE).

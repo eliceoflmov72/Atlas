@@ -1,25 +1,47 @@
-<!-- ¿ Deberiamos quitar todas las opciones que no esten disponibles por falta de backend -->
- <!-- ¿ tambien habria que añadir la parte de perfil pero no de momento -->
-<div class=" hidden fixed w-full md:flex justify-around px-16 z-20 md:px-10 lg:px-28 py-5 bg-white">
-    <div>
-        <img src="logo.svg" routerLink="/" class="cursor-pointer w-12" alt="Logo">
-    </div>
-    <ul class="flex-1 flex justify-center items-center text-neutral-700 text-2xl font-bold gap-2 md:gap-4 lg:gap-10">
-        @for (page of pages; track $index) {
-            <li><a class="px-2 hover:text-blue-400" [routerLink]="page.url">{{page.title}}</a></li>
-        }
-    </ul>
-</div>
-<div class="flex fixed w-full md:hidden justify-start items-center gap-5 px-5 py-5 z-20 bg-white text-neutral-700">
-    
-    <i class="bi bi-list text-3xl cursor-pointer font-bold" (click)="toggleMenu()"></i>
-    @if (menuVisibility) {
-        <ul class="flex-1 flex flex-col items-start text-neutral-700 absolute z-10 start-0 top-0 mt-16 px-5 py-2 text-2xl bg-white font-bold gap-2 md:gap-4 lg:gap-10">
-            @for (page of pages; track $index) {
-                <li><a class="px-2 hover:text-blue-400" [routerLink]="page.url"><i class="bi bi-{{page.icon}} text-blue-600"></i> {{page.title}}</a></li>
-            }
-        </ul>
+<!-- ¿ TODO: Deberiamos quitar todas las opciones que no esten disponibles por falta de backend -->
+<!-- ¿ tambien habria que añadir la parte de perfil pero no de momento -->
+<div class="fixed z-20 hidden w-full justify-around bg-white px-16 py-5 md:flex md:px-5 lg:px-28">
+  <div>
+    <img src="images/logo.svg" routerLink="/" class="w-12 cursor-pointer" alt="Logo" />
+  </div>
+  <ul class="flex flex-1 items-center justify-center gap-2 text-2xl font-bold text-neutral-700 md:gap-2 lg:gap-5 xl:gap-10">
+    @for (page of pages; track $index) {
+      <li>
+        <a class="px-2 hover:text-blue-400" [routerLink]="page.url" [class.text-blue-700]="this.router.url === '/' + page.url">{{ page.title }}</a>
+      </li>
     }
-    <img src="title.svg" routerLink="/" class="cursor-pointer h-6" alt="Logo">
+  </ul>
+
 </div>
-  
+<div class="fixed z-20 flex w-full items-center justify-start gap-5 bg-white px-5 py-5 text-neutral-700 md:hidden">
+  <button (click)="toggleMenu()" (keypress)="toggleMenu()">
+    <i class="bi bi-list cursor-pointer text-3xl font-bold"></i>
+  </button>
+  @if (menuVisibility) {
+    <!-- TODO: -->
+    <!-- ! Aqui hay un pequeño error y es que cuando le das click, como el <ul> tiene la clase "shadow-lg", antes de que acabe la animacion de los <li> se ve el corte del "shadow-lg" -->
+    <!-- ¿ Meter una animacion de desaparicion¿¿¿ -->
+    <ul class="absolute start-0 top-1 z-10 mt-16 flex flex-1 select-none flex-col items-start rounded-b-3xl bg-white pt-2 text-2xl font-bold text-neutral-700 shadow-lg">
+      @for (page of pages; track $index) {
+        <li
+          [routerLink]="page.url"
+          class="last:pb- w-full animate-fade-in-down cursor-pointer px-5 py-2 opacity-0 last:rounded-b-3xl hover:bg-blue-400 hover:text-white"
+          [class.bg-blue-700]="this.router.url === '/' + page.url"
+          [class.text-white]="this.router.url === '/' + page.url"
+          [style]="'animation-delay: ' + $index * 0.05 + 's;'"
+        >
+          <p class="px-2"><i class="bi bi-{{ page.icon }}"></i> {{ page.title }}</p>
+        </li>
+      }
+    </ul>
+  }
+  <img src="images/title.svg" routerLink="/" class="h-6 cursor-pointer" alt="Logo" />
+</div>
+<!-- * TODO: Meter numero de usuarios simultaneos -->
+<div class=" absolute flex flex-col gap-1 end-4 md:end-24 top-20 shadow-md z-10 md:z-0 md:mt-1 bg-white -mt-2 p-2 rounded-b-full">
+  <button class="text-neutral-700 px-1 flex pt-1 " (click)="toggleDropdown()"><i class="bi bi-globe text-xl" ></i></button>
+  @if (isDropdownOpen) {
+      <button class="px-1" (click)="translateText('en'); closeDropdown()">🇬🇧</button>
+    <button class="px-1" (click)="translateText('es'); closeDropdown()">🇪🇸</button>
+}
+</div>

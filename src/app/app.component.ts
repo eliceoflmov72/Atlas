@@ -1,13 +1,14 @@
 import { Component } from '@angular/core';
-import { MenuComponent } from "./layout/menu/menu.component";
-import { FooterComponent } from "./layout/footer/footer.component";
+import { MenuComponent } from './layout/menu/menu.component';
+import { FooterComponent } from './layout/footer/footer.component';
 import { RouterOutlet } from '@angular/router';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-root',
-  imports: [MenuComponent, FooterComponent, RouterOutlet],
+  imports: [MenuComponent, FooterComponent, RouterOutlet, TranslateModule],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrl: './app.component.scss',
 })
 export class AppComponent {
   title = 'Zemios';
@@ -15,40 +16,45 @@ export class AppComponent {
   pages = [
     {
       title: 'Inicio',
-      url: '/',
-      icon: 'house-fill'
+      url: '',
+      icon: 'house-fill',
     },
     {
       title: 'Noticias',
-      url: 'News',
+      url: 'news',
       icon: 'newspaper',
       sub: [
         {
           title: 'Tecnología',
-          url: 'News/Tech',
-          icon: 'gear-fill'
+          url: 'news/tech',
+          icon: 'gear-fill',
         },
         {
           title: 'Empleo',
-          url: 'News/Jobs',
-          icon: 'briefcase-fill'
-        }
-      ]
+          url: 'news/jobs',
+          icon: 'briefcase-fill',
+        },
+      ],
     },
     {
-      title: 'Cursos',
-      url: 'Learning',
-      icon: 'book-half'
+      title: 'Foro',
+      url: 'explore',
+      icon: 'chat-dots-fill',
     },
+    /*     {
+          title: 'Cursos',
+          url: 'learning',
+          icon: 'book-half'
+        }, */
     {
       title: 'Proyectos',
-      url: 'Projects',
-      icon: 'box-fill'
+      url: 'projects',
+      icon: 'box-fill',
     },
     {
       title: 'Contacto',
-      url: 'Contact',
-      icon: 'info-circle-fill'
+      url: 'contact',
+      icon: 'info-circle-fill',
     },
-  ]
+  ];
 }
